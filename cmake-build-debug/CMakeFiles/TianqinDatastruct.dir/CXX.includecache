@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp
+stdio.h
+-
+../utility/Printer.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Printer.h
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Printer.h
+stdio.h
+-
+iostream
+-
+
