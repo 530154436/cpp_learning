@@ -60,39 +60,76 @@ CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct
 CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/TianqinDatastruct.dir
+# Target rules for target CMakeFiles/linkedList.dir
 
 # All Build rule for target.
-CMakeFiles/TianqinDatastruct.dir/all:
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/depend
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target TianqinDatastruct"
-.PHONY : CMakeFiles/TianqinDatastruct.dir/all
+CMakeFiles/linkedList.dir/all:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/depend
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target linkedList"
+.PHONY : CMakeFiles/linkedList.dir/all
 
 # Include target in all.
-all: CMakeFiles/TianqinDatastruct.dir/all
+all: CMakeFiles/linkedList.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TianqinDatastruct.dir/rule: cmake_check_build_system
+CMakeFiles/linkedList.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TianqinDatastruct.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/linkedList.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/TianqinDatastruct.dir/rule
+.PHONY : CMakeFiles/linkedList.dir/rule
 
 # Convenience name for target.
-TianqinDatastruct: CMakeFiles/TianqinDatastruct.dir/rule
+linkedList: CMakeFiles/linkedList.dir/rule
 
-.PHONY : TianqinDatastruct
-
-# clean rule for target.
-CMakeFiles/TianqinDatastruct.dir/clean:
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/clean
-.PHONY : CMakeFiles/TianqinDatastruct.dir/clean
+.PHONY : linkedList
 
 # clean rule for target.
-clean: CMakeFiles/TianqinDatastruct.dir/clean
+CMakeFiles/linkedList.dir/clean:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/clean
+.PHONY : CMakeFiles/linkedList.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/linkedList.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sqList.dir
+
+# All Build rule for target.
+CMakeFiles/sqList.dir/all:
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/depend
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target sqList"
+.PHONY : CMakeFiles/sqList.dir/all
+
+# Include target in all.
+all: CMakeFiles/sqList.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sqList.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sqList.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sqList.dir/rule
+
+# Convenience name for target.
+sqList: CMakeFiles/sqList.dir/rule
+
+.PHONY : sqList
+
+# clean rule for target.
+CMakeFiles/sqList.dir/clean:
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/clean
+.PHONY : CMakeFiles/sqList.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sqList.dir/clean
 
 .PHONY : clean
 

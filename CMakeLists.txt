@@ -3,4 +3,5 @@ project(TianqinDatastruct)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(TianqinDatastruct "2.线性表/2.1. 顺序表.cpp" utility/Printer.h)
+add_executable(sqList "2.线性表/2.1. 顺序表.cpp" utility/SqList.h)
+add_executable(linkedList "2.线性表/2.2. 单链表.cpp" utility/LinkedList.h)

@@ -1,3 +1,4 @@
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/TianqinDatastruct.dir
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/linkedList.dir
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/sqList.dir

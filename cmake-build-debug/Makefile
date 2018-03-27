@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TianqinDatastruct
+# Target rules for targets named linkedList
 
 # Build rule for target.
-TianqinDatastruct: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TianqinDatastruct
-.PHONY : TianqinDatastruct
+linkedList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 linkedList
+.PHONY : linkedList
 
 # fast build rule for target.
-TianqinDatastruct/fast:
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/build
-.PHONY : TianqinDatastruct/fast
+linkedList/fast:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
+.PHONY : linkedList/fast
+
+#=============================================================================
+# Target rules for targets named sqList
+
+# Build rule for target.
+sqList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sqList
+.PHONY : sqList
+
+# fast build rule for target.
+sqList/fast:
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/build
+.PHONY : sqList/fast
 
 2.线性表/2.1._顺序表.o: 2.线性表/2.1._顺序表.cpp.o
 
@@ -129,7 +142,7 @@ TianqinDatastruct/fast:
 
 # target to build an object file
 2.线性表/2.1._顺序表.cpp.o:
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/2.线性表/2.1._顺序表.cpp.o
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o
 .PHONY : 2.线性表/2.1._顺序表.cpp.o
 
 2.线性表/2.1._顺序表.i: 2.线性表/2.1._顺序表.cpp.i
@@ -138,7 +151,7 @@ TianqinDatastruct/fast:
 
 # target to preprocess a source file
 2.线性表/2.1._顺序表.cpp.i:
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/2.线性表/2.1._顺序表.cpp.i
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i
 .PHONY : 2.线性表/2.1._顺序表.cpp.i
 
 2.线性表/2.1._顺序表.s: 2.线性表/2.1._顺序表.cpp.s
@@ -147,8 +160,35 @@ TianqinDatastruct/fast:
 
 # target to generate assembly for a file
 2.线性表/2.1._顺序表.cpp.s:
-	$(MAKE) -f CMakeFiles/TianqinDatastruct.dir/build.make CMakeFiles/TianqinDatastruct.dir/2.线性表/2.1._顺序表.cpp.s
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s
 .PHONY : 2.线性表/2.1._顺序表.cpp.s
+
+2.线性表/2.2._单链表.o: 2.线性表/2.2._单链表.cpp.o
+
+.PHONY : 2.线性表/2.2._单链表.o
+
+# target to build an object file
+2.线性表/2.2._单链表.cpp.o:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.o
+.PHONY : 2.线性表/2.2._单链表.cpp.o
+
+2.线性表/2.2._单链表.i: 2.线性表/2.2._单链表.cpp.i
+
+.PHONY : 2.线性表/2.2._单链表.i
+
+# target to preprocess a source file
+2.线性表/2.2._单链表.cpp.i:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.i
+.PHONY : 2.线性表/2.2._单链表.cpp.i
+
+2.线性表/2.2._单链表.s: 2.线性表/2.2._单链表.cpp.s
+
+.PHONY : 2.线性表/2.2._单链表.s
+
+# target to generate assembly for a file
+2.线性表/2.2._单链表.cpp.s:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.s
+.PHONY : 2.线性表/2.2._单链表.cpp.s
 
 # Help Target
 help:
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... TianqinDatastruct"
+	@echo "... linkedList"
+	@echo "... sqList"
 	@echo "... 2.线性表/2.1._顺序表.o"
 	@echo "... 2.线性表/2.1._顺序表.i"
 	@echo "... 2.线性表/2.1._顺序表.s"
+	@echo "... 2.线性表/2.2._单链表.o"
+	@echo "... 2.线性表/2.2._单链表.i"
+	@echo "... 2.线性表/2.2._单链表.s"
 .PHONY : help
 
 

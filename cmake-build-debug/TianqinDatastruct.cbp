@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TianqinDatastruct">
-				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/TianqinDatastruct" prefix_auto="0" extension_auto="0"/>
+			<Target title="linkedList">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/linkedList" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,14 +53,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 TianqinDatastruct"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 linkedList"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TianqinDatastruct/fast">
-				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/TianqinDatastruct" prefix_auto="0" extension_auto="0"/>
+			<Target title="linkedList/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/linkedList" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -75,7 +75,51 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 TianqinDatastruct/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 linkedList/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sqList">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/sqList" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 sqList"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sqList/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/sqList" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 sqList/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,10 +127,16 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp">
-			<Option target="TianqinDatastruct"/>
+			<Option target="sqList"/>
 		</Unit>
-		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Printer.h">
-			<Option target="TianqinDatastruct"/>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.2. 单链表.cpp">
+			<Option target="linkedList"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h">
+			<Option target="linkedList"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h">
+			<Option target="sqList"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

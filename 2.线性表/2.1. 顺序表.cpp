@@ -2,20 +2,9 @@
 // Created by 郑楚彬 on 2018/3/26.
 //
 #include <stdio.h>
-#include "../utility/Printer.h"
+#include "../utility/SqList.h"
 
 using namespace std;
-
-#define MAX 100
-
-/**
- * 顺序表定义
- */
-typedef struct SqList{
-    int data[MAX];
-    int length;
-} SqList;
-
 
 /**
  * 例题 1  已知一个顺序表 L，其中的元素递增有序排列，设计一个算法插入一个元素 x (x 为 int 型)后
@@ -37,9 +26,12 @@ int findElement(SqList L, int x){
 void insert(SqList &L, int x){
     int p;
     p = findElement(L, x);
+
+    // 其他元素后移
     for(int i=L.length; i>=p; i--){
         L.data[i+1] =L.data[i];
     }
+
     L.data[p] = x;
     L.length++;
 }
