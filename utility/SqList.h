@@ -23,6 +23,10 @@ typedef struct SqList{
  * @param len
  */
 void printSqList(int *a, int len){
+    if(a==NULL){
+        printf("数组为空!!!");
+        return;
+    }
     printf("数组: [");
     for(int i=0; i<len-1; i++){
         printf("%d ",a[i]);

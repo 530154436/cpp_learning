@@ -7,14 +7,10 @@
 #IncludeRegexTransform: 
 
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.2. 单链表.cpp
-stdio.h
--
-iostream
--
 ../utility/LinkedList.h
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h
 
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h
-stdio.h
+iostream
 -
 
