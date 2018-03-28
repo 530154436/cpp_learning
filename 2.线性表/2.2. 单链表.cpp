@@ -5,7 +5,7 @@
 
 /**
  * (尾插法)
- * 例题 1  A和B是两个单链表(带表头结点)，其中元素递增有序。设计一个算法将A 和 B 归并成
+ * 例题 1.1  A和B是两个单链表(带表头结点)，其中元素递增有序。设计一个算法将A 和 B 归并成
  *        一个按元素递增有序的链表 C，C 由 A 和 B 中的结点组成。
  */
 void mergeR(LNode *A, LNode *B, LNode *&C){
@@ -39,7 +39,7 @@ void mergeR(LNode *A, LNode *B, LNode *&C){
 
 /**
  * (头插法)
- * 例题 1  A和B是两个单链表(带表头结点)，其中元素递增有序。设计一个算法将A 和 B 归并成
+ * 例题 1.2  A和B是两个单链表(带表头结点)，其中元素递增有序。设计一个算法将A 和 B 归并成
  *        一个按元素递减有序的链表 C，C 由 A 和 B 中的结点组成。
  */
 void mergeF(LNode *A, LNode*B, LNode *&C){
@@ -84,7 +84,7 @@ void mergeF(LNode *A, LNode*B, LNode *&C){
 
 // =========== 测试 =========== //
 void test01(){
-    LNode *A, *B, *C, *D;
+    LNode *A, *B, *C;
     int a[10] = {1,3,5,7};
     int b[10] = {2,4,6,8,10};
 
@@ -115,6 +115,7 @@ void test02(){
 }
 
 void test03(){
+    // 查找链表
     LNode *A, *B, *C, *D;
     int a[10] = {1,3,5,7};
     createListR(A, a, 4);

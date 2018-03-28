@@ -16,6 +16,20 @@ typedef struct SqList{
     int length;
 } SqList;
 
+/**
+ * 例题 2 删除顺序表 L 中下标为 p(1≤p≤length)的元素，成功返回 1，否则返回 0，并将被删除元素的值赋值给 e。
+ */
+int deleteByPosition(SqList &L, int p, int &e){
+    if(p>L.length || p<1){
+        return 0;
+    }
+    e = L.data[p];
+    for(int i=p; i<L.length; i++){
+        L.data[i] = L.data[i+1];
+    }
+    L.length--;
+    return 1;
+}
 
 /**
  * 打印顺序表

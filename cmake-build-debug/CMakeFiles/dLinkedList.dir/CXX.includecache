@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.3. 双链表.cpp
+../utility/DLinkedLIst.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/DLinkedLIst.h
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/DLinkedLIst.h
+iostream
+-
+

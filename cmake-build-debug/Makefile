@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named dLinkedList
+
+# Build rule for target.
+dLinkedList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dLinkedList
+.PHONY : dLinkedList
+
+# fast build rule for target.
+dLinkedList/fast:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/build
+.PHONY : dLinkedList/fast
+
+#=============================================================================
 # Target rules for targets named linkedList
 
 # Build rule for target.
@@ -190,6 +203,33 @@ sqList/fast:
 	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.s
 .PHONY : 2.线性表/2.2._单链表.cpp.s
 
+2.线性表/2.3._双链表.o: 2.线性表/2.3._双链表.cpp.o
+
+.PHONY : 2.线性表/2.3._双链表.o
+
+# target to build an object file
+2.线性表/2.3._双链表.cpp.o:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/2.线性表/2.3._双链表.cpp.o
+.PHONY : 2.线性表/2.3._双链表.cpp.o
+
+2.线性表/2.3._双链表.i: 2.线性表/2.3._双链表.cpp.i
+
+.PHONY : 2.线性表/2.3._双链表.i
+
+# target to preprocess a source file
+2.线性表/2.3._双链表.cpp.i:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/2.线性表/2.3._双链表.cpp.i
+.PHONY : 2.线性表/2.3._双链表.cpp.i
+
+2.线性表/2.3._双链表.s: 2.线性表/2.3._双链表.cpp.s
+
+.PHONY : 2.线性表/2.3._双链表.s
+
+# target to generate assembly for a file
+2.线性表/2.3._双链表.cpp.s:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/2.线性表/2.3._双链表.cpp.s
+.PHONY : 2.线性表/2.3._双链表.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,6 +238,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... dLinkedList"
 	@echo "... linkedList"
 	@echo "... sqList"
 	@echo "... 2.线性表/2.1._顺序表.o"
@@ -206,6 +247,9 @@ help:
 	@echo "... 2.线性表/2.2._单链表.o"
 	@echo "... 2.线性表/2.2._单链表.i"
 	@echo "... 2.线性表/2.2._单链表.s"
+	@echo "... 2.线性表/2.3._双链表.o"
+	@echo "... 2.线性表/2.3._双链表.i"
+	@echo "... 2.线性表/2.3._双链表.s"
 .PHONY : help
 
 

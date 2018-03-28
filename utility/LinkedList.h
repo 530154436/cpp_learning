@@ -14,7 +14,11 @@ typedef struct LNode{
 
 /**
  * 1. 初始化(尾插法)
- * 假设有 n 个元素已经存储在数组 a 中，用尾插法建立链表 C。
+ *    假设有 n 个元素已经存储在数组 a 中，用尾插法建立链表 C。
+ *
+ * @param C 链表指针
+ * @param a 数组
+ * @param n 长度
  */
 void createListR(LNode *&C, int a[], int n){
     //s用来指向新申请的结点，r始终指向C的终端结点。s
@@ -43,6 +47,10 @@ void createListR(LNode *&C, int a[], int n){
 
 /**
  * 2. 初始化(头插法)
+ *
+ * @param C 链表指针
+ * @param a 数组
+ * @param n 长度
  */
 void crateListF(LNode *&C, int a[], int n){
     LNode *s;
@@ -64,6 +72,13 @@ void crateListF(LNode *&C, int a[], int n){
 
 /**
  * 查找链表 C(带头结点)中是否存在一个值为 x 的结点，存在就删除之并返回 1，否则返回 0。
+ *
+ * ps. 程序中之所以要使 p 指向所要删除结点的前驱结点而不是直接指向所
+ *     要删除结点本身，是因为要删除一个结点必须知道其前驱结点的位置
+ *
+ * @param C 链表指针
+ * @param x 值
+ * @return
  */
 int SearchAndDelete(LNode *&C,int x){
     if(C==NULL){
@@ -90,7 +105,6 @@ int SearchAndDelete(LNode *&C,int x){
         return 1;
     }
 }
-
 
 /**
  * 打印单链表(含头结点)

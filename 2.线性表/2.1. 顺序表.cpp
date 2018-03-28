@@ -36,6 +36,7 @@ void insert(SqList &L, int x){
     L.length++;
 }
 
+// ================= 测试 ================= //
 void test1(SqList &sqlist){
     printSqList(sqlist.data, sqlist.length);
     insert(sqlist, 7);
@@ -46,27 +47,13 @@ void test1(SqList &sqlist){
     printSqList(sqlist.data, sqlist.length);
 }
 
-/**
- * 例题 2 删除顺序表 L 中下标为 p(1≤p≤length)的元素，成功返回 1，否则返回 0，并将被删除元素的值赋值给 e。
- */
-int deleteByPosition(SqList &L, int p, int &e){
-    if(p>L.length || p<1){
-        return 0;
-    }
-    e = L.data[p];
-    for(int i=p; i<L.length; i++){
-        L.data[i] = L.data[i+1];
-    }
-    L.length--;
-    return 1;
-}
-
 void test2(SqList &sqlist){
     int e = 0;
     deleteByPosition(sqlist, 5, e);
     printSqList(sqlist.data, sqlist.length);
     cout << e << endl;
 }
+// ================= 测试 ================= //
 
 int main(){
     // 初始化结构体
