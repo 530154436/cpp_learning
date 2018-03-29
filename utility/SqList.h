@@ -52,7 +52,7 @@ int deleteByPosition(SqList &L, int p, int &e){
 void printSqList(char* name, SqList sqList){
     printf("顺序表 %s : [", name);
     for(int i=0; i<sqList.length; i++){
-        printf("%d ",sqList.data[i]);
+        printf(" %d ",sqList.data[i]);
     }
     printf("]\n");
 }
