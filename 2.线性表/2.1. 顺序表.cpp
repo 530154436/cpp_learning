@@ -38,19 +38,19 @@ void insert(SqList &L, int x){
 
 // ================= 测试 ================= //
 void test1(SqList &sqlist){
-    printSqList(sqlist.data, sqlist.length);
+    printSqList("插入前", sqlist);
     insert(sqlist, 7);
-    printSqList(sqlist.data, sqlist.length);
+    printSqList("插入7", sqlist);
     insert(sqlist, 16);
-    printSqList(sqlist.data, sqlist.length);
+    printSqList("插入16", sqlist);
     insert(sqlist, 20);
-    printSqList(sqlist.data, sqlist.length);
+    printSqList("插入20", sqlist);
 }
 
 void test2(SqList &sqlist){
     int e = 0;
     deleteByPosition(sqlist, 5, e);
-    printSqList(sqlist.data, sqlist.length);
+    printSqList("删除下标为5", sqlist);
     cout << e << endl;
 }
 // ================= 测试 ================= //
@@ -65,6 +65,6 @@ int main(){
     }
 
     test1(sqlist);
-    test2(sqlist);
+    // test2(sqlist);
 }
 

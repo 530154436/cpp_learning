@@ -111,14 +111,14 @@ int SearchAndDelete(LNode *&C,int x){
  * @param tmp
  * @param len
  */
-void printLinkedListH(LNode *a){
+void printLinkedListH(char* name, LNode *a){
     if(a==NULL){
         printf("单链表为空!!\n");
         return;
     }
     LNode *tmp;
     tmp = a->next;
-    printf("单链表: [");
+    printf("单链表 %s : [", name);
     while(tmp){
         printf(" %d ",tmp->data);
         tmp = tmp->next;

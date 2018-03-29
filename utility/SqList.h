@@ -1,8 +1,6 @@
 //
 // Created by 郑楚彬 on 2018/3/27.
 //
-
-#include <stdio.h>
 #include <iostream>
 using namespace std;
 
@@ -15,6 +13,21 @@ typedef struct SqList{
     int data[MAX];
     int length;
 } SqList;
+
+/**
+ * 创建初始顺序表
+ *
+ * @param sqList
+ * @param a
+ * @param len
+ */
+void createSqList(SqList &sqList, int a[], int len){
+    sqList.length = 0;
+    for(int i=0; i<len; i++){
+        sqList.data[i]=a[i];
+        sqList.length++;
+    }
+}
 
 /**
  * 例题 2 删除顺序表 L 中下标为 p(1≤p≤length)的元素，成功返回 1，否则返回 0，并将被删除元素的值赋值给 e。
@@ -36,14 +49,10 @@ int deleteByPosition(SqList &L, int p, int &e){
  * @param a
  * @param len
  */
-void printSqList(int *a, int len){
-    if(a==NULL){
-        printf("数组为空!!!");
-        return;
+void printSqList(char* name, SqList sqList){
+    printf("顺序表 %s : [", name);
+    for(int i=0; i<sqList.length; i++){
+        printf("%d ",sqList.data[i]);
     }
-    printf("数组: [");
-    for(int i=0; i<len-1; i++){
-        printf("%d ",a[i]);
-    }
-    printf("%d]\n", a[len-1]);
+    printf("]\n");
 }

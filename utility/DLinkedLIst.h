@@ -85,8 +85,8 @@ bool insertAfterNode(DLNode *&p, DLNode *&s){
     p->next = s;
 
     // p 不为最后一个元素
-    if(p->next != NULL)
-        p->next->prior = s;
+    if(s->next != NULL)
+        s->next->prior = s;  // s 不是 p
 
     return true;
 }
@@ -119,8 +119,7 @@ void printDLinkedListH(DLNode *a){
         printf("双链表为空!!\n");
         return;
     }
-    DLNode *tmp;
-    tmp = a->next;
+    DLNode *tmp = a->next;
     printf("双链表: [");
     while(tmp!=NULL){
         printf(" %d ",tmp->data);

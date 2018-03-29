@@ -60,6 +60,80 @@ CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct
 CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/linkedList.dir
+
+# All Build rule for target.
+CMakeFiles/linkedList.dir/all:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/depend
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target linkedList"
+.PHONY : CMakeFiles/linkedList.dir/all
+
+# Include target in all.
+all: CMakeFiles/linkedList.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/linkedList.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/linkedList.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/linkedList.dir/rule
+
+# Convenience name for target.
+linkedList: CMakeFiles/linkedList.dir/rule
+
+.PHONY : linkedList
+
+# clean rule for target.
+CMakeFiles/linkedList.dir/clean:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/clean
+.PHONY : CMakeFiles/linkedList.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/linkedList.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/linerExercise.dir
+
+# All Build rule for target.
+CMakeFiles/linerExercise.dir/all:
+	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/depend
+	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target linerExercise"
+.PHONY : CMakeFiles/linerExercise.dir/all
+
+# Include target in all.
+all: CMakeFiles/linerExercise.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/linerExercise.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/linerExercise.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/linerExercise.dir/rule
+
+# Convenience name for target.
+linerExercise: CMakeFiles/linerExercise.dir/rule
+
+.PHONY : linerExercise
+
+# clean rule for target.
+CMakeFiles/linerExercise.dir/clean:
+	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/clean
+.PHONY : CMakeFiles/linerExercise.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/linerExercise.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/dLinkedList.dir
 
 # All Build rule for target.
@@ -97,50 +171,13 @@ clean: CMakeFiles/dLinkedList.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/linkedList.dir
-
-# All Build rule for target.
-CMakeFiles/linkedList.dir/all:
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/depend
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target linkedList"
-.PHONY : CMakeFiles/linkedList.dir/all
-
-# Include target in all.
-all: CMakeFiles/linkedList.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/linkedList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/linkedList.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/linkedList.dir/rule
-
-# Convenience name for target.
-linkedList: CMakeFiles/linkedList.dir/rule
-
-.PHONY : linkedList
-
-# clean rule for target.
-CMakeFiles/linkedList.dir/clean:
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/clean
-.PHONY : CMakeFiles/linkedList.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/linkedList.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/sqList.dir
 
 # All Build rule for target.
 CMakeFiles/sqList.dir/all:
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/depend
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target sqList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target sqList"
 .PHONY : CMakeFiles/sqList.dir/all
 
 # Include target in all.

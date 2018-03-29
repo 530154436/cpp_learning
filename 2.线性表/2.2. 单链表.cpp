@@ -91,11 +91,11 @@ void test01(){
     createListR(A, a, 4);
     createListR(B, b, 5);
 
-    printLinkedListH(A);
-    printLinkedListH(B);
+    printLinkedListH("归并前-A", A);
+    printLinkedListH("归并前-B", B);
 
     mergeR(A, B, C);
-    printLinkedListH(C);
+    printLinkedListH("归并后-C", C);
 }
 
 void test02(){
@@ -106,11 +106,11 @@ void test02(){
     createListR(A, a, 4);
     createListR(B, b, 5);
 
-    printLinkedListH(A);
-    printLinkedListH(B);
+    printLinkedListH("归并前-A", A);
+    printLinkedListH("归并前-C", B);
 
     mergeF(A, B, D);
-    printLinkedListH(D);
+    printLinkedListH("归并后-D", D);
 
 }
 
@@ -119,9 +119,9 @@ void test03(){
     LNode *A, *B, *C, *D;
     int a[10] = {1,3,5,7};
     createListR(A, a, 4);
-    printLinkedListH(A);
+    printLinkedListH("删除前-A", A);
     SearchAndDelete(A, 5);
-    printLinkedListH(A);
+    printLinkedListH("删除后-A", A);
 
 }
 // =========== 测试 =========== //
