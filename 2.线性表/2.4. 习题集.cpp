@@ -1,12 +1,13 @@
 //
 // Created by 郑楚彬 on 2018/3/29.
 //
-#include "../utility/LinkedList.h"
-#include "../utility/DLinkedLIst.h"
-#include "../utility/SqList.h"
+#include "../utility/LinearTable/LinkedList.h"
+#include "../utility/LinearTable/DLinkedLIst.h"
+#include "../utility/LinearTable/SqList.h"
 
 /*
  * 习题分级
+ * ###### 难
  * #####  重要
  * #### 较重要
  */
@@ -293,27 +294,92 @@ void test07(){
  *     在前边讲过的算法基础中，提到过关与逆序的问题，那就是链表建立的头插法。
  */
 void reverseLNode(LNode *&L){
+    LNode *p, *q;
+    p = L->next;
+    L->next = NULL;
 
+    while(p!=NULL){
+        q = p->next;
+        p->next = L->next;
+        L->next = p;
+        p=q;
+    }
 }
 
-/**
+void test08(){
+    LNode *A;
+    int a[8] = { 4, 7, 9, 3, 20, 21, 4, 5};
+    createListR(A, a, 8);
+    printLinkedListH("A", A);
+    reverseLNode(A);
+    printLinkedListH("reverseLNode_A", A);
+}
+
+/** #### 较重要
+ *
  * 7.设计一个算法将一个头结点为 A 的单链表(其数据域为整数)分解成两个单链表 A和 B，使得 A 链表只含有
  *   原来链表中 data 域为奇数的结点，而 B 链表只含有原链表中 data域为偶数的结点，且保持原来相对顺序。
+ *
+ * 思路:
+ *     用指针 p 从头至尾扫描 A 链表，当发现结点 data 域为偶数的结点则取下，插入链表 B 中。
  */
+void split(LNode *&A, LNode *&B){
+    LNode *pre, *p, *tmp, *r;
+
+    pre = A;
+    p = pre->next;
+
+    B = (LNode *)malloc(sizeof(LNode *));
+    B->next = NULL;
+    r = B;
+
+    while(p!=NULL){
+        if(p->data %2 !=0) {
+            // 奇数节点pre和p向右移动
+            pre = p;
+            p = p->next;
+        }else{
+            // 将偶数节点断开，p 向右移动
+            pre->next = p->next;
+            tmp = p;
+            p = p->next;
+
+            // 尾插法，增加偶数节点
+            r->next = tmp;
+            tmp->next = NULL;
+            r = tmp;
+        }
+    }
+}
+
+void test09(){
+    LNode *A, *B;
+    int a[8] = { 4, 7, 9, 3, 20, 21, 4, 5};
+    createListR(A, a, 8);
+    printLinkedListH("A", A);
+    split(A, B);
+    printLinkedListH("split_A", A);
+    printLinkedListH("split_B", B);
+}
 
 /*============================================ 习题心选 ============================================*/
 
 /*============================================  思考题  ============================================*/
-/**
+/**  ###### 难
  * 1.有 N 个个位正整数存在 int 型数组 A[0......N-1]中，N 为已定义好的常量且 N≤9，数组 A[]的长度为 N，
  *   另给一个 int 型变量 i，要求只用上述变量(即 A[0]~A[n-1]与 i 这 N+1 个整型变量)写算法找出这 N 个整数中
  *   的最小者，并且要求不能破坏数组 A[]中的 数据。
  */
+int findMin(int a[], int N){
+}
 
-/**
+/**  #####  重要
  * 2.写一个函数，逆序打印单链表中的数据，假设指针 L 指向了单链表的开始结点。
  */
 /*============================================  思考题  ============================================*/
+void reprint(LNode *L){
+
+}
 
 int main(){
     // test01();
@@ -323,5 +389,7 @@ int main(){
     // test04();
     // test05();
     // test06();
-    test07();
+    // test07();
+    // test08();
+    test09();
 }

@@ -2,7 +2,7 @@
 // Created by 郑楚彬 on 2018/3/26.
 //
 #include <stdio.h>
-#include "../utility/SqList.h"
+#include "../utility/LinearTable/SqList.h"
 
 using namespace std;
 

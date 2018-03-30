@@ -1,7 +1,7 @@
 //
 // Created by 郑楚彬 on 2018/3/26.
 //
-#include "../utility/LinkedList.h"
+#include "../utility/LinearTable/LinkedList.h"
 
 /**
  * (尾插法)
