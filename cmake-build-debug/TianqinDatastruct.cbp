@@ -226,13 +226,13 @@
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp">
 			<Option target="linerExercise"/>
 		</Unit>
-		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/DLinkedLIst.h">
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h">
 			<Option target="dLinkedList"/>
 		</Unit>
-		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h">
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/LinkedList.h">
 			<Option target="linkedList"/>
 		</Unit>
-		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h">
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h">
 			<Option target="sqList"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/CMakeLists.txt">

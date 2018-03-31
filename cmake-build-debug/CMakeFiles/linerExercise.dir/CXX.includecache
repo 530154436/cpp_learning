@@ -7,22 +7,26 @@
 #IncludeRegexTransform: 
 
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp
-../utility/LinkedList.h
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h
-../utility/DLinkedLIst.h
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/DLinkedLIst.h
-../utility/SqList.h
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h
+../utility/LinearTable/LinkedList.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/LinkedList.h
+../utility/LinearTable/DLinkedLIst.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h
+../utility/LinearTable/SqList.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h
+string
+-
 
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/DLinkedLIst.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h
 iostream
 -
 
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/LinkedList.h
 iostream
 -
 
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h
 iostream
+-
+string
 -
 

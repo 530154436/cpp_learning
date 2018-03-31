@@ -3,6 +3,6 @@
 
 CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o
  /Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp
- /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/DLinkedLIst.h
- /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinkedList.h
- /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h
+ /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h
+ /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/LinkedList.h
+ /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h

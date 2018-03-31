@@ -2,6 +2,7 @@
 // Created by 郑楚彬 on 2018/3/27.
 //
 #include <iostream>
+#include <string>
 using namespace std;
 
 #define MAX 100
@@ -49,7 +50,7 @@ int deleteByPosition(SqList &L, int p, int &e){
  * @param a
  * @param len
  */
-void printSqList(char* name, SqList sqList){
+void printSqList(char * name, SqList sqList){
     printf("顺序表 %s : [", name);
     for(int i=0; i<sqList.length; i++){
         printf(" %d ",sqList.data[i]);
