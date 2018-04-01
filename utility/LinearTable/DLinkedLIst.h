@@ -2,6 +2,8 @@
 // Created by 郑楚彬 on 2018/3/28.
 //
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
 /**
@@ -43,30 +45,6 @@ void createDListR(DLNode *&L, int a[], int n){
 }
 
 /**
- * 查找结点
- *
- * 从第一个结点开始，边扫描边比较，若找到这样的结点，则返回结点指针，否则返回 NULL。
- *
- * @param L 链表
- * @param x 待查节点的值
- * @return
- */
-DLNode* findNode(DLNode *L, int x){
-    if(L==NULL){
-        return NULL;
-    }
-    DLNode *tmp = L->next;
-    while(tmp!=NULL){
-        if(tmp->data == x){
-            break;
-        }
-        tmp = tmp->next;
-    }
-    return tmp;  // 如果找到则 p 中内容是结点地址(循环因 break 结束)，
-                 // 没找到 p 中内容是 NULL(循环因 p 等于 NULL 而结束)
-}
-
-/**
  * 插入节点
  *
  * 在双链表中 p 所指的结点之后插入一个结点 s
@@ -104,11 +82,37 @@ int delAfterNode(DLNode *&p){
     DLNode *q = p->next;
     p->next = q->next;
     if(q->next != NULL)
-        printf(" %d\n ",q->next->next->data);
+        // 都正常 printf(" %d\n ",q->next->next->data);
         q->next->prior = p;
-        printf(" %d\n ",q->next->next->data);
+    // osx 环境下编译执行会变成地址(ubuntu正常)，不知道为啥
+    // -> printf(" %d\n ",q->next->next->data);
     free(q);
     return 1;
+}
+
+
+/**
+ * 查找结点
+ *
+ * 从第一个结点开始，边扫描边比较，若找到这样的结点，则返回结点指针，否则返回 NULL。
+ *
+ * @param L 链表
+ * @param x 待查节点的值
+ * @return
+ */
+DLNode* findNode(DLNode *L, int x){
+    if(L==NULL){
+        return NULL;
+    }
+    DLNode *tmp = L->next;
+    while(tmp!=NULL){
+        if(tmp->data == x){
+            break;
+        }
+        tmp = tmp->next;
+    }
+    return tmp;  // 如果找到则 p 中内容是结点地址(循环因 break 结束)，
+                 // 没找到 p 中内容是 NULL(循环因 p 等于 NULL 而结束)
 }
 
 /**

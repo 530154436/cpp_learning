@@ -11,6 +11,8 @@
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h
 
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h
-iostream
+stdio.h
+-
+stdlib.h
 -
 

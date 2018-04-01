@@ -587,7 +587,7 @@ void test15(){
  */
 int mostEle(int A[], int n){
     int main=A[0], count=1, i;
-
+    // 找出候选主元素
     for(i=1; i<n; i++){
         if(A[i] == main){
             count ++;
@@ -600,7 +600,7 @@ int mostEle(int A[], int n){
             }
         }
     }
-
+    // 确认真正的主元素
     if(count > 0){
         count = 0;
         for(i=0; i<n; i++){
@@ -609,7 +609,6 @@ int mostEle(int A[], int n){
             }
         }
     }
-
     if(count > n/2){
         return main;
     }else{

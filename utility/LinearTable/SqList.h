@@ -2,7 +2,8 @@
 // Created by 郑楚彬 on 2018/3/27.
 //
 #include <iostream>
-#include <string>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
 #define MAX 100

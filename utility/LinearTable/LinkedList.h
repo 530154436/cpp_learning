@@ -2,6 +2,8 @@
 // Created by 郑楚彬 on 2018/3/27.
 //
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
 /**
