@@ -9,10 +9,12 @@
 /Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp
 stdio.h
 -
-../utility/SqList.h
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h
+../utility/LinearTable/SqList.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h
 
-/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/SqList.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h
 iostream
+-
+string
 -
 

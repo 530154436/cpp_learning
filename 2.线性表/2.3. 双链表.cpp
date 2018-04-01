@@ -39,18 +39,13 @@ void test03(){
 
 void test04(){
     DLNode *L;
-    int a[4] = {1,3,5,7};
+    int a[10] = {1,3,5,7};
     createDListR(L, a, 4);
     printDLinkedListH(L);
 
     DLNode *p = L->next;
     printf("p: %d\n", p->data);
-
-    DLNode *s = L->next->next;
-    printf("s: %d\n", s->data);
-
-    delAfterNode(p, s);
-    printf("p 删除后继节点 s:\n");
+    delAfterNode(p);
     printDLinkedListH(L);
 }
 // =========== 测试 =========== //

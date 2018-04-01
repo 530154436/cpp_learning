@@ -20,27 +20,26 @@ typedef struct DLNode{
  * @param n 长度
  */
 void createDListR(DLNode *&L, int a[], int n){
-    DLNode *s, *r;
+    DLNode *s, *r, *tmp;
     int i;
 
     // 头结点
     L = (DLNode *)malloc(sizeof(DLNode *));
     L->next = NULL;
+    L->prior = NULL;
     r = L;
 
     for(i=0; i<n; i++){
         s = (DLNode *)malloc(sizeof(DLNode *));
         s->data = a[i];
-        // printf("%d\n", a[i]);
+        s->next = NULL;
 
         // 将 s 插入在 L 的尾部并且 r 指向 s，
         r->next = s;
         s->prior = r;
-        // printf(" %d ",s->data);
-
+        // r 指向尾节点
         r = s;
     }
-    r->next = NULL;
 }
 
 /**
@@ -98,15 +97,18 @@ bool insertAfterNode(DLNode *&p, DLNode *&s){
  * @param q
  * @return
  */
-bool delAfterNode(DLNode *&p, DLNode *&q){
-    if(p==NULL || q==NULL){
-        return false;
+int delAfterNode(DLNode *&p){
+    if(p==NULL || p->next==NULL){
+        return 0;
     }
+    DLNode *q = p->next;
     p->next = q->next;
     if(q->next != NULL)
+        printf(" %d\n ",q->next->next->data);
         q->next->prior = p;
+        printf(" %d\n ",q->next->next->data);
     free(q);
-    return true;
+    return 1;
 }
 
 /**

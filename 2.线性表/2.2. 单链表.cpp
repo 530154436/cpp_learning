@@ -82,6 +82,42 @@ void mergeF(LNode *A, LNode*B, LNode *&C){
     }
 }
 
+/**
+ * 查找链表 C(带头结点)中是否存在一个值为 x 的结点，存在就删除之并返回 1，否则返回 0。
+ *
+ * ps. 程序中之所以要使 p 指向所要删除结点的前驱结点而不是直接指向所
+ *     要删除结点本身，是因为要删除一个结点必须知道其前驱结点的位置
+ *
+ * @param C 链表指针
+ * @param x 值
+ * @return
+ */
+int SearchAndDelete(LNode *&C,int x){
+    if(C==NULL){
+        return 0;
+    }
+
+    // 查找部分
+    LNode *p, *q;
+    p = C;
+    while(p->next != NULL){
+        if(p->next->data == x){
+            break;
+        }
+        p = p->next;
+    }
+
+    // 删除部分
+    if(p->next == NULL){
+        return 0;
+    }else{
+        q = p->next;
+        p->next = p->next->next;
+        free(q);
+        return 1;
+    }
+}
+
 // =========== 测试 =========== //
 void test01(){
     LNode *A, *B, *C;
@@ -124,11 +160,58 @@ void test03(){
     printLinkedListH("删除后-A", A);
 
 }
+
+void test04(){
+    // 获取链表长度
+    LNode *A;
+    int a[10] = {1,3,5,7};
+    createListR(A, a, 4);
+    printLinkedListH("A", A);
+    int len = getLength(A);
+    printf("%d", len);
+}
+
+void test05(){
+    // 指定位置插入节点元素
+    LNode *A;
+    int a[10] = {1,3,5,7};
+    createListR(A, a, 4);
+    printLinkedListH("A", A);
+    insertLinkedList(A, 6, 10);
+    printLinkedListH("A", A);
+}
+
+void test06(){
+    // 删除指定位置的节点
+    LNode *A;
+    int a[10] = {1,3,5,7};
+    createListR(A, a, 4);
+    printLinkedListH("A", A);
+    int del=0;
+    delElem(A, 2, del);
+    printLinkedListH("A", A);
+    printf("%d", del);
+}
+
+void test07(){
+    // 获取指定位置处的节点元素
+    LNode *A;
+    int a[10] = {1,3,5,7};
+    createListR(A, a, 4);
+    printLinkedListH("A", A);
+    int data=0;
+    findElem(A, 4, data);
+    printf("%d", data);
+}
 // =========== 测试 =========== //
 
 int main(){
     // test01();
     // test02();
-    test03();
+    // test03();
+    // test04();
+    // test05();
+    // test06();
+    test07();
 }
 
