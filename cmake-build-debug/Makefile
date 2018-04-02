@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named linkedList
-
-# Build rule for target.
-linkedList: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 linkedList
-.PHONY : linkedList
-
-# fast build rule for target.
-linkedList/fast:
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
-.PHONY : linkedList/fast
-
-#=============================================================================
 # Target rules for targets named linerExercise
 
 # Build rule for target.
@@ -148,6 +135,32 @@ dLinkedList: cmake_check_build_system
 dLinkedList/fast:
 	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/build
 .PHONY : dLinkedList/fast
+
+#=============================================================================
+# Target rules for targets named linkedList
+
+# Build rule for target.
+linkedList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 linkedList
+.PHONY : linkedList
+
+# fast build rule for target.
+linkedList/fast:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
+.PHONY : linkedList/fast
+
+#=============================================================================
+# Target rules for targets named stackExercise
+
+# Build rule for target.
+stackExercise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stackExercise
+.PHONY : stackExercise
+
+# fast build rule for target.
+stackExercise/fast:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/build
+.PHONY : stackExercise/fast
 
 #=============================================================================
 # Target rules for targets named sqList
@@ -270,6 +283,33 @@ sqList/fast:
 	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.s
 .PHONY : 2.线性表/2.4._习题集.cpp.s
 
+3._栈和队列/3.1_栈的应用.o: 3._栈和队列/3.1_栈的应用.cpp.o
+
+.PHONY : 3._栈和队列/3.1_栈的应用.o
+
+# target to build an object file
+3._栈和队列/3.1_栈的应用.cpp.o:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈的应用.cpp.o
+.PHONY : 3._栈和队列/3.1_栈的应用.cpp.o
+
+3._栈和队列/3.1_栈的应用.i: 3._栈和队列/3.1_栈的应用.cpp.i
+
+.PHONY : 3._栈和队列/3.1_栈的应用.i
+
+# target to preprocess a source file
+3._栈和队列/3.1_栈的应用.cpp.i:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈的应用.cpp.i
+.PHONY : 3._栈和队列/3.1_栈的应用.cpp.i
+
+3._栈和队列/3.1_栈的应用.s: 3._栈和队列/3.1_栈的应用.cpp.s
+
+.PHONY : 3._栈和队列/3.1_栈的应用.s
+
+# target to generate assembly for a file
+3._栈和队列/3.1_栈的应用.cpp.s:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈的应用.cpp.s
+.PHONY : 3._栈和队列/3.1_栈的应用.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -277,10 +317,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... linkedList"
-	@echo "... edit_cache"
 	@echo "... linerExercise"
 	@echo "... dLinkedList"
+	@echo "... edit_cache"
+	@echo "... linkedList"
+	@echo "... stackExercise"
 	@echo "... sqList"
 	@echo "... 2.线性表/2.1._顺序表.o"
 	@echo "... 2.线性表/2.1._顺序表.i"
@@ -294,6 +335,9 @@ help:
 	@echo "... 2.线性表/2.4._习题集.o"
 	@echo "... 2.线性表/2.4._习题集.i"
 	@echo "... 2.线性表/2.4._习题集.s"
+	@echo "... 3._栈和队列/3.1_栈的应用.o"
+	@echo "... 3._栈和队列/3.1_栈的应用.i"
+	@echo "... 3._栈和队列/3.1_栈的应用.s"
 .PHONY : help
 
 
