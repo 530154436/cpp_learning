@@ -38,7 +38,7 @@ int match(char exp[], int n){
 int test01(){
     char exp[11] = {'*', '(', '(', '(', ')', ')', '+', '-', ')', '(', ')'};
     int result = match(exp, 11);
-    printArray("表达式", exp, 11);
+    printf("表达式 %s", exp);
     printf("%d\n", result);
 }
 
@@ -48,6 +48,14 @@ int test01(){
  * 思路:
  *     当遇到数值的时候入栈，当遇到运算符的时候，连续两次出栈，将两个出栈 元素结合运算符进行运算。
  *     将结果当成新遇到的数值入栈。如此往复，直到扫描到终止符 ‘\0’,此时栈底元素值即为表达式的值。
+ */
+
+/**
+ * 代数运算函数
+ * @param a
+ * @param Op
+ * @param b
+ * @return
  */
 int op(int a, char Op, int b){
     // 函数是运算函数，来完成算式a Op b的运算。
@@ -64,6 +72,13 @@ int op(int a, char Op, int b){
     }
 }
 
+/**
+ * 后缀表达式求值
+ * 从左向右扫描表达式
+ *
+ * @param exp
+ * @return
+ */
 int com(char exp[]){
     int i,a,b,c;
     // 定义栈
@@ -83,22 +98,166 @@ int com(char exp[]){
             c = op(a, operation, b);
             // 运算结果入栈
             stack[++top] = c;
-            printf("%d\n", c);
+        }
+    }
+    return stack[top];
+}
+
+/**
+ * 前缀表达式求值
+ * 从右向左扫描表达式
+ *
+ * @param exp
+ * @param len
+ * @return
+ */
+int com(char exp[], int len){
+    int i,a,b,c;
+    // 定义栈
+    int stack[Max]; int top=-1;
+    char operation;
+    // 从右向左扫描表达式
+    for(i=len-1; i>=0; i--){
+        if('0'<=exp[i] && exp[i]<='9'){
+            // 字符型和整形的转换，入栈
+            stack[++top] = exp[i] - '0';
+        }else{
+            // 取第第一个操作数(因为第一个操作数后入栈)
+            a = stack[top--];
+            operation = exp[i];
+            // 取第二个操作数。
+            b = stack[top--];
+            // 将两个操作数结合运算符 Op 进行运算，结果保存在 c 中
+            c = op(a, operation, b);
+            // 运算结果入栈
+            stack[++top] = c;
         }
     }
     return stack[top];
 }
 
 void test02(){
-    // 14
-    //char exp[20] = {'5', '1', '2', '+', '4', '*', '+', '3', '-', '\0'};
-    // 29
-    char exp[20] = {'3','4','+','5','*','6','-', '\0'};
+    // 5+((1+2)*4)−3 = 14
+    // (3+4)*5-6 = 29
+
+    // 后缀表达式
+    char exp[20] = {'5', '1', '2', '+', '4', '*', '+', '3', '-', '\0'};
+    // char exp[20] = {'3','4','+','5','*','6','-', '\0'};
     int result = com(exp);
     printf("%d\n", result);
+
+    // 前缀表达式
+    char exp1[20] = {'-', '+', '5', '*', '+', '1', '2', '4', '3'};
+    // char exp1[20] = {'-', '*', '+', '3', '4', '5', '6'};
+    int result1 = com(exp1, 9);
+    printf("%d\n", result1);
+}
+
+/**
+ * 中缀表达式转成后缀表达式
+ */
+
+/**
+ * 求操作符的优先级
+ * @param c     操作符
+ * @param flag  1: 在栈中， 0: 不在栈中
+ * @return
+ */
+int getPrecedence(char c, int flag){
+    switch(c){
+        case '+':
+        case '-':
+            return 1;
+        case '*':
+        case '/':
+            return 2;
+        case '(':
+            // 左括号比较特殊，在栈外优先级高，在栈顶优先级低
+            if(flag==0){
+                return 3;
+            }else{
+                return 0;
+            }
+        default:
+            printf("ERROR: Invalid character.");
+            return -1;
+    }
+}
+
+/**
+ * 判断是否为操作符
+ * @param c
+ * @return
+ */
+int isOperator(char c){
+    if(c=='+' || c=='-' || c=='*' || c=='/' || c=='(' || c==')'){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+char* infix2Postfix(char *ch){
+    // 输出栈
+    char output[Max];
+    int outputTop = -1;
+
+    // 操作符栈
+    char operators[Max];
+    int top = -1;
+
+    char c;
+    while((c=*ch) != '\0'){
+        // 操作数，直接输出
+        if(!isOperator(c)){
+            output[++outputTop] = c;
+            ch++;
+        // 操作符
+        }else{
+            // 栈为空，遇到运算符，入栈
+            if(top == -1){
+                operators[++top] = c;
+                ch++;
+            } else{
+                if(c == ')'){
+                    // ﻿遇到右括号，执行出栈操作，并将出栈的元素输出，直到弹出栈的是左括号，左括号不输出
+                    while(top!=-1 && operators[top]!='('){
+                        output[++outputTop] = operators[top--];
+                    }
+                    // '(' 出栈，但不输出
+                    operators[top--];
+                    ch++;
+                } else{
+                    char outPrecedence = getPrecedence(c, 0);
+                    // ﻿栈不为空，并且栈顶元素大于或等于该运算符则弹出
+                    while(top!=-1 && getPrecedence(operators[top], 1) >= outPrecedence){
+                        output[++outputTop] = operators[top--];
+                    }
+                    operators[++top] = c;
+                    ch++;
+                }
+            }
+        }
+    }
+    // 将栈中剩余的元素弹出
+    while(top!=-1){
+        output[++outputTop] = operators[top--];
+    }
+    output[++outputTop] = '\0';
+    return output;
+}
+
+void test03(){
+    // char* exp = "5+((1+2)*4)-3";
+    // char* exp = "(3+4)*5-6";
+    char* exp = "1+((2+3)*4)-5";
+    char* output = infix2Postfix(exp);
+    printf("中缀表达式 %s\n", exp);
+    printf("后缀表达式 %s\n", output);
 }
 
 int main(){
     // test01();
-    test02();
+    // test02();
+    test03();
 }

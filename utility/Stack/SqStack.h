@@ -73,17 +73,3 @@ int popStack(SqStack &st, int &x){
     st.top--;
     return 1;
 }
-
-/**
- * 打印字符数组
- * @param name
- * @param a
- * @param n
- */
-void printArray(char *name, char a[], int n){
-    printf("%s: [", name);
-    for(int i=0; i<n; i++){
-        printf(" %c ", a[i]);
-    }
-    printf("]\n");
-}
