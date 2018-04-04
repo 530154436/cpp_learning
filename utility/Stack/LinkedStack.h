@@ -23,6 +23,10 @@ void initLStackNode(LStackNode *&lst){
     lst->next = NULL;
 }
 
+void initLStackNode1(LStackNode *&lst){ // 不带头结点
+    lst = NULL;
+}
+
 /**
  * 判断栈空算法
  *
@@ -34,6 +38,14 @@ int isLStackEmpty(LStackNode *&lst){
         return 0;
     }else{
         return 1;
+    }
+}
+
+int isLStackEmpty1(LStackNode *&lst){ // 不带头结点
+    if(lst == NULL){
+        return 1;
+    }else{
+        return 0;
     }
 }
 
@@ -54,6 +66,16 @@ int pushLStack(LStackNode *&lst, int x){
     // 链表的头插法
     p->next = lst->next;
     lst->next = p;
+}
+
+int pushLStack1(LStackNode *&lst, int x){   // 不带头结点
+    LStackNode *p;
+    p = (LStackNode *) malloc(sizeof(LStackNode *));
+    p->next = NULL;
+    p->data = x;
+
+    p->next = lst;
+    lst = p;
 }
 
 /**
@@ -77,4 +99,15 @@ int popLStack(LStackNode *&lst, int &x){
     return 1;
 }
 
+int popLStack1(LStackNode *&lst, int &x){
+    if(lst == NULL){
+        return 0;
+    }
+    // 单链表的删除操作
+    LStackNode *p = lst;
+    lst = p->next;
+    x = p->data;
+    free(p);
+    return 1;
+}
 
