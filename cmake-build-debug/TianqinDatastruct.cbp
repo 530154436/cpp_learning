@@ -213,6 +213,50 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="queueExercise">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/queueExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 queueExercise"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queueExercise/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/queueExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 queueExercise/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="sqList">
 				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/sqList" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
@@ -270,7 +314,7 @@
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp">
 			<Option target="linerExercise"/>
 		</Unit>
-		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈的应用.cpp">
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp">
 			<Option target="stackExercise"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h">
@@ -282,7 +326,20 @@
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/SqList.h">
 			<Option target="sqList"/>
 		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Printer.h">
+			<Option target="dLinkedList"/>
+			<Option target="stackExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Queue/LinkedQueue.h">
+			<Option target="queueExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Queue/SqQueue.h">
+			<Option target="queueExercise"/>
+		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Stack/LinkedStack.h">
+			<Option target="stackExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Stack/SharedStack.h">
 			<Option target="stackExercise"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Stack/SqStack.h">

@@ -53,5 +53,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/dLinkedList.dir/DependInfo.cmake"
   "CMakeFiles/linkedList.dir/DependInfo.cmake"
   "CMakeFiles/stackExercise.dir/DependInfo.cmake"
+  "CMakeFiles/queueExercise.dir/DependInfo.cmake"
   "CMakeFiles/sqList.dir/DependInfo.cmake"
   )
