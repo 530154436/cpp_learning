@@ -208,43 +208,6 @@ clean: CMakeFiles/stackExercise.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/queueExercise.dir
-
-# All Build rule for target.
-CMakeFiles/queueExercise.dir/all:
-	$(MAKE) -f CMakeFiles/queueExercise.dir/build.make CMakeFiles/queueExercise.dir/depend
-	$(MAKE) -f CMakeFiles/queueExercise.dir/build.make CMakeFiles/queueExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num= "Built target queueExercise"
-.PHONY : CMakeFiles/queueExercise.dir/all
-
-# Include target in all.
-all: CMakeFiles/queueExercise.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/queueExercise.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/queueExercise.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/queueExercise.dir/rule
-
-# Convenience name for target.
-queueExercise: CMakeFiles/queueExercise.dir/rule
-
-.PHONY : queueExercise
-
-# clean rule for target.
-CMakeFiles/queueExercise.dir/clean:
-	$(MAKE) -f CMakeFiles/queueExercise.dir/build.make CMakeFiles/queueExercise.dir/clean
-.PHONY : CMakeFiles/queueExercise.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/queueExercise.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/sqList.dir
 
 # All Build rule for target.

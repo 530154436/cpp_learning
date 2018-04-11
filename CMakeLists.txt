@@ -10,4 +10,3 @@ add_executable(dLinkedList "2.线性表/2.3. 双链表.cpp" utility/LinearTable/
 add_executable(linerExercise "2.线性表/2.4. 习题集.cpp")
 
 add_executable(stackExercise "3. 栈和队列/3.1 栈和队列的应用.cpp" utility/Stack/SqStack.h utility/Stack/LinkedStack.h utility/Printer.h utility/Stack/SharedStack.h)
-add_executable(queueExercise utility/Queue/SqQueue.h utility/Queue/LinkedQueue.h)

@@ -39,6 +39,19 @@ int isStackEmpty(SqStack &st){
 }
 
 /**
+ * 判断栈满
+ * @param st
+ * @return
+ */
+int isStackFull(SqStack &st){
+    if(st.top == Max-1){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+/**
  * 进栈算法
  *
  * @param st

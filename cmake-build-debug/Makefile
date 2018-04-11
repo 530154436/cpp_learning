@@ -163,19 +163,6 @@ stackExercise/fast:
 .PHONY : stackExercise/fast
 
 #=============================================================================
-# Target rules for targets named queueExercise
-
-# Build rule for target.
-queueExercise: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 queueExercise
-.PHONY : queueExercise
-
-# fast build rule for target.
-queueExercise/fast:
-	$(MAKE) -f CMakeFiles/queueExercise.dir/build.make CMakeFiles/queueExercise.dir/build
-.PHONY : queueExercise/fast
-
-#=============================================================================
 # Target rules for targets named sqList
 
 # Build rule for target.
@@ -335,7 +322,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... linkedList"
 	@echo "... stackExercise"
-	@echo "... queueExercise"
 	@echo "... sqList"
 	@echo "... 2.线性表/2.1._顺序表.o"
 	@echo "... 2.线性表/2.1._顺序表.i"

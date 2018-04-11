@@ -1,6 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/zhengchubin/CLionProjects/TianqinDatastruct
 -- Configuring done
-CMake Error: CMake can not determine linker language for target: queueExercise
-CMake Error: Cannot determine link language for target "queueExercise".
 -- Generating done
 -- Build files have been written to: /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug

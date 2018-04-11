@@ -39,6 +39,49 @@ void initShareStack(ShareStack &ss){
 }
 
 /**
+ * 判断栈空
+ *
+ * @param ss
+ * @param flag
+ * @return
+ */
+int isSStackEmpty(shareStack &ss, int flag){
+    // S0 为空
+    if(flag == 0){
+        if(ss.top0 == -1){
+            return 1;
+        }else{
+            return 0;
+        }
+    }else if(flag == 1){
+        // S1 为空
+        if(ss.top1 == MAX){
+            return 1;
+        }else{
+            return 0;
+        }
+    }else{
+        // 栈编号输入有误返回-1。
+        return -1;
+    }
+}
+
+/**
+ * 判断栈满
+ *
+ * @param ss
+ * @return
+ */
+int isSStackFull(shareStack &ss){
+    // 栈满
+    if(ss.top0+1 >= ss.top1){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+/**
  * 入栈操作
  *
  * @param ss
@@ -101,7 +144,7 @@ void printSharedStack(ShareStack ss){
         printf(" %d ", ss.data[i]);
     }
     for(int i=ss.top0+1; i<ss.top1; i++){
-        printf(" %d ", 0);
+        printf(" %s ", "NULL");
     }
     for(int i=ss.top1; i<MAX; i++){
         printf(" %d ", ss.data[i]);
@@ -116,9 +159,9 @@ void test04(){
     printSharedStack(ss);
 
     pushShareStack(ss, 0, 1);
-    pushShareStack(ss, 0, 1);
-    pushShareStack(ss, 0, 1);
-    pushShareStack(ss, 0, 1);
+    pushShareStack(ss, 0, 2);
+    pushShareStack(ss, 0, 3);
+    pushShareStack(ss, 0, 4);
     printSharedStack(ss);
 
     pushShareStack(ss, 0, 1);

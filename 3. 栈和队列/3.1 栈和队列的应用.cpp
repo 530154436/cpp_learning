@@ -565,6 +565,68 @@ void test06(){
     char ch[100]={'1', '2', '3','4'};
     perm2(ch, 0, 4);
 }
+
+/**
+ * 计算卡特兰数
+ */
+int countCatalan(int n){
+    if(n==0 || n==1){
+        return 1;
+    }
+    // 必须初始化
+    int sum=0;
+    for(int i=0; i<n; i++){
+        sum += countCatalan(i) * countCatalan(n-1-i);
+    }
+    return sum;
+}
+
+void test07(){
+    for(int i=0; i<10; i++){
+        cout<< countCatalan(i)<<endl;
+    }
+}
+
+/*
+  判读是否为合法出栈序列
+
+【思路】借用一个辅助的栈，遍历压栈顺序，先将第一个放入栈中，这里是1，然后判断栈顶元素是不是出栈顺序的第一个元素，
+      若不是则继续压栈，直到相等以后开始出栈，出栈一个元素，则将出栈顺序向后移动一位，直到不相等，这样循环等压栈顺序
+      遍历完成，如果辅助栈还不为空，说明弹出序列不是该栈的弹出顺序。
+ */
+/**
+ *
+ * @param input  入栈序列
+ * @param output 出栈序列
+ * @param n      元素个数
+ * @return
+ */
+int checkPopSequence(int* input, int* output, int n){
+    int stack[n];
+    int top = -1;
+    int outputIndex = 0;
+    for(int i=0; i<n; i++){
+        stack[++top] = input[i];
+        // 辅助栈不为空，且栈顶元素与输出序列一致
+        while(top!=-1 && stack[top]==output[outputIndex]){
+            top--;
+            outputIndex++;
+        }
+    }
+    if(top == -1){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+void test08(){
+    int input[5] = {1,2,3,4,5};
+    int output[5] = {4,5,3,2,1};
+    int error[5] = {4,3,5,1,2};
+    cout << checkPopSequence(input, output, 5)<<endl;
+    cout << checkPopSequence(input, error, 5)<<endl;
+}
 /*=============================  思考题  =============================*/
 
 
@@ -574,5 +636,7 @@ int main(){
     // test03();
     // test04();
     // test05();
-    test06();
+    // test06();
+    // test07();
+    test08();
 }
