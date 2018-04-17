@@ -309,17 +309,17 @@ int deQueue(LNode *&rear, int &x){
  *   (1) 写出循环队列的类型定义;
  *   (2) 写出“从队尾删除”和“从队头插入”的算法。
  */
-typedef struct CycQueueNode{
+typedef struct deque{
     int data[MAX];
     int front;
     int rear;
-}CycQueueNode;
+}deque;
 
 
 /*
  *  算法实现“从队头插入”元素 x。
  */
-int enCycQueue(CycQueueNode &cyc, int x){
+int enCycQueue(deque &cyc, int x){
     // 判断队满
     if(cyc.rear == (cyc.front-1+MAX) % MAX){
         return 0;
@@ -332,7 +332,7 @@ int enCycQueue(CycQueueNode &cyc, int x){
 /*
  * 算法实现“从队尾删除”，若删除成功用 x 接纳删除元素，返回 1，否则返回 0。
  */
-int deQueue(CycQueueNode &cyc, int &x){
+int deQueue(deque &cyc, int &x){
     // 判断队空
     if(cyc.front == cyc.rear){
         return 0;

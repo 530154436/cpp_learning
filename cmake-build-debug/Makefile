@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named biTreeExercise
+
+# Build rule for target.
+biTreeExercise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 biTreeExercise
+.PHONY : biTreeExercise
+
+# fast build rule for target.
+biTreeExercise/fast:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/build
+.PHONY : biTreeExercise/fast
+
+#=============================================================================
 # Target rules for targets named linerExercise
 
 # Build rule for target.
@@ -310,6 +323,36 @@ sqList/fast:
 	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s
 .PHONY : 3._栈和队列/3.1_栈和队列的应用.cpp.s
 
+6._树和二叉树/6.1_二叉树.o: 6._树和二叉树/6.1_二叉树.cpp.o
+
+.PHONY : 6._树和二叉树/6.1_二叉树.o
+
+# target to build an object file
+6._树和二叉树/6.1_二叉树.cpp.o:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.o
+.PHONY : 6._树和二叉树/6.1_二叉树.cpp.o
+
+6._树和二叉树/6.1_二叉树.i: 6._树和二叉树/6.1_二叉树.cpp.i
+
+.PHONY : 6._树和二叉树/6.1_二叉树.i
+
+# target to preprocess a source file
+6._树和二叉树/6.1_二叉树.cpp.i:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.i
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.i
+.PHONY : 6._树和二叉树/6.1_二叉树.cpp.i
+
+6._树和二叉树/6.1_二叉树.s: 6._树和二叉树/6.1_二叉树.cpp.s
+
+.PHONY : 6._树和二叉树/6.1_二叉树.s
+
+# target to generate assembly for a file
+6._树和二叉树/6.1_二叉树.cpp.s:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.s
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.s
+.PHONY : 6._树和二叉树/6.1_二叉树.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -317,6 +360,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... biTreeExercise"
 	@echo "... linerExercise"
 	@echo "... dLinkedList"
 	@echo "... edit_cache"
@@ -338,6 +382,9 @@ help:
 	@echo "... 3._栈和队列/3.1_栈和队列的应用.o"
 	@echo "... 3._栈和队列/3.1_栈和队列的应用.i"
 	@echo "... 3._栈和队列/3.1_栈和队列的应用.s"
+	@echo "... 6._树和二叉树/6.1_二叉树.o"
+	@echo "... 6._树和二叉树/6.1_二叉树.i"
+	@echo "... 6._树和二叉树/6.1_二叉树.s"
 .PHONY : help
 
 

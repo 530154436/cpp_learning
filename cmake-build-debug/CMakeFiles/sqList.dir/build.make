@@ -60,15 +60,15 @@ include CMakeFiles/sqList.dir/flags.make
 CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o: CMakeFiles/sqList.dir/flags.make
 CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o: ../2.线性表/2.1.\ 顺序表.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp"
+	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp"
 
 CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp" > CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i
+	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp" > CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i
 
 CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp" -o CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s
+	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp" -o CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s
 
 CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.requires:
 

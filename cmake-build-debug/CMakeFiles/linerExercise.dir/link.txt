@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o  -o linerExercise 
+/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o  -o linerExercise 

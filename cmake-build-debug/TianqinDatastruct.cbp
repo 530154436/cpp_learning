@@ -27,6 +27,56 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="biTreeExercise">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/biTreeExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 biTreeExercise"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="biTreeExercise/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/biTreeExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 biTreeExercise/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="linerExercise">
 				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/linerExercise" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
@@ -34,10 +84,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -56,10 +109,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -78,10 +134,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -100,10 +159,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -132,10 +194,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -154,10 +219,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -176,10 +244,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -198,10 +269,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -220,10 +294,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -242,10 +319,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
+					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
@@ -273,6 +353,10 @@
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp">
 			<Option target="stackExercise"/>
 		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp">
+			<Option target="biTreeExercise"/>
+			<Option target="dLinkedList"/>
+		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h">
 			<Option target="dLinkedList"/>
 		</Unit>
@@ -286,6 +370,12 @@
 			<Option target="dLinkedList"/>
 			<Option target="stackExercise"/>
 		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Queue/LinkedQueue.h">
+			<Option target="stackExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Queue/SqQueue.h">
+			<Option target="stackExercise"/>
+		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Stack/LinkedStack.h">
 			<Option target="stackExercise"/>
 		</Unit>
@@ -294,6 +384,9 @@
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Stack/SqStack.h">
 			<Option target="stackExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Tree/BiTree.h">
+			<Option target="dLinkedList"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

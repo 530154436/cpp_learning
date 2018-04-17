@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o  -o stackExercise 
+/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o  -o stackExercise 

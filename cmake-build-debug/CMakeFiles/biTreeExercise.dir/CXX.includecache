@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp
+../utility/Tree/BiTree.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Tree/BiTree.h
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Tree/BiTree.h
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+

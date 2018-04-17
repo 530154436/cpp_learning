@@ -11,8 +11,8 @@ using namespace std;
  */
 typedef struct DLNode{
     int data;
-    struct DLNode *next;
-    struct DLNode *prior;
+    DLNode *next;
+    DLNode *prior;
 } DLNode;
 
 /**
