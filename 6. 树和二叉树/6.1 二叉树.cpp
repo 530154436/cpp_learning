@@ -113,8 +113,8 @@ int maxNode(BiTNode *p){
     if(p != NULL){
         // 第一个节点进队
         rear++;
-        queue[rear].p = p;
-        queue[rear].lno = 1;
+        queue[rear].p = p;     // 根节点进队
+        queue[rear].lno = 1;   // 根节点层数为1
 
         while(front != rear){
             // 节点出队时保存节点所在的层数
