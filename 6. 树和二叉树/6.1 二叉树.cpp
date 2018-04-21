@@ -51,7 +51,7 @@ int test02(BiTNode *tree){
 /*
  * 2. 写一个算法求一棵二叉树的深度，二叉树以二叉链表为存储方式
  */
-int test03(){
+void test03(){
     BiTNode *root;
     char *eles = (char *)"ab#d##c#e##";
     init(root, eles);
@@ -62,7 +62,7 @@ int test03(){
 /*
  * 3. 查找值域等于key的节点
  */
-int test04(){
+void test04(){
     BiTNode *root, *tmp;
     char *eles = (char *)"ab#d##c#e##";
     init(root, eles);
@@ -88,7 +88,7 @@ void findKth(BiTNode *bt, int k){
     }
 }
 
-int test05(){
+void test05(){
     BiTNode *root, *tmp;
     char *eles = (char *)"ab#d##c#e##";
     init(root, eles);
@@ -160,7 +160,7 @@ int maxNode(BiTNode *p){
     }
 }
 
-int test06(){
+void test06(){
     BiTNode *root, *tmp;
     char *eles = (char *)"ab#d##cr##e##";
     init(root, eles);
@@ -169,10 +169,30 @@ int test06(){
     cout << max << endl;
 }
 
+/*
+ * 二叉树非递归遍历测试
+ */
+void test07(){
+    BiTNode *root, *tmp;
+    char *eles = (char *)"123##5##4##";
+    init(root, eles);
+
+    cout << "非递归先序遍历:" << endl;
+    preorderNonRecursion(root);
+
+    cout << endl << "非递归中序遍历:" << endl;
+    inorderNonRecursion(root);
+
+    cout << endl << "非递归后序遍历:" << endl;
+    postorderNonRecursion(root);
+}
+
+
 int main(){
     // test01();
     // test03();
     // test04();
     // test05();
-    test06();
+    // test06();
+    test07();
 }

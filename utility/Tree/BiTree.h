@@ -26,13 +26,18 @@ typedef struct BiTNode{
  */
 void init(BiTNode *&root, char* &elements){
     char c = *elements;
-    if(c == '\0' || '#' == c){
+    if(c == '\0'){
+        return;
+    }
+
+    if('#' == c){
         root = NULL;
         elements++;
         return;
     }else{
         root = (BiTNode *) malloc(sizeof(BiTNode *));
         root->data = c;
+
         cout << *elements << endl;
         elements++;
         init(root->lchild, elements);
@@ -43,6 +48,10 @@ void init(BiTNode *&root, char* &elements){
 /**
  * 先序遍历
  */
+/*
+ * 递归形式
+ * @param bt
+ */
 void preorder(BiTNode *&bt){
     if(bt == NULL){
         return;
@@ -50,6 +59,36 @@ void preorder(BiTNode *&bt){
     cout << bt->data << ' ';
     preorder(bt->lchild);
     preorder(bt->rchild);
+}
+
+/*
+ * 非递归形式
+ * @param bt
+ */
+void preorderNonRecursion(BiTNode *&bt){
+    if(bt != NULL){
+        // 定义栈
+        int top = -1;
+        BiTNode* stack[Max];
+
+        // 根节点入栈
+        stack[++top] = bt;
+        BiTNode *q=NULL;
+
+        while(top != -1){
+            q = stack[top--];
+            cout << q->data << '\t';
+
+            // 先入栈后出，与正常遍历顺序相反
+            if(q->rchild != NULL){
+                stack[++top] = q->rchild;
+            }
+
+            if(q->lchild != NULL){
+                stack[++top] = q->lchild;
+            }
+        }
+    }
 }
 
 /**
@@ -65,6 +104,36 @@ void inorder(BiTNode *&bt){
     inorder(bt->rchild);
 }
 
+/*
+ * 非递归形式
+ * @param bt
+ */
+void inorderNonRecursion(BiTNode *&bt){
+    if(bt != NULL){
+        BiTNode* stack[Max];
+        int top = -1;
+        BiTNode* p=bt;
+
+        // 有可能出现栈空但遍历还没有结束的情况
+        while(top!=-1 || p!=NULL){
+
+            // 左子树不为空，则入栈
+            while(p!=NULL){
+                stack[++top] = p;
+                p = p->lchild;
+            }
+
+            // 栈不为空出栈
+            if(top != -1){
+                p = stack[top--];
+                cout << p->data << '\t';
+                p = p->rchild;
+            }
+        }
+    }
+}
+
+
 /**
  * 后序遍历
  * @param bt
@@ -76,6 +145,43 @@ void postorder(BiTNode *&bt){
     inorder(bt->lchild);
     inorder(bt->rchild);
     cout << bt->data << ' ';
+}
+
+/*
+ * 逆序后序遍历序列 = 先序遍历过程中树的左右子树遍历顺序交换所得的结果
+ *
+ * @param bt
+ */
+void postorderNonRecursion(BiTNode *&bt){
+    if(bt != NULL){
+        BiTNode* stack1[Max];
+        int top1 = -1;
+
+        BiTNode* stack2[Max];
+        int top2 = -1;
+
+        BiTNode* p=NULL;
+        stack1[++top1] = bt;
+        while(top1 != NULL){
+            p = stack1[top1--];
+            stack2[++top2] = p;
+
+            // 与先序遍历相反
+            if(p->lchild != NULL){
+                stack1[++top1] = p->lchild;
+            }
+
+            if(p->rchild != NULL){
+                stack1[++top1] = p->rchild;
+            }
+        }
+
+        // 输出最终结果
+        while(top2 != -1){
+            p = stack2[top2--];
+            cout << p->data << '\t';
+        }
+    }
 }
 
 /*
