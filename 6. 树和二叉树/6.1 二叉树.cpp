@@ -71,8 +71,109 @@ int test04(){
     cout<< tmp->data << endl;
 }
 
+/*
+ * 4. 求先序遍历序列中第k(0≤k≤二叉树中结点个数)个结点的值。
+ */
+int N=0; // 定义全局变量用于计数
+void findKth(BiTNode *bt, int k){
+    if(bt != NULL){
+        // 第n个节点
+        N++;
+        if(N == k){
+            cout << bt->data << endl;
+            return;
+        }
+        findKth(bt->lchild, k);
+        findKth(bt->rchild, k);
+    }
+}
+
+int test05(){
+    BiTNode *root, *tmp;
+    char *eles = (char *)"ab#d##c#e##";
+    init(root, eles);
+
+    findKth(root, 4);
+}
+
+/*
+ * 5. 假设二叉树采用二叉链表存储结构存储，设计一个算法，求出该二叉树的宽度
+ *    (具有节点数最多的那一层上的节点个数)。
+ */
+typedef struct{
+    BiTNode *p;
+    int lno;
+}St;
+
+int maxNode(BiTNode *p){
+    St queue[Max];
+    int front=0, rear=0, LNO=0;
+    BiTNode *q;
+
+    if(p != NULL){
+        // 第一个节点进队
+        rear++;
+        queue[rear].p = p;
+        queue[rear].lno = 1;
+
+        while(front != rear){
+            // 节点出队时保存节点所在的层数
+            front++;
+            LNO = queue[front].lno;
+            q = queue[front].p;
+
+            if(q->lchild != NULL){
+                // 左子树不为空，行数+1，并进队
+                LNO++;
+                rear++;
+                queue[rear].p = q->lchild;
+                queue[rear].lno = LNO+1;
+            }
+
+            if(q->rchild != NULL){
+                // 右子树不为空，行数+1，并进队
+                LNO++;
+                rear++;
+                queue[rear].p = q->rchild;
+                queue[rear].lno = LNO+1;
+            }
+        }
+
+        // 保留最大节点数
+        int max=0;
+        int i,j,n;
+
+        // 按层数遍历队列
+        for(j=1; j<=LNO; j++){
+            n = 0;
+            for(i=1; i<=rear; i++){
+                // 统计每层节点数
+                if(queue[i].lno == j){
+                    n++;
+                }
+                if(n > max){
+                    max = n;
+                }
+            }
+        }
+    }else{
+        return 0; // 空树直接返回0
+    }
+}
+
+int test06(){
+    BiTNode *root, *tmp;
+    char *eles = (char *)"ab#d##c#e##";
+    init(root, eles);
+
+    int max = maxNode(root);
+    cout << max << endl;
+}
+
 int main(){
     // test01();
     // test03();
-    test04();
+    // test04();
+    // test05();
+    test06();
 }

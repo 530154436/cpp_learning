@@ -60,15 +60,15 @@ include CMakeFiles/biTreeExercise.dir/flags.make
 CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o: CMakeFiles/biTreeExercise.dir/flags.make
 CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o: ../6.\ 树和二叉树/6.1\ 二叉树.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp"
 
 CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.i"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp" > CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp" > CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.i
 
 CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.s"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp" -o CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp" -o CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.s
 
 CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o.requires:
 

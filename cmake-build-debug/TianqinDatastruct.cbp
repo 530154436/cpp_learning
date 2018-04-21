@@ -34,14 +34,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -59,14 +55,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -84,14 +76,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -109,14 +97,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -134,14 +118,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -159,14 +139,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -194,14 +170,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -219,14 +191,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -244,14 +212,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -269,14 +233,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -294,14 +254,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -319,14 +275,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/x86_64-apple-darwin16.7.0"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/../../../../../../include/c++/4.9.4/backward"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/include"/>
-					<Add directory="/usr/local/Cellar/gcc@4.9/4.9.4_1/lib/gcc/4.9/gcc/x86_64-apple-darwin16.7.0/4.9.4/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>

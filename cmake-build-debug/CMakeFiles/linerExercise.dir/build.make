@@ -60,15 +60,15 @@ include CMakeFiles/linerExercise.dir/flags.make
 CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o: CMakeFiles/linerExercise.dir/flags.make
 CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o: ../2.线性表/2.4.\ 习题集.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp"
 
 CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.i"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp" > CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp" > CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.i
 
 CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.s"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp" -o CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp" -o CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.s
 
 CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o.requires:
 

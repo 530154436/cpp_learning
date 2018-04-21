@@ -60,15 +60,15 @@ include CMakeFiles/stackExercise.dir/flags.make
 CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o: CMakeFiles/stackExercise.dir/flags.make
 CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o: ../3.\ 栈和队列/3.1\ 栈和队列的应用.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp"
 
 CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp" > CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp" > CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i
 
 CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s"
-	/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/g++-4.9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp" -o CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp" -o CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s
 
 CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires:
 

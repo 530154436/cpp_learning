@@ -6,6 +6,8 @@
 #include <stdlib.h>
 using namespace std;
 
+#define Max 100
+
 /**
  * 二叉链表节点类型定义
  */
@@ -74,6 +76,41 @@ void postorder(BiTNode *&bt){
     inorder(bt->lchild);
     inorder(bt->rchild);
     cout << bt->data << ' ';
+}
+
+/*
+ * 层次遍历
+ */
+void level(BiTNode *p){
+    if(p == NULL){
+        return;
+    }
+    // 循环队列
+    BiTNode* queue[Max];
+    int front=0, rear=0;
+    BiTNode* q;
+
+    // 根节点进队
+    rear = (rear+1)%Max;
+    queue[rear] = p;
+
+    // 队列不空时循环
+    while(front != rear){
+        // 出队
+        front = (front + 1) % Max;
+        q = queue[front];
+        cout << q->data << '\t';
+
+        if(p->lchild != NULL){
+            rear = (rear+1)%Max;
+            queue[rear] = p->lchild;
+        }
+
+        if(p->rchild != NULL){
+            rear = (rear+1)%Max;
+            queue[rear] = p->rchild;
+        }
+    }
 }
 
 /**
