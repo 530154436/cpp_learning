@@ -124,7 +124,6 @@ int maxNode(BiTNode *p){
 
             if(q->lchild != NULL){
                 // 左子树不为空，行数+1，并进队
-                LNO++;
                 rear++;
                 queue[rear].p = q->lchild;
                 queue[rear].lno = LNO+1;
@@ -132,7 +131,6 @@ int maxNode(BiTNode *p){
 
             if(q->rchild != NULL){
                 // 右子树不为空，行数+1，并进队
-                LNO++;
                 rear++;
                 queue[rear].p = q->rchild;
                 queue[rear].lno = LNO+1;
@@ -156,6 +154,7 @@ int maxNode(BiTNode *p){
                 }
             }
         }
+        return max;
     }else{
         return 0; // 空树直接返回0
     }
@@ -163,7 +162,7 @@ int maxNode(BiTNode *p){
 
 int test06(){
     BiTNode *root, *tmp;
-    char *eles = (char *)"ab#d##c#e##";
+    char *eles = (char *)"ab#d##cr##e##";
     init(root, eles);
 
     int max = maxNode(root);
