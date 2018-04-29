@@ -162,7 +162,7 @@ void postorderNonRecursion(BiTNode *&bt){
 
         BiTNode* p=NULL;
         stack1[++top1] = bt;
-        while(top1 != NULL){
+        while(top1 != -1){
             p = stack1[top1--];
             stack2[++top2] = p;
 

@@ -340,6 +340,9 @@
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Tree/BiTree.h">
 			<Option target="dLinkedList"/>
 		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Tree/ThreadBiTree.h">
+			<Option target="biTreeExercise"/>
+		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
