@@ -60,6 +60,80 @@ CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct
 CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/searchExercise.dir
+
+# All Build rule for target.
+CMakeFiles/searchExercise.dir/all:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/depend
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target searchExercise"
+.PHONY : CMakeFiles/searchExercise.dir/all
+
+# Include target in all.
+all: CMakeFiles/searchExercise.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/searchExercise.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/searchExercise.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/searchExercise.dir/rule
+
+# Convenience name for target.
+searchExercise: CMakeFiles/searchExercise.dir/rule
+
+.PHONY : searchExercise
+
+# clean rule for target.
+CMakeFiles/searchExercise.dir/clean:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/clean
+.PHONY : CMakeFiles/searchExercise.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/searchExercise.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/graphExercise.dir
+
+# All Build rule for target.
+CMakeFiles/graphExercise.dir/all:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/depend
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=6,7,8 "Built target graphExercise"
+.PHONY : CMakeFiles/graphExercise.dir/all
+
+# Include target in all.
+all: CMakeFiles/graphExercise.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/graphExercise.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/graphExercise.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/graphExercise.dir/rule
+
+# Convenience name for target.
+graphExercise: CMakeFiles/graphExercise.dir/rule
+
+.PHONY : graphExercise
+
+# clean rule for target.
+CMakeFiles/graphExercise.dir/clean:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/clean
+.PHONY : CMakeFiles/graphExercise.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/graphExercise.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/biTreeExercise.dir
 
 # All Build rule for target.
@@ -103,7 +177,7 @@ clean: CMakeFiles/biTreeExercise.dir/clean
 CMakeFiles/linerExercise.dir/all:
 	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/depend
 	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target linerExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target linerExercise"
 .PHONY : CMakeFiles/linerExercise.dir/all
 
 # Include target in all.
@@ -171,13 +245,50 @@ clean: CMakeFiles/dLinkedList.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/sortExercise.dir
+
+# All Build rule for target.
+CMakeFiles/sortExercise.dir/all:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/depend
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target sortExercise"
+.PHONY : CMakeFiles/sortExercise.dir/all
+
+# Include target in all.
+all: CMakeFiles/sortExercise.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sortExercise.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sortExercise.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sortExercise.dir/rule
+
+# Convenience name for target.
+sortExercise: CMakeFiles/sortExercise.dir/rule
+
+.PHONY : sortExercise
+
+# clean rule for target.
+CMakeFiles/sortExercise.dir/clean:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/clean
+.PHONY : CMakeFiles/sortExercise.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sortExercise.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/linkedList.dir
 
 # All Build rule for target.
 CMakeFiles/linkedList.dir/all:
 	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/depend
 	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target linkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target linkedList"
 .PHONY : CMakeFiles/linkedList.dir/all
 
 # Include target in all.
@@ -214,7 +325,7 @@ clean: CMakeFiles/linkedList.dir/clean
 CMakeFiles/stackExercise.dir/all:
 	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/depend
 	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target stackExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target stackExercise"
 .PHONY : CMakeFiles/stackExercise.dir/all
 
 # Include target in all.
@@ -251,7 +362,7 @@ clean: CMakeFiles/stackExercise.dir/clean
 CMakeFiles/sqList.dir/all:
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/depend
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target sqList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target sqList"
 .PHONY : CMakeFiles/sqList.dir/all
 
 # Include target in all.

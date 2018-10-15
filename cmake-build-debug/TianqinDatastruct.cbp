@@ -27,6 +27,90 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="searchExercise">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/searchExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 searchExercise"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="searchExercise/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/searchExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 searchExercise/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graphExercise">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/graphExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 graphExercise"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graphExercise/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/graphExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 graphExercise/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="biTreeExercise">
 				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/biTreeExercise" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
@@ -158,6 +242,48 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sortExercise">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/sortExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 sortExercise"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sortExercise/fast">
+				<Option output="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/sortExercise" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 sortExercise/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -309,6 +435,27 @@
 			<Option target="biTreeExercise"/>
 			<Option target="dLinkedList"/>
 		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/7. 图/7.1 图的遍历算法操作.cpp">
+			<Option target="graphExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/7. 图/7.2 图的应用.cpp">
+			<Option target="graphExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/8.内部排序/8. 排序练习.cpp">
+			<Option target="sortExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/9. 查找/9. 查找练习.cpp">
+			<Option target="searchExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Graph/AGraph.h">
+			<Option target="graphExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Graph/MGraph.h">
+			<Option target="graphExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Graph/algorithm.h">
+			<Option target="graphExercise"/>
+		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/LinearTable/DLinkedLIst.h">
 			<Option target="dLinkedList"/>
 		</Unit>
@@ -327,6 +474,22 @@
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Queue/SqQueue.h">
 			<Option target="stackExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Search/BTree.h">
+			<Option target="searchExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Search/BalancedBinarySortTree.h">
+			<Option target="searchExercise"/>
+			<Option target="biTreeExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Search/BinarySortTree.h">
+			<Option target="biTreeExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Search/Search.h">
+			<Option target="searchExercise"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Sort/Sorting.h">
+			<Option target="sortExercise"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Stack/LinkedStack.h">
 			<Option target="stackExercise"/>

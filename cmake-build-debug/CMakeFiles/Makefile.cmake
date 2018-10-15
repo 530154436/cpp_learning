@@ -49,9 +49,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/searchExercise.dir/DependInfo.cmake"
+  "CMakeFiles/graphExercise.dir/DependInfo.cmake"
   "CMakeFiles/biTreeExercise.dir/DependInfo.cmake"
   "CMakeFiles/linerExercise.dir/DependInfo.cmake"
   "CMakeFiles/dLinkedList.dir/DependInfo.cmake"
+  "CMakeFiles/sortExercise.dir/DependInfo.cmake"
   "CMakeFiles/linkedList.dir/DependInfo.cmake"
   "CMakeFiles/stackExercise.dir/DependInfo.cmake"
   "CMakeFiles/sqList.dir/DependInfo.cmake"

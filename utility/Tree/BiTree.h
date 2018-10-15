@@ -15,6 +15,8 @@ typedef struct BiTNode{
     char data;
     BiTNode *lchild;
     BiTNode *rchild;
+    // 习题5
+    BiTNode *parent;
 }BiTNode;
 
 /**

@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named searchExercise
+
+# Build rule for target.
+searchExercise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 searchExercise
+.PHONY : searchExercise
+
+# fast build rule for target.
+searchExercise/fast:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/build
+.PHONY : searchExercise/fast
+
+#=============================================================================
+# Target rules for targets named graphExercise
+
+# Build rule for target.
+graphExercise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graphExercise
+.PHONY : graphExercise
+
+# fast build rule for target.
+graphExercise/fast:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/build
+.PHONY : graphExercise/fast
+
+#=============================================================================
 # Target rules for targets named biTreeExercise
 
 # Build rule for target.
@@ -148,6 +174,19 @@ dLinkedList: cmake_check_build_system
 dLinkedList/fast:
 	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/build
 .PHONY : dLinkedList/fast
+
+#=============================================================================
+# Target rules for targets named sortExercise
+
+# Build rule for target.
+sortExercise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sortExercise
+.PHONY : sortExercise
+
+# fast build rule for target.
+sortExercise/fast:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/build
+.PHONY : sortExercise/fast
 
 #=============================================================================
 # Target rules for targets named linkedList
@@ -353,6 +392,114 @@ sqList/fast:
 	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.s
 .PHONY : 6._树和二叉树/6.1_二叉树.cpp.s
 
+7._图/7.1_图的遍历算法操作.o: 7._图/7.1_图的遍历算法操作.cpp.o
+
+.PHONY : 7._图/7.1_图的遍历算法操作.o
+
+# target to build an object file
+7._图/7.1_图的遍历算法操作.cpp.o:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.o
+.PHONY : 7._图/7.1_图的遍历算法操作.cpp.o
+
+7._图/7.1_图的遍历算法操作.i: 7._图/7.1_图的遍历算法操作.cpp.i
+
+.PHONY : 7._图/7.1_图的遍历算法操作.i
+
+# target to preprocess a source file
+7._图/7.1_图的遍历算法操作.cpp.i:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.i
+.PHONY : 7._图/7.1_图的遍历算法操作.cpp.i
+
+7._图/7.1_图的遍历算法操作.s: 7._图/7.1_图的遍历算法操作.cpp.s
+
+.PHONY : 7._图/7.1_图的遍历算法操作.s
+
+# target to generate assembly for a file
+7._图/7.1_图的遍历算法操作.cpp.s:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.s
+.PHONY : 7._图/7.1_图的遍历算法操作.cpp.s
+
+7._图/7.2_图的应用.o: 7._图/7.2_图的应用.cpp.o
+
+.PHONY : 7._图/7.2_图的应用.o
+
+# target to build an object file
+7._图/7.2_图的应用.cpp.o:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.o
+.PHONY : 7._图/7.2_图的应用.cpp.o
+
+7._图/7.2_图的应用.i: 7._图/7.2_图的应用.cpp.i
+
+.PHONY : 7._图/7.2_图的应用.i
+
+# target to preprocess a source file
+7._图/7.2_图的应用.cpp.i:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.i
+.PHONY : 7._图/7.2_图的应用.cpp.i
+
+7._图/7.2_图的应用.s: 7._图/7.2_图的应用.cpp.s
+
+.PHONY : 7._图/7.2_图的应用.s
+
+# target to generate assembly for a file
+7._图/7.2_图的应用.cpp.s:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.s
+.PHONY : 7._图/7.2_图的应用.cpp.s
+
+8.内部排序/8._排序练习.o: 8.内部排序/8._排序练习.cpp.o
+
+.PHONY : 8.内部排序/8._排序练习.o
+
+# target to build an object file
+8.内部排序/8._排序练习.cpp.o:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.o
+.PHONY : 8.内部排序/8._排序练习.cpp.o
+
+8.内部排序/8._排序练习.i: 8.内部排序/8._排序练习.cpp.i
+
+.PHONY : 8.内部排序/8._排序练习.i
+
+# target to preprocess a source file
+8.内部排序/8._排序练习.cpp.i:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.i
+.PHONY : 8.内部排序/8._排序练习.cpp.i
+
+8.内部排序/8._排序练习.s: 8.内部排序/8._排序练习.cpp.s
+
+.PHONY : 8.内部排序/8._排序练习.s
+
+# target to generate assembly for a file
+8.内部排序/8._排序练习.cpp.s:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.s
+.PHONY : 8.内部排序/8._排序练习.cpp.s
+
+9._查找/9._查找练习.o: 9._查找/9._查找练习.cpp.o
+
+.PHONY : 9._查找/9._查找练习.o
+
+# target to build an object file
+9._查找/9._查找练习.cpp.o:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.o
+.PHONY : 9._查找/9._查找练习.cpp.o
+
+9._查找/9._查找练习.i: 9._查找/9._查找练习.cpp.i
+
+.PHONY : 9._查找/9._查找练习.i
+
+# target to preprocess a source file
+9._查找/9._查找练习.cpp.i:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.i
+.PHONY : 9._查找/9._查找练习.cpp.i
+
+9._查找/9._查找练习.s: 9._查找/9._查找练习.cpp.s
+
+.PHONY : 9._查找/9._查找练习.s
+
+# target to generate assembly for a file
+9._查找/9._查找练习.cpp.s:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.s
+.PHONY : 9._查找/9._查找练习.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -360,10 +507,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... searchExercise"
+	@echo "... graphExercise"
 	@echo "... biTreeExercise"
 	@echo "... linerExercise"
 	@echo "... dLinkedList"
 	@echo "... edit_cache"
+	@echo "... sortExercise"
 	@echo "... linkedList"
 	@echo "... stackExercise"
 	@echo "... sqList"
@@ -385,6 +535,18 @@ help:
 	@echo "... 6._树和二叉树/6.1_二叉树.o"
 	@echo "... 6._树和二叉树/6.1_二叉树.i"
 	@echo "... 6._树和二叉树/6.1_二叉树.s"
+	@echo "... 7._图/7.1_图的遍历算法操作.o"
+	@echo "... 7._图/7.1_图的遍历算法操作.i"
+	@echo "... 7._图/7.1_图的遍历算法操作.s"
+	@echo "... 7._图/7.2_图的应用.o"
+	@echo "... 7._图/7.2_图的应用.i"
+	@echo "... 7._图/7.2_图的应用.s"
+	@echo "... 8.内部排序/8._排序练习.o"
+	@echo "... 8.内部排序/8._排序练习.i"
+	@echo "... 8.内部排序/8._排序练习.s"
+	@echo "... 9._查找/9._查找练习.o"
+	@echo "... 9._查找/9._查找练习.i"
+	@echo "... 9._查找/9._查找练习.s"
 .PHONY : help
 
 

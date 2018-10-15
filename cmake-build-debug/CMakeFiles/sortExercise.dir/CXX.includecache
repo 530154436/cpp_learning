@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/8.内部排序/8. 排序练习.cpp
+../utility/Sort/Sorting.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Sort/Sorting.h
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Printer.h
+stdio.h
+-
+iostream
+-
+string
+-
+
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Sort/Sorting.h
+../Printer.h
+/Users/zhengchubin/CLionProjects/TianqinDatastruct/utility/Printer.h
+iostream
+-
+string
+-
+

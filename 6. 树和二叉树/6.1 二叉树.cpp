@@ -320,26 +320,178 @@ void link(BiTNode *root, BiTNode *&head, BiTNode *&tail){
             }
         }
         link(root->lchild, head, tail);
-        link(root->lchild, head, tail);
+        link(root->rchild, head, tail);
     }
 }
 
 void test09(){
     BiTNode *root, *head, *tail;
-    char *eles = (char *)"123##5##4##";
+    char *eles = (char *)"123##4##5##";
     init(root, eles);
-    cout<<"=============================="<<endl;
 
     link(root, head, tail);
     while(head!=NULL){
         cout<<head->data<<'\t';
         head = head->rchild;
     }
+    cout<<endl;
 }
+
+/* ================================= 习题心选 ================================= */
+/*
+ * 5. 在二叉树的二叉链存储结构中，增加一个纸箱双亲节点的 parent 指针，设计一个算法，给这个指针
+ *    赋值，并输出所有节点的路径。
+ */
+void initParent(BiTNode *p, BiTNode *pre){
+    if(p!=NULL){
+        p->parent = pre;    // 根赋值
+        pre = p;
+        initParent(p->lchild, pre); // 左子树赋值
+        initParent(p->rchild, pre); // 右子树赋值
+    }
+}
+
+void printPath(BiTNode *p){
+    while(p!=NULL){
+        cout<< p->data<<"->";
+        p=p->parent;
+    }
+    cout<<"NULL"<<endl;
+}
+
+void printAll(BiTNode *p){
+    if(p!=NULL){
+        printPath(p);
+        printAll(p->lchild); // 输出左子树所有路径
+        printAll(p->rchild); // 输出右子树所有路径
+    }
+}
+
+void test10(){
+    BiTNode *root;
+    char *eles = (char *)"123##4##5##";
+    init(root, eles);
+
+    initParent(root, NULL);
+    printAll(root);
+    cout<<endl;
+}
+
+/*
+ * 6. 假设满二叉树 b 先序遍历序列已经存在数组中，长度为 n ，设计一个算法将其转换为后序遍历序列
+ */
+void change(char pre[], int l1, int r1, char post[], int l2, int r2){
+    if(l1<=r1){
+        // 将根放于末尾
+        post[r2] = pre[l1];
+
+        // 改变左子树部分
+        change(pre, l1+1, (l1+1+r1)/2, post, l2, (l2+r2-1)/2);
+        // 改变左子树部分
+        change(pre, (l1+1+r1)/2+1, r1, post, (l2+r2-1)/2+1, r2-1);
+    }
+}
+
+void test11(){
+    int n=7;
+    char pre[7] = {'1','2','3','4','5','6','7'};
+    char post[7];
+    change(pre, 0, n-1, post, 0, n-1);
+
+    int i=0,j=0;
+    while(j<n){
+        cout<< pre[j]<<" ";
+        j++;
+    }
+    cout<< endl;
+
+    while(i<n){
+        cout<< post[i]<<" ";
+        i++;
+    }
+    cout<< endl;
+}
+
+/*
+ * 7. 假设二叉树采用二叉链存储结构，设计一个算法，求二叉树 b 中值为 x 的节点的层号。
+ */
+int LNO=1;
+void findX(BiTNode *p, char x){
+    if(p!=NULL){
+        if(p->data == x){
+            cout << x << ", 层号:"<<LNO<< endl;
+        }
+        // 进入左右子树，层号+1
+        ++LNO;
+        findX(p->lchild, x);
+        findX(p->rchild, x);
+        --LNO;
+        // 返回上一层，层号-1
+    }
+}
+
+void test12(){
+    BiTNode *root;
+    char *eles = (char *)"323##4##3##";
+    init(root, eles);
+    findX(root, '3');
+}
+
+/*
+ * 10. 二叉树的双序遍历是指，对于二叉树的每一个接单来说，先访问这个节点，再按双序遍历遍历
+ *   它的左子树，然后再一次访问这个节点，接下来按双序遍历遍历它的右子树。试写出执行这种双
+ *   序遍历的算法。
+ */
+void doubleOrder(BiTNode *p){
+    if(p!=NULL){
+        cout<<p->data<<endl;
+        doubleOrder(p->lchild);
+        cout<<p->data<<endl;
+        doubleOrder(p->rchild);
+    }
+}
+
+/*
+ * 11. 设中序索引二叉树的类型为 TBTNode *inThrTree:
+ *   (1) 设计算法，在一棵中序索引树中寻找节点 t 的子树上中序下的最后一个节点。
+ *   (2) 设计算法，在一棵中序索引树中寻找节点 t 的中序下的前驱。
+ *   (3) 设计算法，在一棵中序索引树中寻找节点 t 的前序下的后继。
+ */
 
 /* ================================= 习题心选 ================================= */
 
 
+/* =================================  思考题  ================================= */
+/*
+ * 1. 假设二叉树采用二叉链存储结构，设计一个算法，输出根节点到每个叶子节点的路径。
+ */
+int top=-1;
+int i=0;
+BiTNode* stack[100];
+void printAllLeafPath(BiTNode *p){
+    if(p!=NULL){
+        stack[++top] = p;
+        // 如果是叶子节点，则打印路径
+        if(p->lchild==NULL && p->rchild==NULL){
+            for(i=0; i<=top; i++){
+                cout<<stack[i]->data<<" -> ";
+            }
+            cout<<"NULL"<<endl;
+        }
+        printAllLeafPath(p->lchild);
+        printAllLeafPath(p->rchild);
+        top--;
+    }
+}
+
+void test13(){
+    BiTNode *root;
+    char *eles = (char *)"123##4##58##9##";
+    init(root, eles);
+    printAllLeafPath(root);
+}
+
+/* =================================  思考题  ================================= */
 int main(){
     // test01();
     // test03();
@@ -348,5 +500,9 @@ int main(){
     // test06();
     // test07();
     // test08();
-    test09();
+    // test09();
+    // test10();
+    // test11();
+    // test12();
+    test13();
 }
