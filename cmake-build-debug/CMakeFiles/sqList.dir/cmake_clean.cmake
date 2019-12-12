@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o"
+  "CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o"
   "sqList.pdb"
   "sqList"
 )

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhengchubin/CLionProjects/TianqinDatastruct/8.内部排序/8. 排序练习.cpp" "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.o"
+  "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/8.内部排序/8. 排序练习.cpp" "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/sortExercise.dir/data_struct/8.内部排序/8._排序练习.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

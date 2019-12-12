@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o"
+  "CMakeFiles/linerExercise.dir/data_struct/2.线性表/2.4._习题集.cpp.o"
   "linerExercise.pdb"
   "linerExercise"
 )

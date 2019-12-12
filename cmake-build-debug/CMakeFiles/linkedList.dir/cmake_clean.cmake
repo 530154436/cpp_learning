@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.o"
+  "CMakeFiles/linkedList.dir/data_struct/2.线性表/2.2._单链表.cpp.o"
   "linkedList.pdb"
   "linkedList"
 )

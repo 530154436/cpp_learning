@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.o"
+  "CMakeFiles/searchExercise.dir/data_struct/9._查找/9._查找练习.cpp.o"
   "searchExercise.pdb"
   "searchExercise"
 )

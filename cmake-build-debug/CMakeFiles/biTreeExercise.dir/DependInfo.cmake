@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhengchubin/CLionProjects/TianqinDatastruct/6. 树和二叉树/6.1 二叉树.cpp" "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o"
+  "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/6. 树和二叉树/6.1 二叉树.cpp" "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/biTreeExercise.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

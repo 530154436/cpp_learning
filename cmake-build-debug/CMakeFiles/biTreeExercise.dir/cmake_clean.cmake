@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o"
+  "CMakeFiles/biTreeExercise.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.o"
   "biTreeExercise.pdb"
   "biTreeExercise"
 )

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.2. 单链表.cpp" "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.o"
+  "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/2.线性表/2.2. 单链表.cpp" "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/linkedList.dir/data_struct/2.线性表/2.2._单链表.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

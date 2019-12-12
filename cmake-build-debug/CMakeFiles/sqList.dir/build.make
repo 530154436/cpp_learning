@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct
+CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/cpp_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sqList.dir/depend.make
@@ -57,41 +57,41 @@ include CMakeFiles/sqList.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sqList.dir/flags.make
 
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o: CMakeFiles/sqList.dir/flags.make
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o: ../2.线性表/2.1.\ 顺序表.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp"
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o: CMakeFiles/sqList.dir/flags.make
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o: ../data_struct/2.线性表/2.1.\ 顺序表.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o -c "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/2.线性表/2.1. 顺序表.cpp"
 
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp" > CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.i"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/2.线性表/2.1. 顺序表.cpp" > CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.i
 
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.1. 顺序表.cpp" -o CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.s"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/2.线性表/2.1. 顺序表.cpp" -o CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.s
 
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.requires:
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.requires:
 
-.PHONY : CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.requires
+.PHONY : CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.requires
 
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.provides: CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.requires
-	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.provides.build
-.PHONY : CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.provides
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.provides: CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.requires
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.provides.build
+.PHONY : CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.provides
 
-CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.provides.build: CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o
+CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.provides.build: CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o
 
 
 # Object files for target sqList
 sqList_OBJECTS = \
-"CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o"
+"CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o"
 
 # External object files for target sqList
 sqList_EXTERNAL_OBJECTS =
 
-sqList: CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o
+sqList: CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o
 sqList: CMakeFiles/sqList.dir/build.make
 sqList: CMakeFiles/sqList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sqList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sqList"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sqList.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +99,7 @@ CMakeFiles/sqList.dir/build: sqList
 
 .PHONY : CMakeFiles/sqList.dir/build
 
-CMakeFiles/sqList.dir/requires: CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o.requires
+CMakeFiles/sqList.dir/requires: CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o.requires
 
 .PHONY : CMakeFiles/sqList.dir/requires
 
@@ -108,6 +108,6 @@ CMakeFiles/sqList.dir/clean:
 .PHONY : CMakeFiles/sqList.dir/clean
 
 CMakeFiles/sqList.dir/depend:
-	cd /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhengchubin/CLionProjects/TianqinDatastruct /Users/zhengchubin/CLionProjects/TianqinDatastruct /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/sqList.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhengchubin/CLionProjects/cpp_learning /Users/zhengchubin/CLionProjects/cpp_learning /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/sqList.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sqList.dir/depend
 

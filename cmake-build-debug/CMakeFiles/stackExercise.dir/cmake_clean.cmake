@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o"
+  "CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o"
   "stackExercise.pdb"
   "stackExercise"
 )

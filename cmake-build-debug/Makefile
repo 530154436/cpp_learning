@@ -48,24 +48,13 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct
+CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/cpp_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -163,17 +163,17 @@ linerExercise/fast:
 .PHONY : linerExercise/fast
 
 #=============================================================================
-# Target rules for targets named dLinkedList
+# Target rules for targets named esesential_cpp
 
 # Build rule for target.
-dLinkedList: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dLinkedList
-.PHONY : dLinkedList
+esesential_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esesential_cpp
+.PHONY : esesential_cpp
 
 # fast build rule for target.
-dLinkedList/fast:
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/build
-.PHONY : dLinkedList/fast
+esesential_cpp/fast:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/build
+.PHONY : esesential_cpp/fast
 
 #=============================================================================
 # Target rules for targets named sortExercise
@@ -187,6 +187,19 @@ sortExercise: cmake_check_build_system
 sortExercise/fast:
 	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/build
 .PHONY : sortExercise/fast
+
+#=============================================================================
+# Target rules for targets named dLinkedList
+
+# Build rule for target.
+dLinkedList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dLinkedList
+.PHONY : dLinkedList
+
+# fast build rule for target.
+dLinkedList/fast:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/build
+.PHONY : dLinkedList/fast
 
 #=============================================================================
 # Target rules for targets named linkedList
@@ -227,278 +240,305 @@ sqList/fast:
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/build
 .PHONY : sqList/fast
 
-2.线性表/2.1._顺序表.o: 2.线性表/2.1._顺序表.cpp.o
+data_struct/2.线性表/2.1._顺序表.o: data_struct/2.线性表/2.1._顺序表.cpp.o
 
-.PHONY : 2.线性表/2.1._顺序表.o
-
-# target to build an object file
-2.线性表/2.1._顺序表.cpp.o:
-	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.o
-.PHONY : 2.线性表/2.1._顺序表.cpp.o
-
-2.线性表/2.1._顺序表.i: 2.线性表/2.1._顺序表.cpp.i
-
-.PHONY : 2.线性表/2.1._顺序表.i
-
-# target to preprocess a source file
-2.线性表/2.1._顺序表.cpp.i:
-	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.i
-.PHONY : 2.线性表/2.1._顺序表.cpp.i
-
-2.线性表/2.1._顺序表.s: 2.线性表/2.1._顺序表.cpp.s
-
-.PHONY : 2.线性表/2.1._顺序表.s
-
-# target to generate assembly for a file
-2.线性表/2.1._顺序表.cpp.s:
-	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/2.线性表/2.1._顺序表.cpp.s
-.PHONY : 2.线性表/2.1._顺序表.cpp.s
-
-2.线性表/2.2._单链表.o: 2.线性表/2.2._单链表.cpp.o
-
-.PHONY : 2.线性表/2.2._单链表.o
+.PHONY : data_struct/2.线性表/2.1._顺序表.o
 
 # target to build an object file
-2.线性表/2.2._单链表.cpp.o:
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.o
-.PHONY : 2.线性表/2.2._单链表.cpp.o
+data_struct/2.线性表/2.1._顺序表.cpp.o:
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.o
+.PHONY : data_struct/2.线性表/2.1._顺序表.cpp.o
 
-2.线性表/2.2._单链表.i: 2.线性表/2.2._单链表.cpp.i
+data_struct/2.线性表/2.1._顺序表.i: data_struct/2.线性表/2.1._顺序表.cpp.i
 
-.PHONY : 2.线性表/2.2._单链表.i
+.PHONY : data_struct/2.线性表/2.1._顺序表.i
 
 # target to preprocess a source file
-2.线性表/2.2._单链表.cpp.i:
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.i
-.PHONY : 2.线性表/2.2._单链表.cpp.i
+data_struct/2.线性表/2.1._顺序表.cpp.i:
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.i
+.PHONY : data_struct/2.线性表/2.1._顺序表.cpp.i
 
-2.线性表/2.2._单链表.s: 2.线性表/2.2._单链表.cpp.s
+data_struct/2.线性表/2.1._顺序表.s: data_struct/2.线性表/2.1._顺序表.cpp.s
 
-.PHONY : 2.线性表/2.2._单链表.s
+.PHONY : data_struct/2.线性表/2.1._顺序表.s
 
 # target to generate assembly for a file
-2.线性表/2.2._单链表.cpp.s:
-	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/2.线性表/2.2._单链表.cpp.s
-.PHONY : 2.线性表/2.2._单链表.cpp.s
+data_struct/2.线性表/2.1._顺序表.cpp.s:
+	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/data_struct/2.线性表/2.1._顺序表.cpp.s
+.PHONY : data_struct/2.线性表/2.1._顺序表.cpp.s
 
-2.线性表/2.3._双链表.o: 2.线性表/2.3._双链表.cpp.o
+data_struct/2.线性表/2.2._单链表.o: data_struct/2.线性表/2.2._单链表.cpp.o
 
-.PHONY : 2.线性表/2.3._双链表.o
+.PHONY : data_struct/2.线性表/2.2._单链表.o
 
 # target to build an object file
-2.线性表/2.3._双链表.cpp.o:
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/2.线性表/2.3._双链表.cpp.o
-.PHONY : 2.线性表/2.3._双链表.cpp.o
+data_struct/2.线性表/2.2._单链表.cpp.o:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/data_struct/2.线性表/2.2._单链表.cpp.o
+.PHONY : data_struct/2.线性表/2.2._单链表.cpp.o
 
-2.线性表/2.3._双链表.i: 2.线性表/2.3._双链表.cpp.i
+data_struct/2.线性表/2.2._单链表.i: data_struct/2.线性表/2.2._单链表.cpp.i
 
-.PHONY : 2.线性表/2.3._双链表.i
+.PHONY : data_struct/2.线性表/2.2._单链表.i
 
 # target to preprocess a source file
-2.线性表/2.3._双链表.cpp.i:
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/2.线性表/2.3._双链表.cpp.i
-.PHONY : 2.线性表/2.3._双链表.cpp.i
+data_struct/2.线性表/2.2._单链表.cpp.i:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/data_struct/2.线性表/2.2._单链表.cpp.i
+.PHONY : data_struct/2.线性表/2.2._单链表.cpp.i
 
-2.线性表/2.3._双链表.s: 2.线性表/2.3._双链表.cpp.s
+data_struct/2.线性表/2.2._单链表.s: data_struct/2.线性表/2.2._单链表.cpp.s
 
-.PHONY : 2.线性表/2.3._双链表.s
+.PHONY : data_struct/2.线性表/2.2._单链表.s
 
 # target to generate assembly for a file
-2.线性表/2.3._双链表.cpp.s:
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/2.线性表/2.3._双链表.cpp.s
-.PHONY : 2.线性表/2.3._双链表.cpp.s
+data_struct/2.线性表/2.2._单链表.cpp.s:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/data_struct/2.线性表/2.2._单链表.cpp.s
+.PHONY : data_struct/2.线性表/2.2._单链表.cpp.s
 
-2.线性表/2.4._习题集.o: 2.线性表/2.4._习题集.cpp.o
+data_struct/2.线性表/2.3._双链表.o: data_struct/2.线性表/2.3._双链表.cpp.o
 
-.PHONY : 2.线性表/2.4._习题集.o
+.PHONY : data_struct/2.线性表/2.3._双链表.o
 
 # target to build an object file
-2.线性表/2.4._习题集.cpp.o:
-	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o
-.PHONY : 2.线性表/2.4._习题集.cpp.o
+data_struct/2.线性表/2.3._双链表.cpp.o:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/data_struct/2.线性表/2.3._双链表.cpp.o
+.PHONY : data_struct/2.线性表/2.3._双链表.cpp.o
 
-2.线性表/2.4._习题集.i: 2.线性表/2.4._习题集.cpp.i
+data_struct/2.线性表/2.3._双链表.i: data_struct/2.线性表/2.3._双链表.cpp.i
 
-.PHONY : 2.线性表/2.4._习题集.i
+.PHONY : data_struct/2.线性表/2.3._双链表.i
 
 # target to preprocess a source file
-2.线性表/2.4._习题集.cpp.i:
-	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.i
-.PHONY : 2.线性表/2.4._习题集.cpp.i
+data_struct/2.线性表/2.3._双链表.cpp.i:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/data_struct/2.线性表/2.3._双链表.cpp.i
+.PHONY : data_struct/2.线性表/2.3._双链表.cpp.i
 
-2.线性表/2.4._习题集.s: 2.线性表/2.4._习题集.cpp.s
+data_struct/2.线性表/2.3._双链表.s: data_struct/2.线性表/2.3._双链表.cpp.s
 
-.PHONY : 2.线性表/2.4._习题集.s
+.PHONY : data_struct/2.线性表/2.3._双链表.s
 
 # target to generate assembly for a file
-2.线性表/2.4._习题集.cpp.s:
-	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.s
-.PHONY : 2.线性表/2.4._习题集.cpp.s
+data_struct/2.线性表/2.3._双链表.cpp.s:
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/data_struct/2.线性表/2.3._双链表.cpp.s
+.PHONY : data_struct/2.线性表/2.3._双链表.cpp.s
 
-3._栈和队列/3.1_栈和队列的应用.o: 3._栈和队列/3.1_栈和队列的应用.cpp.o
+data_struct/2.线性表/2.4._习题集.o: data_struct/2.线性表/2.4._习题集.cpp.o
 
-.PHONY : 3._栈和队列/3.1_栈和队列的应用.o
+.PHONY : data_struct/2.线性表/2.4._习题集.o
 
 # target to build an object file
-3._栈和队列/3.1_栈和队列的应用.cpp.o:
-	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o
-.PHONY : 3._栈和队列/3.1_栈和队列的应用.cpp.o
+data_struct/2.线性表/2.4._习题集.cpp.o:
+	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/data_struct/2.线性表/2.4._习题集.cpp.o
+.PHONY : data_struct/2.线性表/2.4._习题集.cpp.o
 
-3._栈和队列/3.1_栈和队列的应用.i: 3._栈和队列/3.1_栈和队列的应用.cpp.i
+data_struct/2.线性表/2.4._习题集.i: data_struct/2.线性表/2.4._习题集.cpp.i
 
-.PHONY : 3._栈和队列/3.1_栈和队列的应用.i
+.PHONY : data_struct/2.线性表/2.4._习题集.i
 
 # target to preprocess a source file
-3._栈和队列/3.1_栈和队列的应用.cpp.i:
-	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i
-.PHONY : 3._栈和队列/3.1_栈和队列的应用.cpp.i
+data_struct/2.线性表/2.4._习题集.cpp.i:
+	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/data_struct/2.线性表/2.4._习题集.cpp.i
+.PHONY : data_struct/2.线性表/2.4._习题集.cpp.i
 
-3._栈和队列/3.1_栈和队列的应用.s: 3._栈和队列/3.1_栈和队列的应用.cpp.s
+data_struct/2.线性表/2.4._习题集.s: data_struct/2.线性表/2.4._习题集.cpp.s
 
-.PHONY : 3._栈和队列/3.1_栈和队列的应用.s
+.PHONY : data_struct/2.线性表/2.4._习题集.s
 
 # target to generate assembly for a file
-3._栈和队列/3.1_栈和队列的应用.cpp.s:
-	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s
-.PHONY : 3._栈和队列/3.1_栈和队列的应用.cpp.s
+data_struct/2.线性表/2.4._习题集.cpp.s:
+	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/data_struct/2.线性表/2.4._习题集.cpp.s
+.PHONY : data_struct/2.线性表/2.4._习题集.cpp.s
 
-6._树和二叉树/6.1_二叉树.o: 6._树和二叉树/6.1_二叉树.cpp.o
+data_struct/3._栈和队列/3.1_栈和队列的应用.o: data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o
 
-.PHONY : 6._树和二叉树/6.1_二叉树.o
+.PHONY : data_struct/3._栈和队列/3.1_栈和队列的应用.o
 
 # target to build an object file
-6._树和二叉树/6.1_二叉树.cpp.o:
-	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.o
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.o
-.PHONY : 6._树和二叉树/6.1_二叉树.cpp.o
+data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o
+.PHONY : data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o
 
-6._树和二叉树/6.1_二叉树.i: 6._树和二叉树/6.1_二叉树.cpp.i
+data_struct/3._栈和队列/3.1_栈和队列的应用.i: data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i
 
-.PHONY : 6._树和二叉树/6.1_二叉树.i
+.PHONY : data_struct/3._栈和队列/3.1_栈和队列的应用.i
 
 # target to preprocess a source file
-6._树和二叉树/6.1_二叉树.cpp.i:
-	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.i
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.i
-.PHONY : 6._树和二叉树/6.1_二叉树.cpp.i
+data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i
+.PHONY : data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i
 
-6._树和二叉树/6.1_二叉树.s: 6._树和二叉树/6.1_二叉树.cpp.s
+data_struct/3._栈和队列/3.1_栈和队列的应用.s: data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s
 
-.PHONY : 6._树和二叉树/6.1_二叉树.s
+.PHONY : data_struct/3._栈和队列/3.1_栈和队列的应用.s
 
 # target to generate assembly for a file
-6._树和二叉树/6.1_二叉树.cpp.s:
-	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/6._树和二叉树/6.1_二叉树.cpp.s
-	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/6._树和二叉树/6.1_二叉树.cpp.s
-.PHONY : 6._树和二叉树/6.1_二叉树.cpp.s
+data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s:
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s
+.PHONY : data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s
 
-7._图/7.1_图的遍历算法操作.o: 7._图/7.1_图的遍历算法操作.cpp.o
+data_struct/6._树和二叉树/6.1_二叉树.o: data_struct/6._树和二叉树/6.1_二叉树.cpp.o
 
-.PHONY : 7._图/7.1_图的遍历算法操作.o
+.PHONY : data_struct/6._树和二叉树/6.1_二叉树.o
 
 # target to build an object file
-7._图/7.1_图的遍历算法操作.cpp.o:
-	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.o
-.PHONY : 7._图/7.1_图的遍历算法操作.cpp.o
+data_struct/6._树和二叉树/6.1_二叉树.cpp.o:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.o
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.o
+.PHONY : data_struct/6._树和二叉树/6.1_二叉树.cpp.o
 
-7._图/7.1_图的遍历算法操作.i: 7._图/7.1_图的遍历算法操作.cpp.i
+data_struct/6._树和二叉树/6.1_二叉树.i: data_struct/6._树和二叉树/6.1_二叉树.cpp.i
 
-.PHONY : 7._图/7.1_图的遍历算法操作.i
+.PHONY : data_struct/6._树和二叉树/6.1_二叉树.i
 
 # target to preprocess a source file
-7._图/7.1_图的遍历算法操作.cpp.i:
-	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.i
-.PHONY : 7._图/7.1_图的遍历算法操作.cpp.i
+data_struct/6._树和二叉树/6.1_二叉树.cpp.i:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.i
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.i
+.PHONY : data_struct/6._树和二叉树/6.1_二叉树.cpp.i
 
-7._图/7.1_图的遍历算法操作.s: 7._图/7.1_图的遍历算法操作.cpp.s
+data_struct/6._树和二叉树/6.1_二叉树.s: data_struct/6._树和二叉树/6.1_二叉树.cpp.s
 
-.PHONY : 7._图/7.1_图的遍历算法操作.s
+.PHONY : data_struct/6._树和二叉树/6.1_二叉树.s
 
 # target to generate assembly for a file
-7._图/7.1_图的遍历算法操作.cpp.s:
-	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.s
-.PHONY : 7._图/7.1_图的遍历算法操作.cpp.s
+data_struct/6._树和二叉树/6.1_二叉树.cpp.s:
+	$(MAKE) -f CMakeFiles/biTreeExercise.dir/build.make CMakeFiles/biTreeExercise.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.s
+	$(MAKE) -f CMakeFiles/dLinkedList.dir/build.make CMakeFiles/dLinkedList.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.s
+.PHONY : data_struct/6._树和二叉树/6.1_二叉树.cpp.s
 
-7._图/7.2_图的应用.o: 7._图/7.2_图的应用.cpp.o
+data_struct/7._图/7.1_图的遍历算法操作.o: data_struct/7._图/7.1_图的遍历算法操作.cpp.o
 
-.PHONY : 7._图/7.2_图的应用.o
+.PHONY : data_struct/7._图/7.1_图的遍历算法操作.o
 
 # target to build an object file
-7._图/7.2_图的应用.cpp.o:
-	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.o
-.PHONY : 7._图/7.2_图的应用.cpp.o
+data_struct/7._图/7.1_图的遍历算法操作.cpp.o:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/data_struct/7._图/7.1_图的遍历算法操作.cpp.o
+.PHONY : data_struct/7._图/7.1_图的遍历算法操作.cpp.o
 
-7._图/7.2_图的应用.i: 7._图/7.2_图的应用.cpp.i
+data_struct/7._图/7.1_图的遍历算法操作.i: data_struct/7._图/7.1_图的遍历算法操作.cpp.i
 
-.PHONY : 7._图/7.2_图的应用.i
+.PHONY : data_struct/7._图/7.1_图的遍历算法操作.i
 
 # target to preprocess a source file
-7._图/7.2_图的应用.cpp.i:
-	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.i
-.PHONY : 7._图/7.2_图的应用.cpp.i
+data_struct/7._图/7.1_图的遍历算法操作.cpp.i:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/data_struct/7._图/7.1_图的遍历算法操作.cpp.i
+.PHONY : data_struct/7._图/7.1_图的遍历算法操作.cpp.i
 
-7._图/7.2_图的应用.s: 7._图/7.2_图的应用.cpp.s
+data_struct/7._图/7.1_图的遍历算法操作.s: data_struct/7._图/7.1_图的遍历算法操作.cpp.s
 
-.PHONY : 7._图/7.2_图的应用.s
+.PHONY : data_struct/7._图/7.1_图的遍历算法操作.s
 
 # target to generate assembly for a file
-7._图/7.2_图的应用.cpp.s:
-	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.s
-.PHONY : 7._图/7.2_图的应用.cpp.s
+data_struct/7._图/7.1_图的遍历算法操作.cpp.s:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/data_struct/7._图/7.1_图的遍历算法操作.cpp.s
+.PHONY : data_struct/7._图/7.1_图的遍历算法操作.cpp.s
 
-8.内部排序/8._排序练习.o: 8.内部排序/8._排序练习.cpp.o
+data_struct/7._图/7.2_图的应用.o: data_struct/7._图/7.2_图的应用.cpp.o
 
-.PHONY : 8.内部排序/8._排序练习.o
+.PHONY : data_struct/7._图/7.2_图的应用.o
 
 # target to build an object file
-8.内部排序/8._排序练习.cpp.o:
-	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.o
-.PHONY : 8.内部排序/8._排序练习.cpp.o
+data_struct/7._图/7.2_图的应用.cpp.o:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/data_struct/7._图/7.2_图的应用.cpp.o
+.PHONY : data_struct/7._图/7.2_图的应用.cpp.o
 
-8.内部排序/8._排序练习.i: 8.内部排序/8._排序练习.cpp.i
+data_struct/7._图/7.2_图的应用.i: data_struct/7._图/7.2_图的应用.cpp.i
 
-.PHONY : 8.内部排序/8._排序练习.i
+.PHONY : data_struct/7._图/7.2_图的应用.i
 
 # target to preprocess a source file
-8.内部排序/8._排序练习.cpp.i:
-	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.i
-.PHONY : 8.内部排序/8._排序练习.cpp.i
+data_struct/7._图/7.2_图的应用.cpp.i:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/data_struct/7._图/7.2_图的应用.cpp.i
+.PHONY : data_struct/7._图/7.2_图的应用.cpp.i
 
-8.内部排序/8._排序练习.s: 8.内部排序/8._排序练习.cpp.s
+data_struct/7._图/7.2_图的应用.s: data_struct/7._图/7.2_图的应用.cpp.s
 
-.PHONY : 8.内部排序/8._排序练习.s
+.PHONY : data_struct/7._图/7.2_图的应用.s
 
 # target to generate assembly for a file
-8.内部排序/8._排序练习.cpp.s:
-	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/8.内部排序/8._排序练习.cpp.s
-.PHONY : 8.内部排序/8._排序练习.cpp.s
+data_struct/7._图/7.2_图的应用.cpp.s:
+	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/data_struct/7._图/7.2_图的应用.cpp.s
+.PHONY : data_struct/7._图/7.2_图的应用.cpp.s
 
-9._查找/9._查找练习.o: 9._查找/9._查找练习.cpp.o
+data_struct/8.内部排序/8._排序练习.o: data_struct/8.内部排序/8._排序练习.cpp.o
 
-.PHONY : 9._查找/9._查找练习.o
+.PHONY : data_struct/8.内部排序/8._排序练习.o
 
 # target to build an object file
-9._查找/9._查找练习.cpp.o:
-	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.o
-.PHONY : 9._查找/9._查找练习.cpp.o
+data_struct/8.内部排序/8._排序练习.cpp.o:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/data_struct/8.内部排序/8._排序练习.cpp.o
+.PHONY : data_struct/8.内部排序/8._排序练习.cpp.o
 
-9._查找/9._查找练习.i: 9._查找/9._查找练习.cpp.i
+data_struct/8.内部排序/8._排序练习.i: data_struct/8.内部排序/8._排序练习.cpp.i
 
-.PHONY : 9._查找/9._查找练习.i
+.PHONY : data_struct/8.内部排序/8._排序练习.i
 
 # target to preprocess a source file
-9._查找/9._查找练习.cpp.i:
-	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.i
-.PHONY : 9._查找/9._查找练习.cpp.i
+data_struct/8.内部排序/8._排序练习.cpp.i:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/data_struct/8.内部排序/8._排序练习.cpp.i
+.PHONY : data_struct/8.内部排序/8._排序练习.cpp.i
 
-9._查找/9._查找练习.s: 9._查找/9._查找练习.cpp.s
+data_struct/8.内部排序/8._排序练习.s: data_struct/8.内部排序/8._排序练习.cpp.s
 
-.PHONY : 9._查找/9._查找练习.s
+.PHONY : data_struct/8.内部排序/8._排序练习.s
 
 # target to generate assembly for a file
-9._查找/9._查找练习.cpp.s:
-	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/9._查找/9._查找练习.cpp.s
-.PHONY : 9._查找/9._查找练习.cpp.s
+data_struct/8.内部排序/8._排序练习.cpp.s:
+	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/data_struct/8.内部排序/8._排序练习.cpp.s
+.PHONY : data_struct/8.内部排序/8._排序练习.cpp.s
+
+data_struct/9._查找/9._查找练习.o: data_struct/9._查找/9._查找练习.cpp.o
+
+.PHONY : data_struct/9._查找/9._查找练习.o
+
+# target to build an object file
+data_struct/9._查找/9._查找练习.cpp.o:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/data_struct/9._查找/9._查找练习.cpp.o
+.PHONY : data_struct/9._查找/9._查找练习.cpp.o
+
+data_struct/9._查找/9._查找练习.i: data_struct/9._查找/9._查找练习.cpp.i
+
+.PHONY : data_struct/9._查找/9._查找练习.i
+
+# target to preprocess a source file
+data_struct/9._查找/9._查找练习.cpp.i:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/data_struct/9._查找/9._查找练习.cpp.i
+.PHONY : data_struct/9._查找/9._查找练习.cpp.i
+
+data_struct/9._查找/9._查找练习.s: data_struct/9._查找/9._查找练习.cpp.s
+
+.PHONY : data_struct/9._查找/9._查找练习.s
+
+# target to generate assembly for a file
+data_struct/9._查找/9._查找练习.cpp.s:
+	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/data_struct/9._查找/9._查找练习.cpp.s
+.PHONY : data_struct/9._查找/9._查找练习.cpp.s
+
+essential_cpp/main.o: essential_cpp/main.cpp.o
+
+.PHONY : essential_cpp/main.o
+
+# target to build an object file
+essential_cpp/main.cpp.o:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o
+.PHONY : essential_cpp/main.cpp.o
+
+essential_cpp/main.i: essential_cpp/main.cpp.i
+
+.PHONY : essential_cpp/main.i
+
+# target to preprocess a source file
+essential_cpp/main.cpp.i:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.i
+.PHONY : essential_cpp/main.cpp.i
+
+essential_cpp/main.s: essential_cpp/main.cpp.s
+
+.PHONY : essential_cpp/main.s
+
+# target to generate assembly for a file
+essential_cpp/main.cpp.s:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.s
+.PHONY : essential_cpp/main.cpp.s
 
 # Help Target
 help:
@@ -506,47 +546,51 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... searchExercise"
 	@echo "... graphExercise"
 	@echo "... biTreeExercise"
 	@echo "... linerExercise"
+	@echo "... esesential_cpp"
+	@echo "... sortExercise"
 	@echo "... dLinkedList"
 	@echo "... edit_cache"
-	@echo "... sortExercise"
+	@echo "... rebuild_cache"
 	@echo "... linkedList"
 	@echo "... stackExercise"
 	@echo "... sqList"
-	@echo "... 2.线性表/2.1._顺序表.o"
-	@echo "... 2.线性表/2.1._顺序表.i"
-	@echo "... 2.线性表/2.1._顺序表.s"
-	@echo "... 2.线性表/2.2._单链表.o"
-	@echo "... 2.线性表/2.2._单链表.i"
-	@echo "... 2.线性表/2.2._单链表.s"
-	@echo "... 2.线性表/2.3._双链表.o"
-	@echo "... 2.线性表/2.3._双链表.i"
-	@echo "... 2.线性表/2.3._双链表.s"
-	@echo "... 2.线性表/2.4._习题集.o"
-	@echo "... 2.线性表/2.4._习题集.i"
-	@echo "... 2.线性表/2.4._习题集.s"
-	@echo "... 3._栈和队列/3.1_栈和队列的应用.o"
-	@echo "... 3._栈和队列/3.1_栈和队列的应用.i"
-	@echo "... 3._栈和队列/3.1_栈和队列的应用.s"
-	@echo "... 6._树和二叉树/6.1_二叉树.o"
-	@echo "... 6._树和二叉树/6.1_二叉树.i"
-	@echo "... 6._树和二叉树/6.1_二叉树.s"
-	@echo "... 7._图/7.1_图的遍历算法操作.o"
-	@echo "... 7._图/7.1_图的遍历算法操作.i"
-	@echo "... 7._图/7.1_图的遍历算法操作.s"
-	@echo "... 7._图/7.2_图的应用.o"
-	@echo "... 7._图/7.2_图的应用.i"
-	@echo "... 7._图/7.2_图的应用.s"
-	@echo "... 8.内部排序/8._排序练习.o"
-	@echo "... 8.内部排序/8._排序练习.i"
-	@echo "... 8.内部排序/8._排序练习.s"
-	@echo "... 9._查找/9._查找练习.o"
-	@echo "... 9._查找/9._查找练习.i"
-	@echo "... 9._查找/9._查找练习.s"
+	@echo "... data_struct/2.线性表/2.1._顺序表.o"
+	@echo "... data_struct/2.线性表/2.1._顺序表.i"
+	@echo "... data_struct/2.线性表/2.1._顺序表.s"
+	@echo "... data_struct/2.线性表/2.2._单链表.o"
+	@echo "... data_struct/2.线性表/2.2._单链表.i"
+	@echo "... data_struct/2.线性表/2.2._单链表.s"
+	@echo "... data_struct/2.线性表/2.3._双链表.o"
+	@echo "... data_struct/2.线性表/2.3._双链表.i"
+	@echo "... data_struct/2.线性表/2.3._双链表.s"
+	@echo "... data_struct/2.线性表/2.4._习题集.o"
+	@echo "... data_struct/2.线性表/2.4._习题集.i"
+	@echo "... data_struct/2.线性表/2.4._习题集.s"
+	@echo "... data_struct/3._栈和队列/3.1_栈和队列的应用.o"
+	@echo "... data_struct/3._栈和队列/3.1_栈和队列的应用.i"
+	@echo "... data_struct/3._栈和队列/3.1_栈和队列的应用.s"
+	@echo "... data_struct/6._树和二叉树/6.1_二叉树.o"
+	@echo "... data_struct/6._树和二叉树/6.1_二叉树.i"
+	@echo "... data_struct/6._树和二叉树/6.1_二叉树.s"
+	@echo "... data_struct/7._图/7.1_图的遍历算法操作.o"
+	@echo "... data_struct/7._图/7.1_图的遍历算法操作.i"
+	@echo "... data_struct/7._图/7.1_图的遍历算法操作.s"
+	@echo "... data_struct/7._图/7.2_图的应用.o"
+	@echo "... data_struct/7._图/7.2_图的应用.i"
+	@echo "... data_struct/7._图/7.2_图的应用.s"
+	@echo "... data_struct/8.内部排序/8._排序练习.o"
+	@echo "... data_struct/8.内部排序/8._排序练习.i"
+	@echo "... data_struct/8.内部排序/8._排序练习.s"
+	@echo "... data_struct/9._查找/9._查找练习.o"
+	@echo "... data_struct/9._查找/9._查找练习.i"
+	@echo "... data_struct/9._查找/9._查找练习.s"
+	@echo "... essential_cpp/main.o"
+	@echo "... essential_cpp/main.i"
+	@echo "... essential_cpp/main.s"
 .PHONY : help
 
 

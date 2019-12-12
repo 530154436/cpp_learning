@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhengchubin/CLionProjects/TianqinDatastruct/7. 图/7.1 图的遍历算法操作.cpp" "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/graphExercise.dir/7._图/7.1_图的遍历算法操作.cpp.o"
-  "/Users/zhengchubin/CLionProjects/TianqinDatastruct/7. 图/7.2 图的应用.cpp" "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/graphExercise.dir/7._图/7.2_图的应用.cpp.o"
+  "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/7. 图/7.1 图的遍历算法操作.cpp" "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/graphExercise.dir/data_struct/7._图/7.1_图的遍历算法操作.cpp.o"
+  "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/7. 图/7.2 图的应用.cpp" "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/graphExercise.dir/data_struct/7._图/7.2_图的应用.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

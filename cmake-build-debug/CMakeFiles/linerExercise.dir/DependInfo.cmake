@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhengchubin/CLionProjects/TianqinDatastruct/2.线性表/2.4. 习题集.cpp" "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/linerExercise.dir/2.线性表/2.4._习题集.cpp.o"
+  "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/2.线性表/2.4. 习题集.cpp" "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/linerExercise.dir/data_struct/2.线性表/2.4._习题集.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zhengchubin/CLionProjects/TianqinDatastruct
+# Install script for directory: /Users/zhengchubin/CLionProjects/cpp_learning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

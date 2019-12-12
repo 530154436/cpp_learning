@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct
+CMAKE_SOURCE_DIR = /Users/zhengchubin/CLionProjects/cpp_learning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/stackExercise.dir/depend.make
@@ -57,41 +57,41 @@ include CMakeFiles/stackExercise.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/stackExercise.dir/flags.make
 
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o: CMakeFiles/stackExercise.dir/flags.make
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o: ../3.\ 栈和队列/3.1\ 栈和队列的应用.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o -c "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp"
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o: CMakeFiles/stackExercise.dir/flags.make
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o: ../data_struct/3.\ 栈和队列/3.1\ 栈和队列的应用.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o -c "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/3. 栈和队列/3.1 栈和队列的应用.cpp"
 
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp" > CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.i
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/3. 栈和队列/3.1 栈和队列的应用.cpp" > CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.i
 
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/TianqinDatastruct/3. 栈和队列/3.1 栈和队列的应用.cpp" -o CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.s
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/zhengchubin/CLionProjects/cpp_learning/data_struct/3. 栈和队列/3.1 栈和队列的应用.cpp" -o CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.s
 
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires:
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires:
 
-.PHONY : CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires
+.PHONY : CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires
 
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides: CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires
-	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides.build
-.PHONY : CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides: CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides.build
+.PHONY : CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides
 
-CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides.build: CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o
+CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.provides.build: CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o
 
 
 # Object files for target stackExercise
 stackExercise_OBJECTS = \
-"CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o"
+"CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o"
 
 # External object files for target stackExercise
 stackExercise_EXTERNAL_OBJECTS =
 
-stackExercise: CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o
+stackExercise: CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o
 stackExercise: CMakeFiles/stackExercise.dir/build.make
 stackExercise: CMakeFiles/stackExercise.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable stackExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable stackExercise"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stackExercise.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +99,7 @@ CMakeFiles/stackExercise.dir/build: stackExercise
 
 .PHONY : CMakeFiles/stackExercise.dir/build
 
-CMakeFiles/stackExercise.dir/requires: CMakeFiles/stackExercise.dir/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires
+CMakeFiles/stackExercise.dir/requires: CMakeFiles/stackExercise.dir/data_struct/3._栈和队列/3.1_栈和队列的应用.cpp.o.requires
 
 .PHONY : CMakeFiles/stackExercise.dir/requires
 
@@ -108,6 +108,6 @@ CMakeFiles/stackExercise.dir/clean:
 .PHONY : CMakeFiles/stackExercise.dir/clean
 
 CMakeFiles/stackExercise.dir/depend:
-	cd /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhengchubin/CLionProjects/TianqinDatastruct /Users/zhengchubin/CLionProjects/TianqinDatastruct /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug /Users/zhengchubin/CLionProjects/TianqinDatastruct/cmake-build-debug/CMakeFiles/stackExercise.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhengchubin/CLionProjects/cpp_learning /Users/zhengchubin/CLionProjects/cpp_learning /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles/stackExercise.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/stackExercise.dir/depend
 
