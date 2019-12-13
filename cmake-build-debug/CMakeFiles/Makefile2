@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-deb
 CMakeFiles/searchExercise.dir/all:
 	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/depend
 	$(MAKE) -f CMakeFiles/searchExercise.dir/build.make CMakeFiles/searchExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target searchExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target searchExercise"
 .PHONY : CMakeFiles/searchExercise.dir/all
 
 # Include target in all.
@@ -103,7 +103,7 @@ clean: CMakeFiles/searchExercise.dir/clean
 CMakeFiles/graphExercise.dir/all:
 	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/depend
 	$(MAKE) -f CMakeFiles/graphExercise.dir/build.make CMakeFiles/graphExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=8,9,10 "Built target graphExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target graphExercise"
 .PHONY : CMakeFiles/graphExercise.dir/all
 
 # Include target in all.
@@ -177,7 +177,7 @@ clean: CMakeFiles/biTreeExercise.dir/clean
 CMakeFiles/linerExercise.dir/all:
 	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/depend
 	$(MAKE) -f CMakeFiles/linerExercise.dir/build.make CMakeFiles/linerExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target linerExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target linerExercise"
 .PHONY : CMakeFiles/linerExercise.dir/all
 
 # Include target in all.
@@ -214,7 +214,7 @@ clean: CMakeFiles/linerExercise.dir/clean
 CMakeFiles/esesential_cpp.dir/all:
 	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target esesential_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=6,7,8 "Built target esesential_cpp"
 .PHONY : CMakeFiles/esesential_cpp.dir/all
 
 # Include target in all.
@@ -224,7 +224,7 @@ all: CMakeFiles/esesential_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/esesential_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/esesential_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/esesential_cpp.dir/rule
@@ -251,7 +251,7 @@ clean: CMakeFiles/esesential_cpp.dir/clean
 CMakeFiles/sortExercise.dir/all:
 	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/depend
 	$(MAKE) -f CMakeFiles/sortExercise.dir/build.make CMakeFiles/sortExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target sortExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target sortExercise"
 .PHONY : CMakeFiles/sortExercise.dir/all
 
 # Include target in all.
@@ -325,7 +325,7 @@ clean: CMakeFiles/dLinkedList.dir/clean
 CMakeFiles/linkedList.dir/all:
 	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/depend
 	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target linkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target linkedList"
 .PHONY : CMakeFiles/linkedList.dir/all
 
 # Include target in all.
@@ -362,7 +362,7 @@ clean: CMakeFiles/linkedList.dir/clean
 CMakeFiles/stackExercise.dir/all:
 	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/depend
 	$(MAKE) -f CMakeFiles/stackExercise.dir/build.make CMakeFiles/stackExercise.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target stackExercise"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target stackExercise"
 .PHONY : CMakeFiles/stackExercise.dir/all
 
 # Include target in all.
@@ -399,7 +399,7 @@ clean: CMakeFiles/stackExercise.dir/clean
 CMakeFiles/sqList.dir/all:
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/depend
 	$(MAKE) -f CMakeFiles/sqList.dir/build.make CMakeFiles/sqList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target sqList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target sqList"
 .PHONY : CMakeFiles/sqList.dir/all
 
 # Include target in all.

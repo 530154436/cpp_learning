@@ -15,4 +15,4 @@ add_executable(sortExercise "data_struct/8.内部排序/8. 排序练习.cpp" dat
 add_executable(searchExercise "data_struct/9. 查找/9. 查找练习.cpp" data_struct/utility/Search/Search.h data_struct/utility/Search/BalancedBinarySortTree.h data_struct/utility/Search/BTree.h)
 
 # Essential C++
-add_executable(esesential_cpp "essential_cpp/main.cpp")
+add_executable(esesential_cpp essential_cpp/main.cpp essential_cpp/chapter01.cpp essential_cpp/exercises.hpp)

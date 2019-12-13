@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter01.cpp
+string
+-
+iostream
+-
+
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/main.cpp
 iostream
 -

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o"
+  "CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o"
   "esesential_cpp.pdb"
   "esesential_cpp"
 )
