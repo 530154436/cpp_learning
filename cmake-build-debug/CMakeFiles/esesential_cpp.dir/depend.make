@@ -3,5 +3,6 @@
 
 CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o: ../essential_cpp/chapter01.cpp
 
+CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o: ../essential_cpp/exercises.hpp
 CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o: ../essential_cpp/main.cpp
 

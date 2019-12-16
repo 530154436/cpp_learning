@@ -8,9 +8,10 @@ using namespace std;
 
 
 int main() {
-    std::cout << __VERSION__ << std::endl;
+    cout << __VERSION__ << endl;
     // ex_01_01();
     // ex_01_02();
+    example_01();
     return 0;
 }
 
