@@ -540,6 +540,33 @@ essential_cpp/chapter01.cpp.s:
 	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.s
 .PHONY : essential_cpp/chapter01.cpp.s
 
+essential_cpp/chapter02.o: essential_cpp/chapter02.cpp.o
+
+.PHONY : essential_cpp/chapter02.o
+
+# target to build an object file
+essential_cpp/chapter02.cpp.o:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o
+.PHONY : essential_cpp/chapter02.cpp.o
+
+essential_cpp/chapter02.i: essential_cpp/chapter02.cpp.i
+
+.PHONY : essential_cpp/chapter02.i
+
+# target to preprocess a source file
+essential_cpp/chapter02.cpp.i:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.i
+.PHONY : essential_cpp/chapter02.cpp.i
+
+essential_cpp/chapter02.s: essential_cpp/chapter02.cpp.s
+
+.PHONY : essential_cpp/chapter02.s
+
+# target to generate assembly for a file
+essential_cpp/chapter02.cpp.s:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.s
+.PHONY : essential_cpp/chapter02.cpp.s
+
 essential_cpp/main.o: essential_cpp/main.cpp.o
 
 .PHONY : essential_cpp/main.o
@@ -566,6 +593,33 @@ essential_cpp/main.s: essential_cpp/main.cpp.s
 essential_cpp/main.cpp.s:
 	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.s
 .PHONY : essential_cpp/main.cpp.s
+
+essential_cpp/util.o: essential_cpp/util.cpp.o
+
+.PHONY : essential_cpp/util.o
+
+# target to build an object file
+essential_cpp/util.cpp.o:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o
+.PHONY : essential_cpp/util.cpp.o
+
+essential_cpp/util.i: essential_cpp/util.cpp.i
+
+.PHONY : essential_cpp/util.i
+
+# target to preprocess a source file
+essential_cpp/util.cpp.i:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.i
+.PHONY : essential_cpp/util.cpp.i
+
+essential_cpp/util.s: essential_cpp/util.cpp.s
+
+.PHONY : essential_cpp/util.s
+
+# target to generate assembly for a file
+essential_cpp/util.cpp.s:
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.s
+.PHONY : essential_cpp/util.cpp.s
 
 # Help Target
 help:
@@ -618,9 +672,15 @@ help:
 	@echo "... essential_cpp/chapter01.o"
 	@echo "... essential_cpp/chapter01.i"
 	@echo "... essential_cpp/chapter01.s"
+	@echo "... essential_cpp/chapter02.o"
+	@echo "... essential_cpp/chapter02.i"
+	@echo "... essential_cpp/chapter02.s"
 	@echo "... essential_cpp/main.o"
 	@echo "... essential_cpp/main.i"
 	@echo "... essential_cpp/main.s"
+	@echo "... essential_cpp/util.o"
+	@echo "... essential_cpp/util.i"
+	@echo "... essential_cpp/util.s"
 .PHONY : help
 
 

@@ -631,10 +631,16 @@
 		<Unit filename="/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter01.cpp">
 			<Option target="esesential_cpp"/>
 		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter02.cpp">
+			<Option target="esesential_cpp"/>
+		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/exercises.hpp">
 			<Option target="esesential_cpp"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/main.cpp">
+			<Option target="esesential_cpp"/>
+		</Unit>
+		<Unit filename="/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/util.cpp">
 			<Option target="esesential_cpp"/>
 		</Unit>
 		<Unit filename="/Users/zhengchubin/CLionProjects/cpp_learning/CMakeLists.txt">

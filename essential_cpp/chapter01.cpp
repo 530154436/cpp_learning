@@ -3,38 +3,14 @@
 //
 
 #include <string>
+#include <cstring>
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <algorithm>
 using namespace std;
 
-void ex_01_01(){
-    // p7
-    string name;
-    cout << "Please input your name:";
-    cin >> name;
-    cout << '\n'
-         << "Hello "
-         << name
-         << '\n';
-}
-
-void ex_01_02(){
-    //p7
-    string first_name, last_name;
-    cout << "Please input your first_name:";
-    cin >> first_name;
-    cout << "Please input your last_name:";
-    cin >> last_name;
-    cout << '\n'
-         << "Hello "
-         << last_name
-         << " "
-         << first_name
-         << '\n';
-}
-
-void example_01(){
+void example_01_06(){
     // p7
     string user_name;
     const int seq_cnt = 6;
@@ -117,8 +93,137 @@ void example_01(){
     }
 }
 
-void example_02(){
-    ofstream out_file("seq_data.txt");                   // 覆盖
+void example_01_07(){
+    // p33
+    ifstream infile("data/seq_data.txt");                // Edit Configurations => Working dictionary
+    // ofstream out_file("data/seq_data.txt");           // 写覆盖
     // ofstream out_file("seq_data.txt", ios_base::app); // 追加模式
 
+    string name;
+    int nt=0, nc=0;
+    if (!infile || !infile.is_open()){
+        cerr << "Unable to read file!\n";
+    } else{
+        while (infile>>name){
+            infile>>nt>>nc;
+            cout<<name<<", "
+                <<nt<<", "
+                <<nc<<endl;
+        }
+    }
+}
+
+void ex_01_01(){
+    // p7
+    string name;
+    cout << "Please input your name:";
+    cin >> name;
+    cout << '\n'
+         << "Hello "
+         << name
+         << '\n';
+}
+
+void ex_01_02(){
+    //p7
+    string first_name, last_name;
+    cout << "Please input your first_name:";
+    cin >> first_name;
+    cout << "Please input your last_name:";
+    cin >> last_name;
+    cout << '\n'
+         << "Hello "
+         << last_name
+         << " "
+         << first_name
+         << '\n';
+}
+
+void ex_01_05(){
+    // p33
+    cout<<"What's your name?"<<endl;
+
+    // C-stype: char-array
+    int cnt=0;
+    char name[10];
+    cin>>name;
+    for(int i=0; i<10; i++){
+        if(name[i]=='\0')
+            break;
+        cnt++;
+    }
+    if (cnt>2)
+        cout<<"Name is not valid.(length must <=2, , char[])"<<endl;
+    else
+        cout<<name<<" Valid. (char[])"<<endl;
+
+    // char*
+    char* line=new char[10];
+    cin>>line;
+    if(strlen(line)>2)
+        cout<<"Name is not valid.(length must <=2, char*)"<<endl;
+    else
+        cout<<line<<" Valid. (char*)"<<endl;
+
+    //string
+    string text;
+    cin>>text;
+    if(text.size()>2)
+        cout<<"Name is not valid.(length must <=2, string)"<<endl;
+    else
+        cout<<text<<" Valid.(string)"<<endl;
+}
+
+void ex_01_06(){
+    //p33
+
+    // 数组实现
+    int max_len=10;
+    int i=0, cur_val=0, sum=0, cnt=0;
+    int arr[max_len];
+
+    // 监视读入的元素个数，确保数组的读取操作不会越界
+    while (cin>>cur_val && cur_val!=-1 && i<max_len){
+        arr[i++] = cur_val;
+        cnt++;
+    }
+    for(i=0; i<cnt; i++) sum += arr[i];
+    float avg = (cnt==0?0:(float)sum/cnt);
+    cout<<"sum="<<sum<<", avg="<<avg<<endl;
+
+    // vector 实现
+    sum=0;
+    vector<int> vec;
+    while (cin>>cur_val && cur_val!=-1){
+        vec.push_back(cur_val);
+    }
+    for(i=0; i<vec.size(); i++){
+        sum += vec.at(i);
+    }
+    avg = (cnt==0?0:(float)sum/vec.size());
+    cout<<"sum="<<sum<<", avg="<<avg<<endl;
+}
+
+void ex_01_07(){
+    string cur_ch;
+    vector<string> vec;
+
+    fstream infile("data/ex0107.txt");
+    if(!infile){
+        cout<<"Read file failed."<<endl;
+        return;
+    }
+
+    while (infile>>cur_ch){
+        vec.push_back(cur_ch);
+    }
+
+    for(int i=0; i<vec.size(); i++) cout<< vec.at(i)<< " ";
+    cout<<endl;
+
+    // 排序
+    sort(vec.begin(), vec.end());
+
+    for(int i=0; i<vec.size(); i++) cout<< vec.at(i)<< " ";
+    cout<<endl;
 }

@@ -81,9 +81,33 @@ CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o.provides: CMakeFiles/eses
 CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o.provides.build: CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o
 
 
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o: CMakeFiles/esesential_cpp.dir/flags.make
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o: ../essential_cpp/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o -c /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/util.cpp
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.i"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/util.cpp > CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.i
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.s"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/util.cpp -o CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.s
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.requires:
+
+.PHONY : CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.requires
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.provides: CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.requires
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.provides.build
+.PHONY : CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.provides
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.provides.build: CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o
+
+
 CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o: CMakeFiles/esesential_cpp.dir/flags.make
 CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o: ../essential_cpp/chapter01.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o"
 	/usr/local/Cellar/gcc/8.3.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o -c /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter01.cpp
 
 CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.i: cmake_force
@@ -105,19 +129,47 @@ CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o.provides: CMakeFiles
 CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o.provides.build: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o
 
 
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o: CMakeFiles/esesential_cpp.dir/flags.make
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o: ../essential_cpp/chapter02.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o -c /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter02.cpp
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.i"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter02.cpp > CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.i
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.s"
+	/usr/local/Cellar/gcc/8.3.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter02.cpp -o CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.s
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.requires:
+
+.PHONY : CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.requires
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.provides: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.requires
+	$(MAKE) -f CMakeFiles/esesential_cpp.dir/build.make CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.provides.build
+.PHONY : CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.provides
+
+CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.provides.build: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o
+
+
 # Object files for target esesential_cpp
 esesential_cpp_OBJECTS = \
 "CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o" \
-"CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o"
+"CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o" \
+"CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o" \
+"CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o"
 
 # External object files for target esesential_cpp
 esesential_cpp_EXTERNAL_OBJECTS =
 
 esesential_cpp: CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o
+esesential_cpp: CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o
 esesential_cpp: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o
+esesential_cpp: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o
 esesential_cpp: CMakeFiles/esesential_cpp.dir/build.make
 esesential_cpp: CMakeFiles/esesential_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable esesential_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable esesential_cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/esesential_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,7 +178,9 @@ CMakeFiles/esesential_cpp.dir/build: esesential_cpp
 .PHONY : CMakeFiles/esesential_cpp.dir/build
 
 CMakeFiles/esesential_cpp.dir/requires: CMakeFiles/esesential_cpp.dir/essential_cpp/main.cpp.o.requires
+CMakeFiles/esesential_cpp.dir/requires: CMakeFiles/esesential_cpp.dir/essential_cpp/util.cpp.o.requires
 CMakeFiles/esesential_cpp.dir/requires: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter01.cpp.o.requires
+CMakeFiles/esesential_cpp.dir/requires: CMakeFiles/esesential_cpp.dir/essential_cpp/chapter02.cpp.o.requires
 
 .PHONY : CMakeFiles/esesential_cpp.dir/requires
 

@@ -9,9 +9,19 @@
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter01.cpp
 string
 -
+cstring
+-
 iostream
 -
 vector
+-
+fstream
+-
+algorithm
+-
+
+/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter02.cpp
+iostream
 -
 
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/exercises.hpp
@@ -20,5 +30,11 @@ vector
 exercises.hpp
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/exercises.hpp
 iostream
+-
+
+/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/util.cpp
+iostream
+-
+vector
 -
 
