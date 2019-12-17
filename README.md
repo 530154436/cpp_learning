@@ -44,4 +44,19 @@
 
 #### 2. Essential C++
 - [x] 第1章 C++编程基础
+```c++
+extern void example_01_06();        // p7
+extern void example_01_07();        // p33
+extern void ex_01_01();             // p7
+extern void ex_01_02();             // p7
+extern void ex_01_05();             // p33
+extern void ex_01_06();             // p33
+extern void ex_01_07();             // p34
+```
 - [x] 第2章 面向过程的编程风格
+```c++
+extern bool example_02_01(int pos, int &elem);      // p36
+extern void example_02_02();                        // p45 传值、传指针、传引用
+extern const vector<int>* example_02_03(int size);  // p54 局部静态对象
+extern bool example_02_04(int pos, int& elems);     // p55 内联函数
+```

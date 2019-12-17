@@ -28,14 +28,14 @@ p;   => 计算p所持有的内存地址，即val的内存地址
 > https://haoqchen.site/2018/09/09/string-and-char/
 https://www.cnblogs.com/zhuluqing/p/8761640.html
 
-    + **字符串指针** char* ch="hello";
+    + 字符串指针 char* ch="hello";
     "hello"是字符串常量，不可改变，即通过ch[0]="s"会编译出错。
     ch保存“hello"这个字符串常量的首地址。
 
-    + **字符数组** char ch[]="hello";
+    + 字符数组 char ch[]="hello";
     字符串以字符数组的形式保存,以”\0”结尾,数组内元素可以改变。
 
-    + **字符串** string ch
+    + 字符串 string ch
     string 由C++提供的字符串类,封装了字符串操作,比C语言的char*操作起来更安全;
 
 4. **array和vector的区别**
@@ -48,6 +48,43 @@ https://www.cnblogs.com/zhuluqing/p/8761640.html
 通常，函数声明会被放在`头文件`，每个打算使用该函数的文件，都会包含对应的头文件。
 头文件只被编译一次，当我们想要使用该函数时，会将它链接(link)到我们的程序。
 
+6. **局部静态对象**
+在局部变量之前加上关键字static，局部变量就被定义成为一个局部静态变量。
+(1) 内存中的位置：`静态存储区`
+(2) 初始化：未经初始化的全局静态变量会被程序自动初始化为0（自动对象的值是任意的，除非他被显示初始化）
+(3) 作用域：作用域仍为局部作用域，当定义它的函数或者语句块结束的时候，作用域随之结束。
+[`注`] 和局部非静态对象不同的是，局部静态对象所处的内存空间，即使在不同的函数函数调用过程中，依然存在。elems的内存不再像以前一样地在fibon_seq()每次调用找那时就被破坏又被重新建立。
+```c++
+const vector<int>* example_02_03(int size){
+    static vector<int> elems;
+    const int max_size = 1024;
+    cout<<"size: "<<size<<endl;
+
+    if(size<=0 || size>max_size){
+        cout<<"Oops: requested size is not supported: "
+            <<size<<" -- can't fulfill request.\n";
+        return 0; // 即空指针
+    }
+    // 如果size<=elems.size()则不必重新计算
+    for(long i=elems.size(); i<size; ++i){
+        if(i==0 || i==1){
+            elems.push_back(1);
+        }else{
+            elems.push_back(elems[i-1]+elems[i-2]);
+        }
+        cout<<elems[i]<<" ";
+    }
+    cout<<endl;
+    return &elems;
+}
+int main(){
+    const vector<int> *elems = example_02_03(3);
+    elems = example_02_03(5);
+    elems = example_02_03(7);
+    display(elems);
+    return 9;
+}
+```
 #### 3. 出现的问题
 1. **ld: 1 duplicate symbol for architecture x86_64**
 出现错误的原因是：重复定义。

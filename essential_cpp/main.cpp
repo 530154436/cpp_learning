@@ -21,37 +21,10 @@ void test_01(){
     cout<<data;
 }
 
-void test_02(){
-    int a = 20, b = 10;
-    cout << "交换前: " << endl;
-    cout << "a = " << a << " ,b = " << b << endl;
-    swap_by_value(a, b); // 值传递
-    cout << "交换后: " << endl;
-    cout << "a = " << a << " ,b = " << b << endl;
-    /*-------------------------分界线1------------------*/
-    cout << "交换前: " << endl;
-    cout << "a = " << a << " ,b = " << b << endl;
-    swap_by_pointer(&a, &b); // 值传递
-    cout << "交换后: " << endl;
-    cout << "a = " << a << " ,b = " << b << endl;
-    /*-------------------------分界线2------------------*/
-    cout << "交换前: " << endl;
-    cout << "a = " << a << " ,b = " << b << endl;
-    swap_by_reference(a, b); // 引用传递
-    cout << "交换后: " << endl;
-    cout << "a = " << a << " ,b = " << b << endl;
-
-    int value=1024;
-    int* pi = &value; // pi=0x7ffeef04a05c2028
-    *pi = 2028;
-    cout << *pi;
-
-}
-
 int main() {
     cout<< "G++ " << __VERSION__ << endl;
     //test_01();
-    test_02();
+    //test_02();
 
     // 第1章
     //example_01_06();
@@ -65,6 +38,18 @@ int main() {
     // 第2章
     //int elem = 0;
     //example_02_01(10, elem);
+    //example_02_02();
+
+    //const vector<int> *elems = example_02_03(3);
+    //elems = example_02_03(5);
+    //elems = example_02_03(7);
+    //display(elems);
+
+    int elem = 0;
+    example_02_04(5, elem);
+    cout<<"pos:"<<5<<", elem:"<<elem<<endl;
+    example_02_04(7, elem);
+    cout<<"pos:"<<7<<", elem:"<<elem<<endl;
 
     return 0;
 }

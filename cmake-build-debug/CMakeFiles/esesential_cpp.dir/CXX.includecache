@@ -23,8 +23,16 @@ algorithm
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/chapter02.cpp
 iostream
 -
+vector
+-
+exercises.hpp
+/Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/exercises.hpp
 
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/exercises.hpp
+vector
+-
+iostream
+-
 
 /Users/zhengchubin/CLionProjects/cpp_learning/essential_cpp/main.cpp
 exercises.hpp
