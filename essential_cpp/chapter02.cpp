@@ -80,32 +80,6 @@ const vector<int>* example_02_03(int size){
     return &elems;
 }
 
-inline bool is_size_ok(int size, const int max_size){
-    if(size<0 || size>max_size){
-        cout<<"Oops: requested size is not supported: "
-            <<size<<" -- can't fulfill request.\n";
-        return false;
-    }
-    return true;
-}
-inline const vector<int>* fibon_seq(int size){
-    const int max_size = 1024;
-    static vector<int> elems;
-    cout<<"size: "<<size<<endl;
-    if(!is_size_ok(size, max_size)) return 0;
-
-    // 如果size<=elems.size()则不必重新计算
-    for(long i=elems.size(); i<size; ++i){
-        if(i==0 || i==1){
-            elems.push_back(1);
-        }else{
-            elems.push_back(elems[i-1]+elems[i-2]);
-        }
-        cout<<elems[i]<<" ";
-    }
-    cout<<endl;
-    return &elems;
-}
 bool example_02_04(int pos, int& elems){
     // p55
     const vector<int>* pseq = fibon_seq(pos);
@@ -114,6 +88,26 @@ bool example_02_04(int pos, int& elems){
         return false;
     }
     elems = (*pseq)[pos-1];
+    return true;
+}
+
+bool example_02_05(int pos, int &elems, const vector<int>* (*seq_ptr)(int)){
+    // 61
+    const vector<int> *pseq = seq_ptr(pos);
+    if(!pseq){
+        elems = 0;
+        return false;
+    }
+    elems = (*pseq)[pos-1];
+    return true;
+}
+
+bool ex_02_02(int pos, int &elem){
+    const int max_size = 100;
+    std::cout<<"size: "<<pos<< std::endl;
+    if(!is_size_ok(pos, max_size)) return 0;
+    vector<int>* elems = pentagonal_seq(pos);
+    elem = (*elems)[pos-1];
     return true;
 }
 

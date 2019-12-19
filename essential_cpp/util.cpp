@@ -5,31 +5,6 @@
 #include <vector>
 using namespace std;
 
-void display(const vector<int> &vec){
-    for(int i=0; i<vec.size(); i++){
-        cout<<vec[i]<<' ';
-    }
-    cout<<endl;
-}
-
-void display(const vector<int> *vec){
-    if (!vec){
-        cout<<"display(): The vector pointer is 0.\n";
-    }
-    for(int i=0; i<vec->size(); i++){
-        cout<<(*vec)[i]<<' ';
-    }
-    cout<<endl;
-}
-
-// 默认参数
-void display(const vector<int> &vec, ostream &os=cout){
-    for(int i=0; i<vec.size(); i++){
-        os<<vec[i]<<' ';
-    }
-    os<<endl;
-}
-
 // 一、值传递
 /*
 形参意思是被调用函数的参数/变量，实参意思是主调函数中放到括号中的参数/变量。

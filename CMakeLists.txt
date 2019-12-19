@@ -16,4 +16,4 @@ add_executable(searchExercise "data_struct/9. 查找/9. 查找练习.cpp" data_s
 
 # Essential C++
 add_executable(esesential_cpp essential_cpp/main.cpp essential_cpp/exercises.hpp essential_cpp/util.cpp
-        essential_cpp/chapter01.cpp essential_cpp/chapter02.cpp )
+        essential_cpp/chapter01.cpp essential_cpp/chapter02.cpp)
