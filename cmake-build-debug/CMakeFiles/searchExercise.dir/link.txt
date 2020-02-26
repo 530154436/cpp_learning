@@ -1,1 +1,0 @@
-/usr/local/Cellar/gcc/8.3.0/bin/g++-8  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/searchExercise.dir/data_struct/9._查找/9._查找练习.cpp.o  -o searchExercise 

@@ -1,1 +1,0 @@
-/usr/local/Cellar/gcc/8.3.0/bin/g++-8  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/linerExercise.dir/data_struct/2.线性表/2.4._习题集.cpp.o  -o linerExercise 

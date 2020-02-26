@@ -1,1 +1,0 @@
-/usr/local/Cellar/gcc/8.3.0/bin/g++-8  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/biTreeExercise.dir/data_struct/6._树和二叉树/6.1_二叉树.cpp.o  -o biTreeExercise 

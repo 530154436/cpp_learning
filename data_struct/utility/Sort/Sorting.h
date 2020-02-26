@@ -15,16 +15,12 @@ using namespace std;
  * @param n
  */
 void insertSort(int R[], int n){
-    int tmp;
-    int i,j;
+    int i,j,Ri;
     for(i=1; i<n; i++){
-        tmp = R[i];
-        // 大于待排元素则后移，即找到第一个小于tmp的数组下标
-        for(j=i-1; j>=0 && R[j]>tmp; j--){
-            R[j+1] = R[j];
-        }
-        // 找到插入位置
-        R[j+1] = tmp;
+        Ri = R[i];
+        for(j=i-1; j>=0 && R[j]>Ri; j--)  // 从后往前查找待插入位置
+            R[j+1] = R[j];                // 向后挪位
+        R[j+1] = Ri;                      // 复制到插入位置
         string result = "第 " + to_string(i) + " 趟排序结果";
         printIntArray(result, R, 8);
     }
@@ -126,38 +122,33 @@ void bubbleSort(int R[], int n){
  * @param l
  * @param r
  */
-void quickSort(int R[], int l, int r){
-    int i=l,j=r,tmp;
+// 分区
+int partion(int a[], int low, int high){
+    int pivot = a[low];
+    while(low < high){
+        // 找到第1个比pivot小的值左移
+        while( low<high && a[high]>=pivot ) high--;
+        a[low] = a[high];
 
-    if(l<r){
-        tmp = R[l];
-        while(i!=j){
-            // 从右向左扫描找到一个小于tmp的元素
-            while(i<j && R[j]>=tmp) j--;
-            if(i<j){
-                // 放在tmp左边，i指针右移一位
-                R[i] = R[j];
-                i++;
-            }
-
-            // 从左向右扫描找到一个大于tmp的元素
-            while(i<j && R[i]<=tmp) i++;
-            if(i<j){
-                // 放在tmp右边, j左移一位
-                R[j] = R[i];
-                j--;
-            }
-        }
-        R[i] = tmp;
-
-        string result = "i=" + to_string(i) + ", pivot=" + to_string(tmp) + ", l=" + to_string(l) + ", r=" + to_string(r);
-        printIntArray(result, R, 8);
-
-        // 对tmp左边元素进行排序
-        quickSort(R, l, i-1);
-        // 对tmp右边元素进行排序
-        quickSort(R, i+1, r);
+        // 找到第1个比pivot大的值右移
+        while( low<high && a[low]<=pivot ) low++;
+        a[high] = a[low];
     }
+    a[low] = pivot;
+    return low;
+}
+
+// 快排
+void quickSort(int a[], int low, int high){
+    if(low >= high)
+        return;
+    // 分区
+    int pivotpos = partion(a, low, high);
+    string result = "pivotpos " + to_string(++pivotpos) + " 趟排序结果("+"pivot=" + to_string(a[pivotpos]) +")";
+    printIntArray(result, a, high+1);
+    // 分治
+    quickSort(a, low, pivotpos-1);
+    quickSort(a, pivotpos+1, high);
 }
 
 /**
@@ -186,76 +177,69 @@ void selectSort(int R[], int n){
     }
 }
 
+void swap(int &a, int &b){
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+
 /**
- * 最大堆调整( 保证父节点最大 )
+ * 向下调整( 保证父节点最大 )
  *
- * @param R
- * @param low
- * @param high
+ * @param a
+ * @param k
+ * @param len
  */
-void maxHeapify(int R[], int low, int high){
-    // 父节点和左孩子(数组从0开始)
-    int i=low, j = 2*i + 1;
-    int tmp = R[i];
-    while(j <= high){
-
-        // 如果右孩子较大，则 j 指向右孩子
-        if(j<high && R[j]<R[j+1]){
-            j++;
-        }
-
-        // 将 R[j] 调整到双亲节点的位置上
-        if(tmp < R[j]){
-            R[i] = R[j];
-            i = j;
-            j = 2*i + 1;
+void adjustDown(int a[], int k, int len){
+    string result = "(k=" + to_string(k) + ", len="+to_string(len) + ")";
+    int p = a[k];                        // 父节点k
+    for(int i=2*k+1; i<len; i=2*i+1){    // 沿key较大的子节点向下筛选
+        if(i<len-1 && a[i]<a[i+1]) i++;  // 左右子节点中取最大
+        if(p<a[i]){                     // 父子节点中取最大
+            a[k] = a[i];
+            k = i;
         }else{
-            // 调整结束
             break;
         }
     }
-    R[i] = tmp;
-    string result = "(low=" + to_string(low) + ", hight="+to_string(high) + ")";
-    printIntArray(result, R, 9);
+    a[k] = p;
+    printIntArray(result, a, len);
 }
 
 /**
  * 初始化最大堆
  *
- * @param R
+ * @param a
  * @param n
  */
-void buildHeap(int R[], int n){
+void buildHeap(int a[], int len){
     // 初始化堆，i从最后一个父节点开始调整
-    for(int i=n/2-1; i>=0; i--){
-        maxHeapify(R, i, n-1);
+    for(int i=len/2-1; i>=0; i--){
+        adjustDown(a, i, len);
     }
 }
 
 /**
  * 堆排序
  *
- * @param R
- * @param n
+ * @param a
+ * @param len
  */
-void heapSort(int R[],  int n){
-    int tmp,i;
+void heapSort(int a[],  int len){
+    int i;
 
     // 创建堆
-    buildHeap(R, n);
+    buildHeap(a, len);
 
     // 先将第一个元素(最大的元素)和已排数组最后一个元素做交换，再重新调整
-    for(i=n-1; i>0; i--){
-        // 交换
-        tmp = R[0];
-        R[0] = R[i];
-        R[i] = tmp;
+    for(i=len-1; i>0; i--){
+        swap(a[0], a[i]);
 
-        string result = "第 " + to_string(n-i) + " 趟排序结果";
-        printIntArray(result, R, n);
+        string result = "第 " + to_string(len-i) + " 趟排序结果";
+        printIntArray(result, a, len);
 
         // 在减少一个元素的无序列中进行调整
-        maxHeapify(R, 0, i-1);
+        adjustDown(a, 0, i);
     }
 }
 

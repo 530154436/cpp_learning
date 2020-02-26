@@ -1,0 +1,8 @@
+//
+// Created by 郑楚彬 on 2020/2/19.
+//
+
+#ifndef TIANQINDATASTRUCT_LC24_HPP
+#define TIANQINDATASTRUCT_LC24_HPP
+
+#endif //TIANQINDATASTRUCT_LC24_HPP

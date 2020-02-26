@@ -2,7 +2,6 @@
 // Created by 郑楚彬 on 2019/12/12.
 //
 #include "exercises.hpp"
-#include <iostream>
 using namespace std;
 
 void test_01(){
@@ -66,6 +65,19 @@ int main() {
     //cout<<ex2_6_max(1,4)<<endl;
     //cout<<ex2_6_max("a", "d")<<endl;
     //cout<<ex2_6_max(1.2f, 4.1f)<<endl;
+
+    // 第3章
+    const int size=8;
+    int x[8] = {1,2,3,4,5,6,7,8};
+    vector<int> vec(x, x+8);
+    vector<int>::iterator it;
+
+    const int* val = find(x, size, 5);
+    const int* val1 = find(x, x + size, 6);
+    const int* val3 = find(vec_begin(vec), vec_end(vec), 7);
+    it = find(vec.begin(), vec.end(), 8);
+
+    cout<<*val<<", "<<*val1<<", "<<*val3<< ", "<< *it<<endl;
 
     return 0;
 }

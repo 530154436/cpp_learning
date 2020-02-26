@@ -2,6 +2,7 @@
 #ifndef EXERCISES_H
 #define EXERCISES_H
 
+#include <list>
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -23,15 +24,46 @@ extern void ex_01_06();             // p33
 extern void ex_01_07();             // p34
 
 // 第2章样例、习题
-extern bool example_02_01(int pos, int &elem);           // p36
-extern void example_02_02();                             // p45 传值、传指针、传引用
-extern const std::vector<int>* example_02_03(int size);  // p54 局部静态对象
-extern bool example_02_04(int pos, int& elems);          // p55 内联函数
+extern bool example_02_01(int pos, int &elem);                      // p36
+extern void example_02_02();                                        // p45 传值、传指针、传引用
+extern const std::vector<int>* example_02_03(int size);             // p54 局部静态对象
+extern bool example_02_04(int pos, int& elems);                     // p55 内联函数
 extern bool example_02_05(int pos, int& elems, const std::vector<int>* (*seq_ptr)(int)); // p61 函数指针
-extern bool ex_02_02(int pos, int &elem);                // p64 练习2.2
+extern bool ex_02_02(int pos, int &elem);                           // p64 练习2.2
+inline int ex2_5_max(int a, int b){  return a>b?a:b; }              // p65
+inline float ex2_5_max(float a, float b){  return a>b?a:b; }        // p65
+inline string ex2_5_max(string a, string b){  return a>b?a:b; }     // p65
+template <typename T> T ex2_6_max(T a, T b){ return a>b?a:b; }      // p65
+
+// 第3章泛型编程
+template <typename T>
+const T* find(const T *array, const int size, const  T &val){    // p70
+    if(!array || size<1) return 0;
+    for(int i=0; i<size; i++,array++){
+        if(*array==val) return array;
+    }
+    return 0;
+}
+template <typename T>
+const T* find(const T *first, const T *last, const T &val){ // p71
+    if(!first || !last) return 0;
+    for(; first!=last; first++){
+        if(*first==val) return first;
+    }
+    return 0;
+}
+template <typename IteratorType, typename T>
+IteratorType find(IteratorType first, IteratorType last, const T &val){ // p75
+    for(; first!=last; first++){
+        if(*first==val) return first;
+    }
+    return last;
+}
+template <typename T> inline const T* vec_begin(vector<T> &vec){ return vec.empty()?0:&vec[0]; }           // p72
+template <typename T> inline const T* vec_end(vector<T> &vec){ return vec.size()>0?&vec[vec.size()-1]:0; } // p72
 
 // ------------------------------------------------------------ //
-// 函数模板的实现需要写在头文件中
+// 函数模板、inline函数的实现需要写在头文件中
 template <typename T>
 void display(const std::vector<T> &vec){
     for(int i=0; i<vec.size(); i++){
@@ -57,12 +89,14 @@ void display(const std::vector<T> *vec){
     std::cout<<std::endl;
 }
 template <typename T>
-void display(const std::vector<T> &vec, std::ostream &os=std::cout){
-    for(int i=0; i<vec.size(); i++){
-        os<<vec[i]<<' ';
-    }
-    os<<std::endl;
+void display(const vector<T> &vec, ostream &os){
+    typename vector<T>::const_iterator iter = vec.begin();
+    typename vector<T>::const_iterator end_it = vec.end();
+    for(; iter!=end_it; iter++)
+        os<< *iter << " ";
+    std::cout<<std::endl;
 }
+
 inline bool is_size_ok(int size, const int max_size){
     if(size<=0 || size>max_size){
         std::cout<<"Oops: requested size is not supported: "
@@ -100,11 +134,5 @@ inline std::vector<int>* pentagonal_seq(int pos){
     cout<<endl;
     return &elems;
 }
-
-inline int ex2_5_max(int a, int b){  return a>b?a:b; }
-inline float ex2_5_max(float a, float b){  return a>b?a:b; }
-inline string ex2_5_max(string a, string b){  return a>b?a:b; }
-
-template <typename T> T ex2_6_max(T a, T b){ return a>b?a:b; }
 
 #endif     //防止文件被重复包含

@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/Cellar/gcc/8.3.0/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/local/Cellar/gcc/8.3.0/bin/g++-8 -G "CodeBlocks - Unix Makefiles" /Users/zhengchubin/CLionProjects/cpp_learning
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/zhengchubin/CLionProjects/cpp_learning/cmake-build-debug
