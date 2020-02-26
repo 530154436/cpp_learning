@@ -1,7 +1,7 @@
 //
 // Created by 郑楚彬 on 2020/2/12.
 //
-#include "lib.hpp"
+#include "../lib.hpp"
 
 /**
 75. 颜色分类(荷兰国旗问题)

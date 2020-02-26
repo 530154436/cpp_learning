@@ -30,17 +30,17 @@ void swap(int &a, int &b){
     b = tmp;
 }
 
-void swap(TreeNode* &a, TreeNode* &b){
-    TreeNode* tmp = a;
-    a = b;
-    b = tmp;
-}
-
 struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+
+void swap(TreeNode* &a, TreeNode* &b){
+    TreeNode* tmp = a;
+    a = b;
+    b = tmp;
+}
 
 #endif     //防止文件被重复包含

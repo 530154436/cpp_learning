@@ -4,10 +4,12 @@
 #include "ds1_string/lc242.hpp"
 #include "ds1_string/lc125.hpp"
 #include "ds1_string/lc246.hpp"
+#include "ds1_string/smo_5.hpp"
 /*
  125. 验证回文串
  242. 有效的字母异位词
  246. 中心对称数
+ 面试题05. 替换空格
  */
 
 int main(){

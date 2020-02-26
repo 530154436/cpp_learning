@@ -51,6 +51,10 @@ B是A的子结构， 即 A中有出现和B相同的结构和节点值。
     b. A树遍历完了（此时A树没有遍历完），说明不同，return false;
     c. 判断A树和B树当前节点值相等，并且其左右子树节点值均相等
  */
+
+/**
+ * 判断树A中以R为根节点的子树是否和树B具有相同的结构
+ */
 bool checkSubStructure(TreeNode* A, TreeNode* B){
     if(!B) return true;
     if(!A) return false;
@@ -60,6 +64,9 @@ bool checkSubStructure(TreeNode* A, TreeNode* B){
     return A->val==B->val && isLeft && isRight;
 }
 
+/**
+ * 在树A中查找与根节点的值一样的节点 (前序遍历)
+ */
 bool isSubStructure(TreeNode* A, TreeNode* B) {
     bool res = false;
     if(A && B){
