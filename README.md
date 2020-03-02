@@ -64,7 +64,8 @@ extern bool example_02_04(int pos, int& elems);     // p55 内联函数
 #### 3. LeetCode 分类刷题
 > lc: leetcode、面试题(smo): 剑指offer
 ##### 3.1 数据结构
-+ `数组`
+###### `数组`
+
 | 题号 | 题名 | 方法 |
 |:--- | :---  | :---  |
 | 167 | 两数之和 II - 输入有序数组 | 双指针|
