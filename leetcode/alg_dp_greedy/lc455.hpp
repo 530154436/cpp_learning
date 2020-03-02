@@ -1,7 +1,7 @@
 //
 // Created by 郑楚彬 on 2020/2/12.
 //
-#include "lib.hpp"
+#include "../lib.hpp"
 
 /**
 455. 分发饼干

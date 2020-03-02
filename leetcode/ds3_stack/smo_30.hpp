@@ -42,7 +42,7 @@ public:
 
     void push(int x) {
         s.push(x);
-        if(minStack.empty() || x<=minStack.top())   // 栈为空、或小于栈顶
+        if(minStack.empty() || x<=minStack.top())   // 栈为空、或小于等于栈顶
             minStack.push(x);
     }
 

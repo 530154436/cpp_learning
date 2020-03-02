@@ -51,3 +51,11 @@ add_executable(ds6_heap leetcode/lib.hpp leetcode/ds6_heap.cpp ${HEAP})
 # 算法 递归
 file(GLOB RECURSION "leetcode/alg_recursion/*.hpp")
 add_executable(alg_recursion leetcode/lib.hpp leetcode/alg_recursion.cpp  ${RECURSION} )
+
+# 算法 位运算
+file(GLOB BITWISE "leetcode/alg_bitwise/*.hpp")
+add_executable(alg_bitwise leetcode/lib.hpp leetcode/alg_bitwise.cpp  ${BITWISE} )
+
+# 算法 动态规划
+file(GLOB ALG_DP_GREEDY "leetcode/alg_dp_greedy/*.hpp")
+add_executable(alg_dp_greedy leetcode/lib.hpp leetcode/alg_dp_greedy.cpp  ${ALG_DP_GREEDY} )
