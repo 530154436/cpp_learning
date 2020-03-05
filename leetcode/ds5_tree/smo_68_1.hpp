@@ -40,12 +40,13 @@
 链接：https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/di-gui-jie-fa-by-yicheng2020-3/
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  */
-TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-    return findLCA(root, p, q);
-}
 
 TreeNode* findLCA(TreeNode* &root, TreeNode* p, TreeNode* q){
     if(root->val>p->val && root->val>q->val) return findLCA(root->left, p, q);        // 如果当前根值大于两个值，那说明pq都在左子树
     else if(root->val<p->val && root->val<q->val) return findLCA(root->right, p, q);  // 如果当前根值小于两个值，那说明pq都在右子树
     return root;
+}
+
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    return findLCA(root, p, q);
 }
