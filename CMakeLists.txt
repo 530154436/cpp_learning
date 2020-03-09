@@ -56,10 +56,14 @@ add_executable(alg_recursion leetcode/lib.hpp leetcode/alg_recursion.cpp  ${RECU
 file(GLOB BITWISE "leetcode/alg_bitwise/*.hpp")
 add_executable(alg_bitwise leetcode/lib.hpp leetcode/alg_bitwise.cpp  ${BITWISE} )
 
-# 算法 动态规划+贪心算法
-file(GLOB ALG_DP_GREEDY "leetcode/alg_dp_greedy/*.hpp")
-add_executable(alg_dp_greedy leetcode/lib.hpp leetcode/alg_dp_greedy.cpp  ${ALG_DP_GREEDY} )
+# 算法 动态规划+贪心算法+回溯法
+file(GLOB ALG_DP_GREEDY_BACKTRACKING "leetcode/alg_dp_greedy_backtracking/*.hpp")
+add_executable(alg_dp_greedy_backtracking leetcode/lib.hpp leetcode/alg_dp_greedy_backtracking.cpp ${ALG_DP_GREEDY_BACKTRACKING} )
 
 # 算法 数学+找规律+智力题
 file(GLOB ALG_MATH "leetcode/alg_math/*.hpp")
 add_executable(alg_math leetcode/lib.hpp leetcode/alg_math.cpp  ${ALG_MATH} )
+
+# 算法 查找
+file(GLOB SEARCH "leetcode/alg_search/*.hpp")
+add_executable(alg_search leetcode/lib.hpp leetcode/alg_search.cpp  ${SEARCH} )
