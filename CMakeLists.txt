@@ -18,6 +18,9 @@ add_executable(searchExercise "data_struct/9. 查找/9. 查找练习.cpp" data_s
 add_executable(esesential_cpp essential_cpp/main.cpp essential_cpp/exercises.hpp essential_cpp/util.cpp
         essential_cpp/chapter01.cpp essential_cpp/chapter02.cpp essential_cpp/chapter03.cpp)
 
+# ------------------------------------------------------------------------------------------------
+# 数据结构 + 算法
+# ------------------------------------------------------------------------------------------------
 # sword means offer ==> smo 、 leetcode ==> lc
 
 # 数据结构0 数组
@@ -67,3 +70,19 @@ add_executable(alg_math leetcode/lib.hpp leetcode/alg_math.cpp  ${ALG_MATH} )
 # 算法 查找
 file(GLOB SEARCH "leetcode/alg_search/*.hpp")
 add_executable(alg_search leetcode/lib.hpp leetcode/alg_search.cpp  ${SEARCH} )
+
+# ------------------------------------------------------------------------------------------------
+# 深入理解计算机系统 (CSAPP)
+# ------------------------------------------------------------------------------------------------
+
+# 第1章
+file(GLOB CH01 "csapp/ch01/*.hpp")
+add_executable(csapp_ch01 csapp/ch01.cpp  ${CH01} )
+
+# 第2章
+file(GLOB CH02 "csapp/ch02/*.hpp")
+add_executable(csapp_ch02 csapp/ch02.cpp  ${CH02} )
+
+# 第3章
+file(GLOB CH03 "csapp/ch03/*.hpp")
+add_executable(csapp_ch03 csapp/ch03.cpp  ${CH03} )

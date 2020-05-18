@@ -38,7 +38,8 @@ int majorityElement(vector<int>& nums) {
             cnt--;
         }
         if(cnt==0) {
-            res=nums[i]; cnt=1;
+            res=nums[i];
+            cnt=1;
         }
     }
     return res;

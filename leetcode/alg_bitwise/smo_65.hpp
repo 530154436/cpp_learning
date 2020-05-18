@@ -36,7 +36,7 @@
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  */
 int add(int a, int b) {
-    int sum=0, carry=0;
+    int sum=0;
     while(b){                        // 循环条件: 进位不为0，即不再产生进位
         sum = a^b;                   // 求和（不计进位）. 相同位置0，相反位置1
         b = ((unsigned int)a&b)<<1;  // 计算进位. bit=1左移1位

@@ -3,7 +3,7 @@
 //
 #include "../lib.hpp"
 /**
-225. 用队列实现栈
+225. 用队列实现栈(包括单队列、双队列)
 
 使用队列实现栈的下列操作：
 
@@ -23,7 +23,7 @@ empty() -- 返回栈是否为空
  */
 
 /*
- 解题思路：
+ 解题思路：单队列
     1. 用队列实现栈 C++ 单队列 入栈O(N) 出栈O(1)
     2. 维护队列使其队头对应栈的栈顶，队尾对应栈的栈底。则需要在每次在队列尾部加入元素之后将原本就有的que.size()-1个元素
     从头取出放回尾部以使队头对应栈顶，队尾对应栈底。
@@ -65,6 +65,77 @@ public:
     }
 };
 
+/*
+ 双队列:
+ 插入操作: queue，queue2一定至少一个为空。选择queue1，queue2中不为空的那个队列插入（如果都为空，随意选择一个）
+ 弹出操作: 将不为空的队列除最后一个队列的其他元素依次取出放到另一个队列中，而将最后那一个元素取出丢弃即可。
+ */
+class MyStack2 {
+public:
+    /** Initialize your data structure here. */
+    MyStack2() {
+
+    }
+
+    queue<int> q1;
+    queue<int> q2;
+
+    /** Push element x onto stack. */
+    void push(int x) {
+        if(!q1.empty()){
+            q1.push(x);
+        }else {
+            q2.push(x);
+        }
+    }
+
+    /** Removes the element on top of the stack and returns that element. */
+    int pop() {
+        int x=-1;
+        if(!q1.empty()){
+            int size=(int)q1.size();
+            for(int i=0; i<size-1; i++){
+                q2.push(q1.front());
+                q1.pop();
+            }
+            x = q1.front();
+            q1.pop();
+        }else{
+            int size=(int)q2.size();
+            for(int i=0; i<size-1; i++){
+                q1.push(q2.front());
+                q2.pop();
+            }
+            x = q2.front();
+            q2.pop();
+        }
+        return x;
+    }
+
+    /** Get the top element. */
+    int top() {
+        int x=-1;
+        if(!q1.empty()){
+            while(!q1.empty()){
+                q2.push(q1.front());
+                x = q1.front();
+                q1.pop();
+            }
+        }else{
+            while(!q2.empty()){
+                q1.push(q2.front());
+                x = q2.front();
+                q2.pop();
+            }
+        }
+        return x;
+    }
+
+    /** Returns whether the stack is empty. */
+    bool empty() {
+        return q1.empty() && q2.empty();
+    }
+};
 /**
  * Your MyStack object will be instantiated and called as such:
  * MyStack* obj = new MyStack();
