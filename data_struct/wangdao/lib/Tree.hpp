@@ -1,0 +1,8 @@
+//
+// Created by 郑楚彬 on 2020/8/18.
+//
+
+#ifndef TIANQINDATASTRUCT_TREE_HPP
+#define TIANQINDATASTRUCT_TREE_HPP
+
+#endif //TIANQINDATASTRUCT_TREE_HPP
