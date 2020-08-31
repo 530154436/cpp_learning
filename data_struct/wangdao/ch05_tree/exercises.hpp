@@ -1,35 +1,15 @@
-```bash
-g++ --version
+//
+// Created by 郑楚彬 on 2020/8/18.
+//
+/**
+ * 5.3 二叉树的遍历和线索二叉树-综合应用题 (p149-p151)
+ *     假设: (1) 二又树采用二叉链表存储结构 ★★☆☆☆
+ */
+#include "BiTree.hpp"
 
-g++ (Ubuntu 5.4.0-6ubuntu1~16.04.9) 5.4.0 20160609
-Copyright (C) 2015 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-
-#### 5. 树与二叉树
-+ 编译与执行
-```bash
-g++ -o ch05.o ch05.cpp ch05_tree/BiTree.cpp ch05_tree/exercises.cpp
-./ch05.o
-```
-+ 二叉树遍历
-```c
-void visit(BiTNode *node);  // 访问节点
-
-void PreOrder(BiTree T);    // 先序遍历
-void InOrder(BiTree T);     // 中序遍历
-void PostOrder(BiTree T);   // 后序遍历
-
-void PreOrder2(BiTree T);   // 先序遍历(非递归)
-void InOrder2(BiTree T);    // 中序遍历(非递归)
-void PostOrder2(BiTree T);  // 后序遍历(非递归) 最难!
-
-void LevelOrder(BiTree T);  // 层次遍历
-```
-+ 练习
-```c
-/* 练习 5.3 p149-p151 */
+/*
+ * 练习 5.3 p149-p151
+ */
 void InvertLevel(BiTree T);                             // 4. 二又树自下而上、从右到左的层次遍历算法。
 int Btdepth(BiTree T);                                  // 5. 求二叉树的高度。
 int BtdepthR(BiTree T);
@@ -61,7 +41,8 @@ int wpl(BiTree T);                                      // 19. 二又树的带�
 
                                                         /** ★★☆ */
 void BtreeToExp(BiTree T, int depth);                   // 20. 将给定的表达式树(二叉树)转换为等价的中缀表达式并输出。
-```
 
-#### 参考
-[1][C++之函数/结构体/类 模板](https://zhuanlan.zhihu.com/p/37669989)
+
+/*
+ * 练习 5.4 p176-p177
+ */
