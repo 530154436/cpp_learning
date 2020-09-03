@@ -5,8 +5,11 @@
 #include "../templates/SqQueueTemplate.hpp"
 #include "../templates/SqStackTemplate.hpp"
 
-void visit(BiTNode *node){
-    std::cout << node->data << ' ';
+void visit(BiTree node){
+    if(node)
+        std::cout << node->data << ' ';
+    else
+        std::cout << "NULL" << ' ';
 }
 
 void Create(BiTree &root, char const *&elements){
@@ -18,7 +21,7 @@ void Create(BiTree &root, char const *&elements){
         root = NULL;
         elements++;
     }else{
-        root = (BiTNode *) malloc(sizeof(BiTNode *));
+        root = (BiTNode *) malloc(sizeof(BiTNode));
         root->data = c;
 
         // std::cout << root->data << std::endl;

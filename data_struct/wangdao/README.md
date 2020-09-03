@@ -10,7 +10,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #### 5. 树与二叉树
 + 编译与执行
 ```bash
-g++ -o ch05.o ch05.cpp ch05_tree/BiTree.cpp ch05_tree/exercises.cpp
+g++ -o ch05.o ch05.cpp ch05_tree/BiTree.cpp ch05_tree/Tree.cpp ch05_tree/BinarySearchTree.cpp ch05_tree/exercises.cpp -std=c++11
 ./ch05.o
 ```
 + 二叉树遍历

@@ -4,9 +4,7 @@
 /**
  * 5.3 二叉树的遍历和线索二叉树-综合应用题 (p149-p151)
  */
-#include "BiTree.hpp"
-#include "../templates/SqStackTemplate.hpp"
-#include "../templates/SqQueueTemplate.hpp"
+#include "exercises.hpp"
 
 /**
  * 4. 二又树自下而上、从右到左的层次遍历算法。
@@ -84,7 +82,7 @@ int BtdepthR(BiTree T){
  *    (2) 根据根结点在中序序列中划分出二叉树的左、右子树包含哪些结点，
  *        然后根据左、右子树结点在先序序列中的次序确定子树的根结点，即回到步骤 (1)。
  */
-BiTNode* BiTreePreinCreat(ElemType A[], int l1, int h1, ElemType B[], int l2, int h2){
+BiTNode* BiTreePreinCreate(ElemType *A, int l1, int h1, ElemType *B, int l2, int h2){
     if(l1>h1) return NULL;
     int middle = l2;
     while(middle<=h2 && A[l1]!=B[middle])                                   // 根结点在中序序列中的划分
@@ -94,8 +92,8 @@ BiTNode* BiTreePreinCreat(ElemType A[], int l1, int h1, ElemType B[], int l2, in
 
     BiTNode* root = (BiTNode *)malloc(sizeof(BiTNode*));                    // 建根结点
     root->data = A[l1];
-    root->lchild = BiTreePreinCreat(A, l1+1, l1+lnum, B, l2, middle-1);     // (A,l1+1,l1+lnum,B,l2,l2+lnum-1);
-    root->rchild = BiTreePreinCreat(A, l1+lnum+1, h1, B, middle+1, h2);     // (A,h1-rnum+1,h1,B,h2-rnum+1,h2);
+    root->lchild = BiTreePreinCreate(A, l1 + 1, l1 + lnum, B, l2, middle - 1);     // (A,l1+1,l1+lnum,B,l2,l2+lnum-1);
+    root->rchild = BiTreePreinCreate(A, l1 + lnum + 1, h1, B, middle + 1, h2);     // (A,h1-rnum+1,h1,B,h2-rnum+1,h2);
     return root;
 }
 
@@ -335,6 +333,8 @@ void Search (BiTree T , ElemType x){
  *    方法2 后序遍历(非递归)
  *          分别求出 p、q 的所有祖先，然后对比
  *
+ *    方法3 增加 *parent 指针域，指向父节点，转化为“两个链表求最近交点”
+ *
  */
 BiTree AncestorR(BiTree T, BiTNode *p, BiTNode *q){
 
@@ -482,10 +482,27 @@ bool Similar(BiTree T1, BiTree T2){
     return left&&right;
 }
 
-
 /**
  * 18. 写出在中序线索二叉树里查找指定结点在后序的前驱结点的算法。
  */
+ThreadNode* InPostPre(ThreadNode* T , ThreadNode* p){
+    ThreadNode* q;
+    if(p->rtag==0){                             // 若 p 有右子女，则右子女是其后序前驱
+        q = p->rchild;
+    }else if(p->ltag==0){                       // 若 p 只有左子女，则左子女是其后序前驱
+        q = p->lchild;
+    }else if(p->lchild==NULL){                  // p 是中序序列第一个结点，无后序前驱
+        q = NULL;
+    }else{                                      // 顺左线索向上找 p 的祖先，若存在，再找祖先的左子女 => 这部分不是很理解❌
+        while (p->ltag==1 && p->lchild!=NULL)
+            p = p->lchild;
+        if(p->ltag==0)
+            q = p->lchild;                      // p 结点的祖先的左子女是其后序前驱
+        else
+            q = NULL;                           // 仅有单支树( p 是叶子)，已到根结点，p 无后序前驱
+    }
+    return q;
+}
 
 /**
  * 19.【2014 统考真题】 二又树的带权路径长度( WPL )是二又树中所有叶结点的带权路径长度之和。
@@ -532,4 +549,211 @@ void BtreeToExp(BiTree T, int depth){
         BtreeToExp(T->rchild, depth+1);
         if(depth>1) std::cout<<")";         // 若有子表达式则加 1 层括号
     }
+}
+
+/**
+ * 7. 己知一棵树的层次序列及每个结点的度，编写算法构造此树的孩子兄弟链表。
+ *
+ * 算法思想:
+ *    可设立一个辅助数组 poiηter[] 存储新建树的各结点的地址，再根据层次序列与每个结点的度，逐个链接结点。
+ */
+void createCSTree_Degree(CSTree&T, ElemType e[], int degree[], int n){
+    CSNode* nodes[n];
+
+    for(int i=0; i<n; i++){                                     // 初始化
+        nodes[i] = (CSNode*) malloc(sizeof(CSNode*));
+        nodes[i]->data = e[i];
+        nodes[i]->firstChild = nodes[i]->nextSibling = NULL;
+    }
+
+    int j = 1;                                                  // j 为子女结点序号
+    for(int i=0; i<n; i++){
+        int d = degree[i];                                      // 结点 i 的度数
+        if(d>=1){
+            nodes[i]->firstChild = nodes[j];                    // 建立 i 与子女 j 间的链接
+            j++;
+            for(int k=2; k<=d; k++){                            // 建立孩子兄弟的联系
+                nodes[j-1]->nextSibling = nodes[j];
+                j++;
+            }
+        }
+        display(nodes[i]);
+    }
+
+    T = nodes[0];
+}
+
+/**
+ * 5. 编程求以孩子兄弟表示法存储的森林的叶子结点数。
+ *
+ * 算法思想:
+ *    当森林(树) 以孩子兄弟表示法存储时
+ *    (1) 若节点没有孩子(firstchild=null)，则它必是叶子
+ *    (2) 总的叶子结点个数 = 孩子子树(firstchild)上的叶子数和 + 兄弟弟子树(nextSibling)上的叶结点个数之矛[I0
+ */
+int leaves(CSTree T){
+    if(!T)
+        return 0;
+    else if(T->firstChild==NULL)                                // 若结点无孩子，则该结点必是叶子
+        return 1+leaves(T->nextSibling);                        // 返回叶子结点和其兄弟子树中的叶子结点数
+    else
+        return leaves(T->firstChild)+leaves(T->nextSibling);    // 孩子子树和兄弟子树中叶子数之和
+}
+
+/**
+ * 6. 以孩子兄弟链表为存储结构，请设计递归算法求树的深度。
+ *
+ * 算法思想:
+ */
+int Height (CSTree bt){
+    if(!bt) return 0;
+    int ch = Height(bt->firstChild);    // 第一子女树高
+    int sh = Height(bt->nextSibling);   // 兄弟树高
+    return ch+1>sh?ch+1:sh;
+}
+
+/**
+ * 6. 试编写一个算法，判断给定的二叉树是否是二叉排序树。
+ *
+ * 算法思想:
+ *    对给定的二叉树进行中序遍历，若始终能保持前一个值比后一个值小，则说明该二叉树是一棵二叉排序树。
+ *
+ * LeetCode 98. 验证二叉搜索树
+ * https://leetcode-cn.com/problems/validate-binary-search-tree/submissions/
+ * https://leetcode-cn.com/problems/validate-binary-search-tree/solution/bao-zhun-sheng-guo-guan-fang-ti-jie-by-novice2mast/
+ */
+bool Judge(BSTree bt, int &prev){
+    if(!bt) return true;                // 空树
+    bool l = Judge(bt->lchild, prev);   // 判断左子树是否是二叉排序树
+    if(!l || prev>=bt->data)            // 若左子树返回值为false 或前驱大于等于当前结点
+        return false;
+    prev = bt->data;                    // 保存当前结点的关键字
+    return Judge(bt->rchild, prev);     // 判断右子树
+}
+
+bool JudgeBST(BSTree bt){
+    int prev = INT_MIN;
+    return Judge(bt, prev);
+}
+
+/**
+ * 7. 设计一个算法，求出在指定结点给定二叉排序树中的层次。
+ *
+ * 算法思想:
+ *    在二叉排序树中，查找一次就下降一层。 因此，查找该结点所用的次数就是该结点在二叉排序序树中的层次。
+ */
+void SearchCount(BSTree bst, BSTNode *p, int &cnt){    // 类似递归查找
+    if(!bst) return;
+    cnt++;                               //std::cout<<bst->data<<":"<<p->data<<" => "<<cnt<<std::endl;
+    if(bst->data==p->data)
+        return;
+    else if(p->data<bst->data)
+        SearchCount( bst->lchild, p, cnt);
+    else
+        SearchCount( bst->rchild, p, cnt);
+}
+
+int levelR(BSTree bst, BSTNode *p){
+    int cnt = 0;
+    SearchCount(bst, p, cnt);
+    return cnt;
+}
+
+int level(BSTree bst, BSTNode *p){   // 类似非递归查找
+    int cnt = 0;
+    while(bst){
+        cnt++;
+        if(bst->data==p->data)
+            break;
+        else if(p->data<bst->data)
+            bst = bst->lchild;
+        else
+            bst = bst->rchild;
+    }
+    return cnt;
+}
+
+/**
+ * 8. 利用二叉树遍历的思想编写一个判断二叉树是否是平衡二叉树的算法。
+ *
+ * 算法思想:
+ *    采用后序遍历，设置二叉树的高度标记 depth，计算当前节点左右子树的高度，并判断左右子树之差的绝对值是否大于1，
+ *    是则返回 false，否则返回 true。
+ *
+ * 剑指 Offer 55 - II. 平衡二叉树
+ * https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/
+ */
+bool Judge_AVL(BSTree bst, int &depth){
+    if(!bst) return true;
+
+    int dl=0, dr=0;                             // 左右子树的高度
+    bool lJude = Judge_AVL(bst->lchild, dl);    // 递归判断左子树
+    bool rJude = Judge_AVL(bst->rchild, dr);    // 递归判断右子树
+    depth = 1+(dl>dr?dl:dr);                    // 计算当前节点的高度
+    return abs(dl-dr)<=1 && lJude && rJude;     // 若子树高度差的绝对值<=1、且左、右子树都平衡时， 二叉树平衡
+}
+
+/**
+ * 9. 设计一个算法，求出给定二叉排序树中最小和最大的关键字。
+ *
+ * 算法思想: 在一棵二叉排序树中，最左下结点即为关键字最小的节点， 最右下结点即为关键字最大的结点。
+ *          本算法只要找出这两个结点即可，而不需要比较关键字
+ */
+int MinBST(BSTree bst){
+    int val=INT_MIN;
+    while(bst){                 // 求出二叉排序树中最小关键字结点
+        val = bst->data;
+        bst = bst->lchild;
+    }
+    return val;
+}
+
+int MaxBST(BSTree bst){
+    int val=INT_MIN;
+    while(bst){                 // 求出二叉排序树中最大关键字结点
+        val = bst->data;
+        bst = bst->rchild;
+    }
+    return val;
+}
+
+/**
+ * 10. 设计一个算法 ，从大到小输出二叉排序树中所有值不小于 k 的关键字。
+ *
+ * 算法思想: 由二叉排序树的性质可知，右子树中所有的结点值均大于根结点值，左子树中所有的结点值均小于根结点值。
+ *          为了从大到小输出，先遍历右子树，再访问根结点，后遍历左子树。
+ */
+void OutPut(BSTNode *bt, int key){
+    if(!bt) return;
+    OutPut(bt->rchild, key);
+    if(bt->data>=key)
+        std::cout<<bt->data<<" ";
+    OutPut(bt->lchild, key);
+}
+
+/**
+ * 12. 编写一个递归算法，在一棵有 n 个结点的、随机建立起来的二叉排序树上查找第 k (1<=k<=n) 小的元素，并返回指向该结点的指针。
+ *     要求算法的平均时间复杂度为 O(log2n)。 二叉排序树的每个结点中除 data, lchild, rchild 等数据成员外，增加一个 couηt 成员，
+ *     保存以该结点为栋的子树上的结点个数。
+ *
+ * 算法思想: 二叉搜索树的中序遍历是按从小大到排序的.
+ *
+ * 230. 二叉搜索树中第K小的元素
+ * https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/
+ */
+void CountKth(BSTNode* root, int k, BSTNode* &res, int &cnt){
+    if(!root) return ;
+    CountKth(root->lchild, k, res, cnt);
+    if(++cnt==k){
+        res = root;
+        return;
+    }
+    CountKth(root->rchild, k, res, cnt);
+}
+
+BSTNode* Search_Small(BSTNode* root, int k) {
+    int cnt=0;
+    BSTNode* res=NULL;
+    CountKth(root, k, res, cnt);
+    return res;
 }

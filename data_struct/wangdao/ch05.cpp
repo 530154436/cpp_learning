@@ -3,12 +3,13 @@
 //
 #include <iomanip>
 #include "ch05_tree/BiTree.hpp"
+#include "ch05_tree/BinarySearchTree.hpp"
 #include "ch05_tree/exercises.hpp"
 #include "templates/util.hpp"
 
-void travel(){
+void bt_travel(){
     string str = "12#46##7##3#5##";
-    const char* elems = str.data();    // 构建二叉树
+    const char* elems = str.data();
     BiTree root;
     Create(root, elems);    // 构建二叉树
 
@@ -62,7 +63,7 @@ void exercise_5_3(){
     std::cout<<std::left<<std::setw(indent-20)<<"   12#46##7##3#5##";
     ElemType A[7] = {'1','2','4','6','7','3','5'};
     ElemType B[7] = {'2','6','4','7','1','3','5'};
-    BiTNode* root1 = BiTreePreinCreat(A, 0, 6, B, 0, 6);
+    BiTNode* root1 = BiTreePreinCreate(A, 0, 6, B, 0, 6);
     LevelOrder(root1); std::cout << std::endl;  // 1234567
 
     std::cout<<std::left<<std::setw(indent)<<"7. 判别二叉树是否为完全二叉树: ";
@@ -126,27 +127,64 @@ void exercise_5_3(){
 
     // 新建一棵树(第19题改变了树的结构)
     str = "*+a##b##*c##-#d##"; elems = str.data(); Create(root, elems);
-    std::cout<<std::left<<std::setw(indent)<<"20. 给定的表达式树(二叉树)转换为等价的中缀表达式: ";
+    std::cout<<"20. 给定的表达式树(二叉树)转换为等价的中缀表达式: "<<std::endl;
+    std::cout<<std::left<<std::setw(indent-20)<<"   *+a##b##*c##-#d##";
     BtreeToExp(root, 1); std::cout<< std::endl;
 }
 
-int main(){
-    //travel();
-    exercise_5_3();
-    return 0;
+void exercise_5_4(){
+    CSTree T;
+    int indent = 60;
+    ElemType e[] = {'A','B','C','D','E','F','G'};
+    int degree[] = {3, 2, 0, 1, 0, 0, 0};
+    std::cout<<"7. 己知一棵树的层次序列及每个结点的度，编写算法构造此树的孩子兄弟链表。"<<std::endl;
+    createCSTree_Degree(T, e, degree, 7);
+
+    std::cout<<std::left<<std::setw(indent)<<"5. 编程求以孩子兄弟表示法存储的森林的叶子结点数: "<<leaves(T)<<std::endl;
+    std::cout<<std::left<<std::setw(indent)<<"6. 以孩子兄弟链表为存储结构，请设计递归算法求树的深度: "<<Height(T)<<std::endl;
 }
 
+void exercise_5_5(){
+    BSTree T=NULL;
+    int n=5, indent=60;
+    int elems[5] = {54, 20, 66, 40, 79};
 
+    std::cout<<std::left<<std::setw(indent)<<"构造二叉排序树:";
+    BST_Create(T, elems, n);
+    display<BSTree>(T);
 
+    std::cout<<std::left<<std::setw(indent)<<"二叉排序树插入28:";
+    BST_Insert(T, 28);
+    display<BSTree>(T);
 
+    std::cout<<std::left<<std::setw(indent)<<"查询二叉排序树 33:"; std::cout<<BST_SearchR(T, 33); std::cout<<std::endl;
+    std::cout<<std::left<<std::setw(indent)<<"查询二叉排序树 66:"; std::cout<<BST_Search(T, 66); std::cout<<std::endl;
 
+    std::cout<<std::left<<std::setw(indent)<<"6. 试编写一个算法，判断给定的二叉树是否是二叉排序树:";
+    std::cout<<JudgeBST(T); std::cout<<std::endl;
 
+    std::cout<<std::left<<std::setw(indent)<<"7. 设计一个算法，求出在指定结点给定二叉排序树中的层次(P=40):";
+    std::cout<<level(T, T->lchild->rchild); std::cout<<std::endl;
 
+    int depth;
+    std::cout<<std::left<<std::setw(indent)<<"8. 利用二叉树遍历的思想编写一个判断二叉树是否是平衡二叉树的算法:";
+    std::cout<<Judge_AVL(T, depth); std::cout<<std::endl;
 
+    std::cout<<std::left<<std::setw(indent)<<"9. 设计一个算法，求出给定二叉排序树中最小和最大的关键字:";
+    std::cout<<"minVal="<<MinBST(T)<<", "<<"maxVal="<<MaxBST(T); std::cout<<std::endl;
 
+    std::cout<<std::left<<std::setw(indent)<<"10.设计一个算法 ，从大到小输出二叉排序树中所有值不小于 k 的关键字:";
+    OutPut(T, 40); std::cout<<std::endl;
 
+    std::cout<<std::left<<std::setw(indent)<<"12. 二叉排序树上查找第 k (1<=k<=n) 小的元素，并返回指向该结点的指针(k=4):";
+    BSTNode* p = Search_Small(T, 4);
+    std::cout<<p->data<<std::endl;
+}
 
-
-
-
-
+int main(){
+    bt_travel();        // 二叉树的遍历
+    exercise_5_3();     // 二叉树
+    exercise_5_4();     // 树、森林 (孩子兄弟链表)
+    exercise_5_5();     // 二叉搜索树、平衡树
+    return 0;
+}
