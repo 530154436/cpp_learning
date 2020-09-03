@@ -2,8 +2,7 @@
 // Created by 郑楚彬 on 2020/8/18.
 //
 /**
- * 5.3 二叉树的遍历和线索二叉树-综合应用题 (p149-p151)
- *     假设: (1) 二又树采用二叉链表存储结构 ★★☆☆☆
+ *     假设: 二又树采用二叉链表存储结构
  */
 #include <climits>
 
@@ -15,7 +14,7 @@
 #include "../templates/SqQueueTemplate.hpp"
 
 /*
- * 练习 5.3 p149-p151
+ * 练习 5.3 二叉树的遍历和索引二叉树 (p149-p151)
  */
 void InvertLevel(BiTree T);                             // 4. 二又树自下而上、从右到左的层次遍历算法。
 int Btdepth(BiTree T);                                  // 5. 非递归求二叉树的高度。
@@ -55,7 +54,7 @@ void BtreeToExp(BiTree T, int depth);                   // 20. 将给定的表�
 
 
 /*
- * 练习 5.4 p176-p177
+ * 练习 5.4 树、森林 (p176-p177)
  */
 int leaves(CSTree T);                                   // 5. 编程求以孩子兄弟表示法存储的森林的叶子结点数。
 
@@ -66,7 +65,7 @@ int Height (CSTree bt);                                 // 6. 以孩子兄弟链
 
 
 /*
- * 练习 5.5 p195-p196
+ * 练习 5.5 树与二叉树的应用 (p195-p196)
  */
                                                         /** ★★☆ */
 bool JudgeBST(BSTree bt);                               // 6. 试编写一个算法，判断给定的二叉树是否是二叉排序树。
@@ -80,10 +79,8 @@ int MaxBST(BSTree bst);
 void OutPut(BSTNode *bt, int key);                      // 10. 设计一个算法 ，从大到小输出二叉排序树中所有值不小于 k 的关键字。
 BSTNode *Search_Small(BSTNode*t , int k );              // 12. 二叉排序树上查找第 k (1<=k<=n) 小的元素，并返回指向该结点的指针。
 
-
 /*
  * 总结 p206-p207
- *     设二叉树的存储结构为二叉链表 ，编写有关二叉树的递归算法。
  */
 void DelLeafNode(BiTree bt);                            // 6. 从二叉树中删去所有叶结点。     (层次遍历 => 参考练习5.3_11)
 int GetLevel(BiTree bt,BiTNode *p);                     // 7. 计算指定结点 *p 所在的层次。  (层次遍历=>参考练习5.3_5)
