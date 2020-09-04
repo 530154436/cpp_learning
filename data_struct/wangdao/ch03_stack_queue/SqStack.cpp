@@ -37,3 +37,7 @@ void DestroyStack(SqStack &S){
     free(S.data);
     S.top = -1;
 }
+
+int StackLength(SqStack S){
+    return S.top+1;
+}

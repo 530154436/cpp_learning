@@ -33,3 +33,7 @@ bool GetHead(SqQueue Q, ElemType &x){
     x = Q.data[Q.front];
     return true;
 }
+
+int QueueLength(SqQueue Q){
+    return (Q.rear-Q.front+MaxSize)%MaxSize;
+}

@@ -3,7 +3,6 @@
 //
 #include <iostream>
 #include "templates/SqQueueTemplate.hpp"
-typedef char ElemType;
 
 int main(){
     SqQueue<int> Q;

@@ -66,13 +66,6 @@ bool GetTop(SqStack<ElemType> S, ElemType &x){
     return true;
 }
 
-//template<typename ElemType>
-//ElemType GetTop(SqStack<ElemType> S){
-//    if(S.top==-1)                   // 栈空，报错
-//        return false;
-//    return S.data[S.top];
-//}
-
 /**
  * 销毁栈，并释放栈 s 占用的存储空间(“&” 表示引用调用)。
  */
@@ -84,7 +77,7 @@ void DestroyStack(SqStack<ElemType> &S){
 
 template<typename ElemType>
 int StackLength(SqStack<ElemType> S){
-    return S.top;
+    return S.top+1;
 }
 
 #endif //TIANQINDATASTRUCT_SQSTACK_TEMPLATE_HPP

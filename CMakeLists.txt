@@ -24,6 +24,10 @@ file(GLOB WD_CH03_H "data_struct/wangdao/ch03_stack_queue/*.hpp")
 file(GLOB WD_CH03_C "data_struct/wangdao/ch03_stack_queue/*.cpp")
 add_executable(wd_ch03 "data_struct/wangdao/ch03.cpp" ${WD_CH03_H} ${WD_CH03_C})
 
+file(GLOB WD_CH02_H "data_struct/wangdao/ch02_linear_table/*.hpp")
+file(GLOB WD_CH02_C "data_struct/wangdao/ch02_linear_table/*.cpp")
+add_executable(wd_ch02 "data_struct/wangdao/ch02.cpp" ${WD_CH02_H} ${WD_CH02_C})
+
 ## Essential C++
 #add_executable(esesential_cpp essential_cpp/main.cpp essential_cpp/exercises.hpp essential_cpp/util.cpp
 #        essential_cpp/chapter01.cpp essential_cpp/chapter02.cpp essential_cpp/chapter03.cpp)

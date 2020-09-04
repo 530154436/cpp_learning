@@ -23,5 +23,6 @@ bool QueueEmpty(SqQueue Q);             // 判断队列空，若队列 Q 为空�
 bool EnQueue(SqQueue &Q, ElemType x);   // 入队，若队列 Q 未满，将 x 加入，使之成为新的队尾。
 bool DeQueue(SqQueue &Q, ElemType &x);  // 出队，若队列 Q 非空，删除队头元素，并用 x 返回 。
 bool GetHead(SqQueue Q, ElemType &x);   // 读队头元素，若队列 Q 非空，则将队头元素赋值给 X
+int QueueLength(SqQueue Q);             // 队列长度
 
 #endif //TIANQINDATASTRUCT_SQQUEUE_HPP
