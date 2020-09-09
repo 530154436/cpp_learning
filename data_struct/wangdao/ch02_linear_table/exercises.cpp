@@ -207,40 +207,157 @@ void SearchExcgIst(ElemType A[], int n, ElemType x){
  *     两个序列的中位数是含它们所有元素的升序序列的中位数。
  *     例如，若 S2 = (2, 4, 6, 8, 20)，则 S1 和 S2 的中位数是 11。
  *     现在有两个等长升序序列 A 和 B，试设计一个在时间和空间两方面都尽可能高效的算法，找出两个序列 A 和 B 的中位数。
+ *
+ * 方法1: 双指针 => 等价于求第n个节点
+ * 方法2: 分别求两个升序序列 A、 B 的中 位数，设为 a 和 b， 求序列 A、 B 的中位数过程如下:
+ *     ① 若 a=b，则 a或b 即为所求中位数，算法结束。
+ *     ② 若 a<b，则舍弃序列A中较小的一半，同时舍弃序列B中较大的一半，要求两次舍弃的长度相等。
+ *     ③ 若 a>b，则舍弃序列 A 中较大的一半，同时舍弃序列 B 中较小的一半，要求两次舍弃的长度相等。
+ *     在保留的两个升序序列中，重复过程1、2、 3，直到两个序列中均只含一个元素时为止，较小者即为所求的中位数。
  */
-//int MSearch(int A[],int B[],int n){
-//
-//}
+/*
+ * 两个等长有序序列
+ */
+int MSearch(int A[],int B[],int n) {
+    int i=0,j=0,median=0;
+    for(int k=0; k<=n-1; k++){
+        if(i<n && (j>=n||A[i]<B[j])){   // 较小者前进一步
+            median=A[i++];
+        }else{
+            median=B[j++];
+        }
+    }
+    return median;
+}
+
+/*
+ * 两个不等长有序序列 相当于求两个有序序列的第n个节点
+ * https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+ * https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-2/
+ */
+double MSearch1(int A[], int m, int B[],int n) {
+    int i=0,j=0,mid=(m+n)/2, pre=0,median=0;
+    for(int k=0; k<=mid; k++){
+        pre = median;
+        if(i<m && (j>=n || A[i]<B[j])){
+            median=A[i++];
+        }else{
+            median=B[j++];
+        }
+    }
+    return (m+n)%2==0?(median+pre)/2.0:median;
+}
+
+int MSearch2(int A[],int B[],int n){
+    int s1=0,d1=n-1,s2=0,d2=n-1,m1,m2;
+    while(s1<d1 || s2<d2){
+        m1 = (s1+d1)/2;
+        m2 = (s2+d2)/2;
+        if(A[m1]==B[m2]){
+            return A[m1];
+        }else if(A[m1]<B[m2]){
+            if((s1+d1)%2==0){   // 若元素个数为奇数
+                s1=m1;          // 舍弃 A 中间点以前的部分且保留中间点
+                d2=m2;          // 舍弃 B 中间点 以后的部分且保留中间点
+            }else{              // 元素个数为偶数
+                s1=m1+1;        // 舍弃 A 中间点及中间点以前部分
+                d2=m2;          // 舍弃 B 中间点 以后部分且保留中间点
+            }
+        }else{
+            if((s2+d2)%2==0){
+                d1=m1;
+                s2=m2;
+            }else{
+                d1=m1;
+                s2=m2+1;
+            }
+        }
+    }
+}
+
 /**
  * 12.【2013】已知一个整数序列 A =(a0，a1，..., an-1)，其中 0≤ai<n (0≤i<n)。 若存在
  *    ap1 = ap2 =...= apm = x 且 m>n/2 (0≤pk<n，1≤k≤m)，则称 x 为 A 的主元素。
  *    例如A= ( 0，5，5，3，5，7，5，5 )，则 5 为主元素；又如 A= ( 0，5，5，3，5，1，5，7 )，
  *    则A 中没有主元素。假设 A 中的 n 个元素保存在一个一维数组中，请设计一个尽可能高效的算法，
- *    找出 A 的主元素。若存在主元素， 则输出该元素；否则输出-1。要求：
- *  (1) 给出算法的基本设计思想。
- *  (2) 根据设计思想，采用 C 或 C++或 Java 语言描述算法，关键之处给出注释。
- *  (3) 说明你所设计算法的时间复杂度和空间复杂度。
+ *    找出 A 的主元素。若存在主元素， 则输出该元素；否则输出-1。
+ *
+ * 算法思想:
+ *     从前向后扫描数组元素，标记出一个可能成为主元素的元素 num。然后重新计数，确认 num 是否是主元素。算法可分为以下两步:
+ *     (1)选取候选的主元素。
+ *        ① 依次扫描所给数组中的每个整数，记录 num 的出现次数为 1;
+ *        ② 遇到的下一个整数仍等于 num，则计数 cnt 加 1， 否则计数减 1:
+ *        ③ 当计数减到 0 时，将遇到的下一个整数保存到 num 中，计数重新记为 1，
+ *        ④ 开始新一轮计数，即从当前位置开始重复上述过程，直到扫描完全部数组元素 。
+ *     (2)判断 num 是否是真正的主元素。再次扫描该数组，统计 num 出现的次数，若大 于 n/2，则为主元素；否则，序列中不存在主元素。
+ *
+ * https://leetcode-cn.com/problems/find-majority-element-lcci/
  */
-//int Majority (int A[], int n){
-//
-//}
+int Majority (int A[], int n){
+    if(n<1)
+        return -1;
+    int num=A[0],cnt=1;
+    for(int i=0; i<n; i++){
+        if(A[i]==num){
+            cnt++;              // 对 A 中的候选主元素计数
+        }else{
+            if(cnt==0){         // 更换候选主元素，重新计数
+                num = A[i];
+                cnt = 1;
+            }else{
+                cnt--;          // 处理不是候选主元素的情况
+            }
+        }
+    }
+
+    if(cnt>0){
+        cnt = 0;
+        for(int i=0; i<n; i++)  // 统计候选主元素的实际出现次数
+            cnt++;
+    }
+    return cnt>n/2?num:-1;      // 确认是否存在主元素
+}
 
 /**
  * 13.【2018】给定一个含 n (n>=1)个整数的数组，请设计一个在时问上尽可能高效的算法，找出数组中未出现的最小正整数。
  *     例如，数组 {-5，3, 2, 3} 中未出现的最小正整数是1; 数组 {1,2,3} 中未出现的最小正整数是 4。
+ *
+ * 算法思想:
+ *     要求在时间上尽可能高效，因此采用空间换时间的办法。
+ *     分配一个用于标记的数组 B[n+1],用来记录A中是否出现了1~n中的正整数，B[O]对应正整数 1, B[n]对应正整数n，初始化B中全部为0。
+ *     由于 A 中含有n个整数，因此可能返回的值是1~n:
+ *        ① 当 A 中 n 个数恰好为 1~n 时返回 n+1。
+ *        ② 当数组 A 中出现了小于等于 0 或大于 n 的值时，会导致 1~n 中出现空余位置，返回结果必然在 1~n 中，
+ *           因此对于 A 中 出现了小于等于 0 或大于 n 的值可以不采取任何操作。
  */
-//int findMissMin(int A[] , int n){
-//
-//}
+int findMissMin(int A[] , int n){
+    int B[n+1],i;
+    for(i=0; i<=n; i++)         // 赋初值为 0
+        B[i] = 0;
 
+    for(i=0; i<n; i++){
+        if(A[i]>0 && A[i]<=n)   // 若 A[i] 的值介于 1~n，则标记数组 B
+            B[A[i]] = 1;
+    }
+
+    for(i=1; i<=n; i++){        // 扫描数组B， 找到目标值
+        if(B[i]==0)
+            break;
+    }
+    return i;
+}
 
 /**
  * 1. 设计一个递归算法, 删除不带头结点的单链表 L 中所有值为 x 的结点。
+ *
+ *    终止条件: f(L, x)=不做任何事情,                 若 L 为空表
+ *    递归主体: f(L, x)=删除*L结点, f(L->next, x);   若 L一>data==x
  */
 void Del_X_1(LinkList &L, ElemType x){
-    LNode*p=L;                  // 递归出口
+    LNode*p;                  // 递归出口
     if(!L) return;
     if(L->data==x){             // 若L所指结点的值为 x, 删除*L，并让L指向下一结点
+        p = L;
         L = L->next;
         free(p);
         Del_X_1(L, x);
@@ -293,6 +410,14 @@ void R_Print(LinkList L){
 
 /**
  * 4. 试编写在带头结点的单链表 L 中删除一个最小值结点的高效算法(假设最小值结点是唯一的)。
+ *
+ * 算法思想:
+ *       用 p从头至尾扫描单链表，
+ *            pre指向*p结点的前驱，
+ *            minp保存值最小的结点指针(初值为 p),
+ *            minpre 指向*minp 结点的前驱(初值为 pre)
+ *       一边扫描，一边比较，若 p->data 小于 minp->data，则将 p、 pre 分别赋值给 minp、 minpre，
+ *       当 p扫描完毕,minp 指向最小值结点，minpre 指向最小值结点的前驱结点，再将 minp 所指结点删除即可 。
  */
 LinkList Delete_Min(LinkList &L){
     if(!L || !L->next)
@@ -309,7 +434,7 @@ LinkList Delete_Min(LinkList &L){
         pre = p;
         p = p->next;
     }
-
+    std::cout<<minp->data<<" ";
     minpre->next = minp->next;
     free(minp);
     return L;
@@ -406,7 +531,12 @@ LinkList Search_Lst_Common(LinkList headA, LinkList headB){
  * 9. 给定一个带表头结点的单链表，设 head 为头指针，结点结构为(data,next), data 为整型元素，next 为指针，试写出算法。
  *    按递增次序输出单链表中各结点的数据元素，并释放结点所占的存储空间(要求: 不允许使用数组作为辅助空间)。
  */
-
+void MinDelete(LinkList &head){
+    while(head->next){
+        Delete_Min(head);
+    }
+    free(head);
+}
 
 /**
  * 10.将一个带头结点的单链表 A 分解为两个带头结点的单链表 A 和 B，
@@ -673,6 +803,12 @@ LinkList Link(LinkList &h1 , LinkList &h2){ // 无头结点
  * 19.设有一个带头结点的循环单链表，其结点值均为正整数。设计一个算法，反复找出单链表中结点值最小的结点并输出，然后将该结点从中删除，
  *    直到单链表空为止，再删除表头结点。
  */
+void Del_All(LinkList &L){
+    while(L->next){
+        Delete_Min(L);
+    }
+    free(L);
+}
 
 /**
  * 20.设头指针为 L 的带有表头结点的非循环双向链表，其每个结点中除有 pred(前驱指针)、data(数据)和 next(后继指针)域外，
@@ -680,10 +816,33 @@ LinkList Link(LinkList &h1 , LinkList &h2){ // 无头结点
  *    的结点中 freq 域的值增 1，并使此链表中结点保持按访问频度非增(递减)的顺序排列，同时最近访问的结点排在频度相同的结点
  *    前面，以便使频繁访问的结点总是靠近表头。试编写符合上述要求的 Locate(L,x) 运算的算法，该运算为函数过程，返回找到结
  *    点的地址，类型为指针型。
+ *
+ * 算法思想: 首先在双向链表中查找数据值为 x 的结点，查到后，将结点从链表上摘下，然后再顺着结点的前驱链查找该结点的
+ *          插入位置(频度递减，且排在同频度的第一个，即向前找到第一个比它的频度大的结点，插入位置为该结点之后)，并插入到该位置 。
  */
-//DLinkList Locate(DLinkList &L,ElemType x){
-//
-//}
+DLinkList Locate(DLinkList &L, ElemType x){ // x的值需唯一...
+    DNode *p=L->next,*q,*pre=L;
+    while(p && p->data!=x)
+        p = p->next;
+
+    if(!p) return NULL;                 // 没找到值为 x 的结点
+    p->freq += 1;                       // 令元素值为 x 的结点的 freq域加 1
+
+    if(p->next)                         // 将 p 结点从链表上摘下
+        p->next->prior = p->prior;
+    p->prior->next = p->next;
+
+    q = p->prior;
+    while(q!=L && q->freq<=p->freq)     // 查找 p 结点的插入位置 (向前找到第一个比它的频度大的结点，插入位置为该结点之后)
+        q = q->prior;
+
+    p->next = q->next;                  //将 p 结点插入，一定是排在同频率的第一个
+    q->next->prior = p;
+    p->prior = q;
+    q->next = p;
+
+    return p;                           // 返回值为 x 的结点的指针
+}
 
 /**
  * 21.「2009」已知一个带有表头结点的单链表，结点结构为 |data|link|，假设该链表只给出了头指针 list。
@@ -772,19 +931,34 @@ void func(LNode* &h, int n){     // 带头结点
  *    ② 由于 fast 比 slow 走得快，如果有环，fast 一定会先进入环，而 slow 后进入环。
  *    ③ 当两个指针都进入环后，经过若干次操作后两个指针定能在环上相遇。即可判断一个链表是否有环。
  *
+ *  2. 设头结点到环的入口点的距离为 a，环的入口点沿着环的方向到相遇点的距离为 x，环长为 r，相遇时 fast 绕过了 n 圈。
+ *     则 2(a+x)=a+nr+x
+ *        => a=nr-x=(r-x)+(n-1)r，即从头结点到环的入口点的距离等于 n 倍的环长减去环的入口点到相遇点的距离。
+ *     因此可设置两个指针，一个指向head，一个指向相遇点，两个指针同步移动(均为一次走一步)，相遇点即为环的入口点。
+ *
  * https://leetcode-cn.com/problems/linked-list-cycle/
  * https://leetcode-cn.com/problems/linked-list-cycle-ii/
  * https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/
  */
-//LNode* FindLoopStart(LNode *head){  // 无头结点
-//    LNode *slow=head, *fast=head;
-//    while(slow && fast && fast->next){
-//        slow = slow->next;
-//        fast = fast->next->next;
-//        if(slow==fast)
-//            break;
-//    }
-//}
+LNode* FindLoopStart(LNode *head){  // 无头结点
+    LNode *slow=head, *fast=head;
+    while(slow && fast && fast->next){
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow==fast)                                  // 快慢指针相遇
+            break;
+    }
+
+    if(slow==NULL || fast==NULL || fast->next==NULL)    // 没有环，返回 nulptr
+        return NULL;
+
+    LNode *p1=head, *p2=slow;                           // 分别指向开始点、相遇点
+    while(p1!=p2){                                      // 2(a+x) =a+nr+x，即 a=nr-x=(r-x)+(n-1)r，n>=1
+        p1 = p1->next;
+        p2 = p2->next;
+    }
+    return p1;
+}
 
 /**
  * 25.【2019】设线性表 L = {a1,a2,··· ,an},采用带头结点的单链表保存，请设计一个空间复杂度为 O(1) 且时间上尽可能高效的算法，
@@ -817,11 +991,11 @@ void change_list(LNode* &h){
         slow->next = q;
         q = p;
     }
-    PrintLinkList(slow); // 有问题!!
-    PrintLinkList(h);
 
     p = h->next;                            // p 为前半段链表的首结点
     q = slow->next;                         // q 为后半段链表的首结点
+    slow->next=NULL;                        // 前半段最后一个节点置空
+
     while(q){                               // 将链表后半段的结点插入到指定位置
         r = q->next;
         q->next = p->next;                  // 将q所指结点插入到p所指结点之后
@@ -829,5 +1003,4 @@ void change_list(LNode* &h){
         p = q->next;                        // p 指向前半段的下一个插入点
         q = r;
     }
-    p = NULL;
 }

@@ -60,6 +60,20 @@ void exercise_2_2(){
     init(L2, b, 10);
     std::cout<<std::left<<std::setw(indent)<<"9. 线性表递增有序，在表中查找数值为 x 的元素: ";
     SearchExcgIst(L2.data,10, 8); PrintList(L2);
+
+    int A[5]={11,13,15,17}, B[5]={2,4,6,8};
+    std::cout<<std::left<<std::setw(indent)<<"11. 找出两个序列 A={11,13,15,17,19} 和 B={2,4,6,8,20} 的中位数: ";
+    std::cout<<"法1:"<<MSearch(A, B, 4)<<", 法2:"<<MSearch2(A, B, 4)<<std::endl;
+
+    int c[10]={1,1,1,4,4,1,7,1,9,1};
+    init(L2, c, 10);
+    std::cout<<std::left<<std::setw(indent)<<"12. 找出数组 A={1,1,1,4,4,1,7,1,9,1} 的主元素: ";
+    std::cout<<Majority(c, 10)<<std::endl;
+
+    int d[10]={-1,2,3,4,6,7,8,9,1,0};
+    init(L2, c, 10);
+    std::cout<<std::left<<std::setw(indent)<<"13. 找出数组 A={-1,2,3,4,6,7,8,9,1,0} 中未出现的最小正整数: ";
+    std::cout<<findMissMin(d, 10)<<std::endl;
 }
 
 void exercise_2_3(){
@@ -95,7 +109,7 @@ void exercise_2_3(){
 
     List_TailInsert(L1, a, 10);
     std::cout<<std::left<<std::setw(indent)<<"4. 带头结点的单链表 L 中删除一个最小值结点: ";
-    Delete_Min(L1);  PrintLinkList(L1);
+    Delete_Min(L1); std::cout<<std::endl;
 
     List_TailInsert(L1, a, 10);
     std::cout<<std::left<<std::setw(indent)<<"5. 将带头结点的单链表就地逆置: ";
@@ -108,6 +122,10 @@ void exercise_2_3(){
     List_TailInsert(L1, a, 10);
     std::cout<<std::left<<std::setw(indent)<<"7. 删除表中所有介于给定的两个值(min=4,max=8)之间的元素的元素: ";
     RangeDelete(L1, 4, 8);  PrintLinkList(L1);
+
+    List_TailInsert(L1, a, 10);
+    std::cout<<std::left<<std::setw(indent)<<"9. 按递增次序输出单链表中各结点的数据元素，并释放结点所占的存储空间: ";
+    MinDelete(L1); std::cout<<std::endl;
 
     LinkList A;
     List_TailInsert(A, a, 10);
@@ -151,6 +169,10 @@ void exercise_2_3(){
     std::cout<<std::left<<std::setw(indent)<<Pattern(L1->next, L11->next)<<std::endl;
 
     List_TailInsert(L1, a, 10);
+    std::cout<<std::left<<std::setw(indent)<<"19.反复找出单链表中结点值最小的结点并输出，直到单链表空为止，再删除表头结点: ";
+    Del_All(L1); std::cout<<std::endl;
+
+    List_TailInsert(L1, a, 10);
     std::cout<<std::left<<std::setw(indent)<<"21.查找链表中倒数第 k 个位直上的结点(k为正整数): ";
     Search_k(L1, 9);
 
@@ -158,12 +180,35 @@ void exercise_2_3(){
     std::cout<<std::left<<std::setw(indent)<<"23.对于链表中 data 的绝对值相等的结点，仅保留第一次出现的结点而删除其余绝对值相等的结点: ";
     func(L1, 12); PrintLinkList(L1);
 
-    List_TailInsert(L1, a, 10);
+    List_TailInsert(L1, a, 9);
+    std::cout<<std::left<<std::setw(indent)<<"24.判断一个链表是否有环，如果有，找出环的入口点并返回，否则返回 NULL: ";
+    std::cout<<std::left<<std::setw(indent)<<FindLoopStart(L1)<<std::endl;
+
+    List_TailInsert(L1, a, 9);
     std::cout<<std::left<<std::setw(indent)<<"25. 单链表{a1,a2,··· ,an}转换为{a1,an,a2,an-1,a3,an-2,···}: ";
     change_list(L1); PrintLinkList(L1);
 }
 
+#include <vector>
+
+// std::cout<<"i="<<i<<",median="<<nums1[i]<<std::endl;
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    int n1=nums1.size(),n2=nums2.size();
+    int i=0,j=0,mid=(n1+n2)/2, pre=0,median=0;
+
+    for(int k=0; k<=mid; k++){
+        pre = median;
+        if(i<nums1.size() && (j>=n2||nums1[i]<nums2[j])){
+            median=nums1[i++];
+        }else{
+            median=nums2[j++];
+        }
+    }
+
+    return (n1+n2)%2==0?(median+pre)/2.0:median;
+}
+
 int main(){
-    //exercise_2_2();
-    exercise_2_3();
+    exercise_2_2();     // 顺序表
+    //exercise_2_3();     // 链表
 }

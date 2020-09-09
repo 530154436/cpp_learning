@@ -25,9 +25,9 @@
  */
 
 bool hasCycle(ListNode *head) {
-    if(!head) return false;
-    ListNode *slow=head;
-    ListNode *fast=head;
+    if(!head)
+        return false;
+    ListNode *slow=head,*fast=head;
     while(slow && fast && fast->next){
         slow = slow->next;              // 走一步
         fast = fast->next->next;        // 走两步

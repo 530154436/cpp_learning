@@ -32,7 +32,9 @@ int Length(LinkList L);                                 // 求表长。返回线
  */
 typedef struct DNode{           // 定义双链表结点类型
     ElemType data ;             // 数据域
-    struct DNode *prior,*next;  // 前驱和后继之好着呢
+    struct DNode *prior,*next;  // 前驱和后继
+
+    int freq;                   // 频度域 => 练习 2.2线性表的链式表示第20题 p40-p44
 }DNode, *DLinkList ;
 
 
