@@ -1,7 +1,7 @@
 //
 // Created by 郑楚彬 on 2020/2/12.
 //
-#include "../lib.hpp"
+#include "LinkList.hpp"
 
 /**
 160. 相交链表

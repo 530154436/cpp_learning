@@ -1,9 +1,9 @@
 //
 // Created by 郑楚彬 on 2020/2/19.
 //
-#include "ds2_linked_list/lc206.hpp"
-#include "ds2_linked_list/lc92.hpp"
-#include "ds2_linked_list/lc160.hpp"
+#include "ds2_linked_list/lc206.cpp"
+#include "ds2_linked_list/lc92.cpp"
+#include "ds2_linked_list/lc160.cpp"
 
 /*
  206. 反转链表

@@ -29,6 +29,7 @@ LinkList List_HeadInsert(LinkList &L, int a[], int n){
  */
 LinkList List_TailInsert (LinkList &L, int a[], int n){
     L = (LNode*)malloc(sizeof(LNode));      // 创建头结点
+    L->data = 0;
     L->next = NULL;
 
     LNode *s,*r=L;

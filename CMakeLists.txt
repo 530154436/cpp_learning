@@ -46,7 +46,7 @@ file(GLOB STRING "leetcode/ds1_string/*.hpp")
 add_executable(ds1_string leetcode/lib.hpp leetcode/ds1_string.cpp ${STRING})
 
 # 数据结构2 链表
-file(GLOB LL "leetcode/ds2_linked_list/*.hpp")
+file(GLOB LL "leetcode/ds2_linked_list/*.cpp")
 add_executable(ds2_linked_list leetcode/lib.hpp leetcode/ds2_linked_list.cpp ${LL})
 
 # 数据结构3 栈

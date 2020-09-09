@@ -2,6 +2,7 @@
 // Created by 郑楚彬 on 2020/2/15.
 //
 #include "../lib.hpp"
+#include "LinkList.hpp"
 /**
 面试题18. 删除链表的节点
     给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。返回删除后的链表的头节点。
@@ -27,12 +28,6 @@
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
 /*
  解题思路: 双指针+哑节点
     构建头部 dummy 节点，后面的操作就可以转化为一般化得链表节点移除问题
@@ -44,9 +39,12 @@ ListNode* deleteNode(ListNode* head, int val) {
     while(cur){
         if(cur->val==val){
             pre->next = cur->next;
+            cur = cur->next;
+            // delete(cur);
+        }else{
+            pre = cur;
+            cur = cur->next;
         }
-        pre = cur;
-        cur = cur->next;
     }
     return dummy->next;
 }

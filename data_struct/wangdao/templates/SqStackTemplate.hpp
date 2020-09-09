@@ -6,14 +6,14 @@
 
 #include <cstdlib>
 
-#define MaxSize 100                 // 定义栈中元素的最大个数
+#define MaxStackSize 100                 // 定义栈中元素的最大个数
 
 /**
  * 栈的顺序存储
  */
 template<typename ElemType>
 struct SqStack {
-    ElemType data[MaxSize];         // 存放栈中元素
+    ElemType data[MaxStackSize];         // 存放栈中元素
     int top;                        // 栈顶指针
 };
 
