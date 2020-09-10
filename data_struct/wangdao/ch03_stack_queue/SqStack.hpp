@@ -24,6 +24,7 @@ bool Push(SqStack &S, ElemType x);  // 进栈，若栈 s 未满，则将 x 压�
 bool Pop(SqStack &s, ElemType &x);  // 出栈，若栈 S 非空，则弹出栈顶元素， 并用 x 返回。
 bool GetTop(SqStack S, ElemType &x);// 读栈顶元素，若栈 s 非空，则用 x 返回栈顶元素。
 void DestroyStack(SqStack&S);       // 销毁栈，并释放栈 s 占用的存储空间(“&” 表示引用调用)。
+bool StackOverflow(SqStack S);      // 判断栈是否满
 int StackLength(SqStack S);         // 栈元素个数
 
 #endif //TIANQINDATASTRUCT_SQSTACK_HPP

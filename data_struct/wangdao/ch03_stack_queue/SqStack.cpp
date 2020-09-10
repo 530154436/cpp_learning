@@ -41,3 +41,12 @@ void DestroyStack(SqStack &S){
 int StackLength(SqStack S){
     return S.top+1;
 }
+
+/**
+ * 判断栈是否满
+ * @param S
+ * @return
+ */
+bool StackOverflow(SqStack S){
+    return S.top+1>=MaxSize-1;
+}

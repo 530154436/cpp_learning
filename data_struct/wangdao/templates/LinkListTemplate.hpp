@@ -12,10 +12,10 @@ using namespace std;
  * 单链表 (带头结点)
  */
 template<typename ElemType>
-typedef struct LNode{
+struct LNode{
     ElemType data;              // 数据域
-    struct LNode* next;         // 指针域
-}LNode, *LinkList;
+    struct LNode<ElemType>* next;         // 指针域
+};
 
 /**
  * 采用头插法建立单链表
@@ -23,13 +23,13 @@ typedef struct LNode{
  * @return
  */
 template<typename ElemType>
-LinkList List_HeadInsert(LinkList &L, ElemType a[], int n){
-    L = (LNode*)malloc(sizeof(LNode));      // 创建头结点
+LNode<ElemType>* List_HeadInsert(LNode<ElemType> *&L, ElemType a[], int n){
+    L = (LNode<ElemType>*)malloc(sizeof(LNode<ElemType>));      // 创建头结点
     L->next = NULL;                         // 初始为空链表
 
-    LNode *s;
+    LNode<ElemType> *s;
     for(int i=0; i<n; i++){
-        s = (LNode*)malloc(sizeof(LNode));  // 创建新结点
+        s = (LNode<ElemType> *)malloc(sizeof(LNode<ElemType>));  // 创建新结点
         s->data = a[i];
         s->next = L->next;                  // 将新结点插入表中， L 为头指针
         L->next = s;
@@ -43,14 +43,14 @@ LinkList List_HeadInsert(LinkList &L, ElemType a[], int n){
  * @return
  */
 template<typename ElemType>
-LinkList List_TailInsert (LinkList &L, ElemType a[], int n){
-    L = (LNode*)malloc(sizeof(LNode));      // 创建头结点
+LNode<ElemType>* List_TailInsert (LNode<ElemType> *&L, ElemType a[], int n){
+    L = (LNode<ElemType>*)malloc(sizeof(LNode<ElemType>));      // 创建头结点
     L->data = 0;
     L->next = NULL;
 
-    LNode *s,*r=L;
+    LNode<ElemType> *s,*r=L;
     for(int i=0; i<n; i++){
-        s = (LNode*)malloc(sizeof(LNode));  // 创建新结点
+        s = (LNode<ElemType>*)malloc(sizeof(LNode<ElemType>));  // 创建新结点
         s->data = a[i];
 
         r->next = s;                        // r 指向新的表尾结点
@@ -67,7 +67,7 @@ LinkList List_TailInsert (LinkList &L, ElemType a[], int n){
  * @return
  */
 template<typename ElemType>
-LNode *GetElem(LinkList L, int i){
+LNode<ElemType>*GetElem(LNode<ElemType>*L, int i){
     if(i<0)
         return NULL;
     int k=0;
@@ -85,7 +85,7 @@ LNode *GetElem(LinkList L, int i){
  * @return
  */
 template<typename ElemType>
-LNode *LocateElem(LinkList L, ElemType e){
+LNode<ElemType>*LocateElem(LNode<ElemType>* L, ElemType e){
     L = L->next;
     while(L){
         if(L->data==e)
@@ -101,9 +101,9 @@ LNode *LocateElem(LinkList L, ElemType e){
  * @return
  */
 template<typename ElemType>
-int Length(LNode *L){
+int Length(LNode<ElemType> *L){
     int length=0;
-    LNode *p = L->next; // 指向第一个节点
+    LNode<ElemType> *p = L->next; // 指向第一个节点
     while(p){
         length++;
         p = p->next;
@@ -117,7 +117,7 @@ int Length(LNode *L){
  * @param a
  */
 template<typename ElemType>
-void PrintLinkList(LinkList L){
+void PrintLinkList(LNode<ElemType> *L){
     L = L->next;
     while(L){
         std::cout<<L->data<<" ";

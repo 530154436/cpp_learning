@@ -20,13 +20,17 @@ file(GLOB WD_CH05_C "data_struct/wangdao/ch05_tree/*.cpp")
 file(GLOB WD_TEMP "data_struct/wangdao/templates/*.hpp")
 add_executable(wd_ch05 "data_struct/wangdao/ch05.cpp" ${WD_CH05_H} ${WD_CH05_C} ${WD_TEMP})
 
+file(GLOB WD_CH02_H "data_struct/wangdao/ch02_linear_table/*.hpp")
+file(GLOB WD_CH02_C "data_struct/wangdao/ch02_linear_table/*.cpp")
+add_executable(wd_ch02 "data_struct/wangdao/ch02.cpp" ${WD_CH02_H} ${WD_CH02_C})
+
 file(GLOB WD_CH03_H "data_struct/wangdao/ch03_stack_queue/*.hpp")
 file(GLOB WD_CH03_C "data_struct/wangdao/ch03_stack_queue/*.cpp")
 add_executable(wd_ch03 "data_struct/wangdao/ch03.cpp" ${WD_CH03_H} ${WD_CH03_C})
 
-file(GLOB WD_CH02_H "data_struct/wangdao/ch02_linear_table/*.hpp")
-file(GLOB WD_CH02_C "data_struct/wangdao/ch02_linear_table/*.cpp")
-add_executable(wd_ch02 "data_struct/wangdao/ch02.cpp" ${WD_CH02_H} ${WD_CH02_C})
+file(GLOB WD_CH08_H "data_struct/wangdao/ch08_sort/*.hpp")
+file(GLOB WD_CH08_C "data_struct/wangdao/ch08_sort/*.cpp")
+add_executable(wd_ch08 "data_struct/wangdao/ch08.cpp" ${WD_CH08_H} ${WD_CH08_C})
 
 ## Essential C++
 #add_executable(esesential_cpp essential_cpp/main.cpp essential_cpp/exercises.hpp essential_cpp/util.cpp

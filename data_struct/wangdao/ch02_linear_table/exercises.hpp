@@ -75,3 +75,14 @@ DLinkList Locate(DLinkList &L,ElemType x);              // 20.非循环双向链
                                                         /** ★☆☆ 其他 */
 int Pattern(LinkList A,LinkList B);                     // 16. 判断序列 B 是否是序列 A 的连续子序列
 void func(LNode* &h, int n);                            // 23.对于链表中 data 的绝对值相等的结点，仅保留第一次出现的结点而删除其余绝对值相等的结点
+
+/*
+ * 思维拓展 p63
+ */
+/**
+ * 1. 一个长度为 N 的整型数组 A[1..N]，给定整数 x，请设计一个时间复杂度不超过 O(nlog2n) 的算法，
+ *    查找出这个数组中所有两两之和等于 X 的整数对(每个元素只输出一次)。
+ *
+ * 面试题57. 和为s的两个数字
+ * 链接：https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof
+ */

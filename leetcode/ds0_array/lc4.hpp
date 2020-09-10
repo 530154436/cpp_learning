@@ -1,6 +1,7 @@
 //
 // Created by 郑楚彬 on 2020/2/15.
 //
+#include <vector>
 /**
  4. 寻找两个正序数组的中位数
     给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
@@ -22,7 +23,7 @@
 /*
  解题思路： 双指针 => 等价于求第n个节点 (非最优解)
  */
-double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+double findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2) {
     int n1=nums1.size(),n2=nums2.size();
     int i=0,j=0,mid=(n1+n2)/2, pre=0,median=0;
 

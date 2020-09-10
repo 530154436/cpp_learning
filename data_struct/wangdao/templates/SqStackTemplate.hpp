@@ -13,7 +13,7 @@
  */
 template<typename ElemType>
 struct SqStack {
-    ElemType data[MaxStackSize];         // 存放栈中元素
+    ElemType data[MaxStackSize];    // 存放栈中元素
     int top;                        // 栈顶指针
 };
 
@@ -38,7 +38,7 @@ bool StackEmpty(SqStack<ElemType> S){
  */
 template<typename ElemType>
 bool Push(SqStack<ElemType> &S, ElemType x){
-    if(S.top>=MaxSize-1)            // 栈满
+    if(S.top>=MaxStackSize-1)            // 栈满
         return false;
     S.data[++S.top] = x;            // 指针先加 1，再入栈
     return true;
@@ -78,6 +78,16 @@ void DestroyStack(SqStack<ElemType> &S){
 template<typename ElemType>
 int StackLength(SqStack<ElemType> S){
     return S.top+1;
+}
+
+/**
+ * 判断栈是否满
+ * @param S
+ * @return
+ */
+template<typename ElemType>
+bool StackOverflow(SqStack<ElemType> S){
+    return S.top+1>=MaxStackSize-1;
 }
 
 #endif //TIANQINDATASTRUCT_SQSTACK_TEMPLATE_HPP
