@@ -180,9 +180,40 @@ int SSQueueEmpty(SSQueue q){
  * 1. 假设一个算术表达式中包含圆括号、方括号和花括号 3 种类型的括号，编写一个算法来判别表达式中的括号是否配对，
  *    以字符“\0”作为算术表达式的结束符。
  *
+ *
+ * 算法思想:
+ *      (1)扫描每个字符，遇到花、中、圆的左括号时进栈，
+ *      (2)遇到花、中、圆的右括号时检查找顶元素是否为相应的左括号，若是，退栈，否则配对错误。
+ *      (3)最后栈不为空也为错误。
+ *
  * 20. 有效的括号
  * 链接：https://leetcode-cn.com/problems/valid-parentheses
  */
+bool BracketsCheck(char *str){
+    char ch, p;
+    SqStack<char> s; InitStack(s);
+    while((ch=*(str++))!='\0'){
+        switch(ch){
+            case '(':
+            case '[':
+            case '{': Push(s, ch); break;
+            case ')':
+            case ']':
+            case '}':
+                if(StackEmpty(s))
+                    return false;
+
+                Pop(s, p);
+                if( !(p=='('&&ch==')') && !(p=='['&&ch==']') && !(p=='{'&&ch=='}'))
+                    return false;
+
+                break;
+            default:
+                break;
+        }
+    }
+    return StackEmpty(s);
+}
 
 /**
  * 3. 利用一个找实现以下递归函数的非递归计算:
@@ -190,6 +221,25 @@ int SSQueueEmpty(SSQueue q){
  *    P_n(x) =  2x,                             n=1
  *              2xP_{n-1}(x)-2(n-1)P_{n-2}(x),  n>1
  */
+double p(int n, double x){
+    if(n<0)
+        return -1;
+    else if(n==0)
+        return 1;
+    else if(n==1)
+        return 2*x;
+    else{
+        double stack[n+1];  // 栈
+        int top = -1;       // 栈顶
+
+        stack[++top] = 1;
+        stack[++top] = 2*x;
+        for(int i=2; i<=n; i++){
+            stack[++top] = 2*x*stack[i-1] - 2*(i-1)*stack[i-2]; // 入栈
+        }
+        return stack[top];  // 返回栈顶
+    }
+}
 
 /*
  * 思维拓展
@@ -197,7 +247,42 @@ int SSQueueEmpty(SSQueue q){
 /**
  * 1. 设计一个栈，使它可以在O(1)的时间复杂度内实用 Push、 Pop和min操作。所谓min操作，是指得到栈中最小的元素。
  *
+ * 算法思想: 使用双栈，两个栈是同步关系。
+ *      (1)主栈是普通栈，用来实现栈的基本操作 Push 和 Pop;
+ *      (2)辅助栈用来记录同步的最小值 min，例如元素 x 进栈:
+ *          ①辅助栈 stack_min[top++]= (x<min)?x:min; 即在每次Push中，都将当前最小元素放到stack_min的栈顶。
+ *          ②在主栈中Pop最小元素y时，stack_min栈中相同位置的最小元素y也会随着top一起出栈。
+ *      因此 stack_min 的找顶元素必然是y之前入栈的最小元素。
+ *
  * 面试题30. 包含min函数的栈
  * 链接：https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof
  */
+bool Push(MinStack &ms, ElemType x){
+    Push(ms.s, x);
 
+    ElemType m;
+    GetTop(ms.min_stack, m);
+    if(StackEmpty(ms.min_stack)||x<=m){ // 最小值栈为空、或入栈元素小于等于最小值栈顶
+        Push(ms.min_stack,x);
+    }
+    return true;
+}
+
+bool Pop(MinStack &ms, ElemType &x){
+    if(StackEmpty(ms.s))
+        return false;
+    Pop(ms.s, x);
+
+    ElemType m;
+    GetTop(ms.min_stack, m);
+    if(x==m)                            // 弹出元素等于最小值栈顶
+        Pop(ms.min_stack, m);
+    return true;
+}
+
+bool min(MinStack ms, ElemType &x){
+    if(StackEmpty(ms.s))
+        return false;
+    GetTop(ms.min_stack, x);
+    return true;
+}

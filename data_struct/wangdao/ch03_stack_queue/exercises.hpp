@@ -47,10 +47,21 @@ int SSQueueEmpty(SSQueue q);
 /*
  * 3.3 核和队列的应用 p96-97
  */
+bool BracketsCheck(char *str);                                 // 1. 判别表达式中的括号是否配对
 
+                                                                /** ★☆☆ 这个题的官方解答有点繁琐，直接迭代搞定*/
+double p(int n,double x);                                      // 2. 利用一个找实现递归函数的非递归计算
 
+/** ★★☆ */
 /*
  * 思维拓展
+ * 设计一个栈，使它可以在O(1)的时间复杂度内实用 Push、 Pop 和 min 操作。所谓min操作，是指得到栈中最小的元素。
  */
+typedef struct MinStack{
+    SqStack<ElemType> s, min_stack;
+};
+bool Push(MinStack &ms, ElemType x);
+bool Pop(MinStack &ms, ElemType &x);
+bool min(MinStack ms, ElemType &x);
 
 #endif //TIANQINDATASTRUCT_EXERCISES_HPP

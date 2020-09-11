@@ -38,17 +38,26 @@
  */
 bool isValid(string s) {
     stack<char> ss;
+    char p;
     for(char ch:s){
-        if(ch=='}' || ch==']' || ch==')'){
-            if(ss.empty()
-               || (ss.top()!='(' && ch==')')
-               || (ss.top()!='{' && ch=='}')
-               || (ss.top()!='[' && ch==']'))
+        switch(ch){
+            case '(':
+            case '[':
+            case '{': ss.push(ch); break;
+            case ')':
+            case ']':
+            case '}':
+                if(ss.empty())
+                    return false;
+                p = ss.top();
+                ss.pop();
+                if(!(p=='('&&ch==')') && !(p=='['&&ch==']') && !(p=='{'&&ch=='}'))
+                    return false;
+                break;
+            default:
                 return false;
-            ss.pop();
-        }else{
-            ss.push(ch);
         }
     }
     return ss.empty();
+
 }
