@@ -135,7 +135,7 @@ int partition(ElemType A[] , int low, int high){
 void QuickSort(ElemType A[] , int low, int high){
     if(low<high){
         int pivot_pos = partition(A, low, high);     // 将表A[low···high]划分为两个子表
-        QuickSort(A, low, pivot_pos-1);             // 依次对两个子表进行递归排序
+        QuickSort(A, low, pivot_pos-1);              // 依次对两个子表进行递归排序
         QuickSort(A, pivot_pos+1, high);
     }
 }
@@ -160,3 +160,94 @@ void SelectSort (ElemType A[], int n){
             swap(A[i], A[min]);
     }
 }
+
+
+/**
+ * 堆排序
+ *
+ * 算法思想:
+ *    首先将存放在 L[1..n] 中的 n 个元素建成初始堆，由于堆本身的特点(以大顶堆为例)，堆顶元素就是最大值。
+ *    输出堆顶元素后，通常将堆底元素送入堆顶，此时根结点已不满足大顶堆的性质，堆被破坏，将堆顶元素向下调整
+ *    使其继续保持大顶堆的性质，再输出堆顶元素。如此重复，直到堆中仅剩一个元素为止。
+ */
+
+void HeadAdjust(ElemType A[], int k, int n){
+    A[0] = A[k];
+    for(int i=2*k; i<=n; i*=2){
+        if(i+1<=n && A[i+1]>A[i])   // 取 key 较大的子结点的下标
+            i++;
+        if(A[0]>=A[i]){             // 筛选结束
+            break;
+        }else{
+            k = i;                  // 将 A[i] 调整到双亲结点上
+            A[k] = A[i];            // 修改 k 值，以便继续向下筛选
+        }
+    }
+    A[k] = A[0];                    // 被筛选结点的值放入最终位置
+}
+
+void BuildMaxHeap(ElemType A[], int n){
+    for(int i=n/2; i>0; i--)        // 从 i=[n/2]~1，反复调整堆
+        HeadAdjust(A, i, n);
+}
+
+void HeapSort(ElemType A[], int n){ // 注意: 数组从1开始(比较容易定位孩子节点)
+    BuildMaxHeap(A, n);             // 初始建堆
+    for(int i=n; i>1; i--){
+        swap(A[1], A[i]);           // 输出堆顶元素(和堆底元素交换)
+        HeadAdjust(A, 1, i-1);        // 调整，把剩余的 i-1个元素整理成堆
+    }
+}
+
+/**
+ * 归并排序
+ *
+ * 算法思想:
+ *    (1) 分解
+ *        将含有 n 个元素的待排序表分成各含 n/2 个元素的子表，采用 2 路归井排序算法对两个子表递归地进行排序 。
+ *
+ *    (2) 合并
+ *        Merge() 的功能是将前后相邻的两个有序表归并为一个有序表。
+ *        设两段有序表 A[low...mid]、 A[mid+l...high] 存放在同一顺序表中的相邻位置，先将它们复制到辅助数组 B 中。每次从对应 B 中的
+ *        两个段取出一个记录进行关键字的比较，将较小者放入 A 中， 当数组 B 中有一段的下标超出其对应的表长
+ *        (即该段的所有元素都己复制到 A 中)时，将另一段中的剩余部分直接复制到 A 中。
+ */
+
+ElemType *B = (ElemType*) malloc(sizeof(ElemType)*MaxSize);
+
+/*
+ * 表A的两段 A[low...mid]和A[mid+l...high]各自有序，将它们合并成一个有序表
+ */
+void Merge(ElemType A[],int low,int mid,int high){
+
+    for(int i=low; i<=high; i++)                    // 将 A 中所有元素复制到 B
+        B[i] = A[i];
+
+    int i,j,k;
+    for(i=low,j=mid+1,k=low; i<=mid&&j<=high; k++){
+        if(B[i]<=B[j])
+            A[k] = B[i++];                          // 比较 B 的左右两段中的元素,将较小值复制到 A 中
+        else
+            A[k] = B[j++];
+    }
+
+    while(i<=mid) A[k++]=B[i++];                    // 若第一个表未检测完，复制
+    while(j<=high) A[k++]=B[j++];                   // 若第二个表未检测完，复制
+}
+
+
+void MergeSort(ElemType A[],int low, int high){
+    if(low<high){
+        int mid = (low+high)/2;         // 从中间划分两个子序列
+        MergeSort(A, low, mid);         // 对左侧子序列进行递归排序
+        MergeSort(A, mid+1, high);      // 对右侧子序列进行递归排序
+        Merge(A, low, mid, high);       // 归并
+    }
+}
+
+
+
+
+
+
+

@@ -35,5 +35,14 @@ int main(){
     std::cout<<std::left<<std::setw(indent-3)<<"6. 选择排序 {49,38,65,97,76,13,27,49}: ";
     SelectSort(B, 8); display<int>(B, 8);
 
+    int C[9]; // 数组下标从1开始
+    std::copy(std::begin(A),std::end(A),std::begin(C)+1);
+    std::cout<<std::left<<std::setw(indent-3)<<"7.  堆排序  {49,38,65,97,76,13,27,49}: ";
+    HeapSort(C, 8); display<int>(B, 8);
+
+    std::copy(std::begin(A),std::end(A),std::begin(B));
+    std::cout<<std::left<<std::setw(indent-3)<<"8. 归并排序 {49,38,65,97,76,13,27,49}: ";
+    MergeSort(B, 0, 7); display<int>(B, 8);
+    
     return 0;
 }
