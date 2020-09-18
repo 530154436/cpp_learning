@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/7/22.
+// Created by Edward on 2020/7/22.
 //
 #include <stdio.h>
 #include "math.h"

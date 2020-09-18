@@ -1,6 +1,6 @@
 //
 // Cr
-// eated by 郑楚彬 on 2020/2/2.
+// eated by Edward on 2020/2/2.
 //
 #include "lib.hpp"
 #include "alg_dp_greedy/lc455.hpp"

@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2018/3/26.
+// Created by Edward on 2018/3/26.
 //
 #include "../utility/LinearTable/LinkedList.h"
 

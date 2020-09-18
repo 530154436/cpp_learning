@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/2/23.
+// Created by Edward on 2020/2/23.
 //
 /*
 246. 中心对称数

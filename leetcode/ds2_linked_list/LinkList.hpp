@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/9/7.
+// Created by Edward on 2020/9/7.
 //
 
 #ifndef TIANQINDATASTRUCT_LINKLIST_HPP

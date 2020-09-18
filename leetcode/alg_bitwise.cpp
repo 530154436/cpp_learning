@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/2/19.
+// Created by Edward on 2020/2/19.
 //
 #include "alg_bitwise/smo_64.hpp"
 #include "alg_bitwise/smo_56_1.hpp"

@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/8/27.
+// Created by Edward on 2020/8/27.
 //
 #ifndef TIANQINDATASTRUCT_SQQUEUE_HPP
 #define TIANQINDATASTRUCT_SQQUEUE_HPP

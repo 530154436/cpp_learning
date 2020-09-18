@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/7/8.
+// Created by Edward on 2020/7/8.
 //
 
 int sum(int *a, int n);

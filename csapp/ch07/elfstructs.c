@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2020/7/24.
+// Created by Edward on 2020/7/24.
 //
 
 /* 符号表的条目（CSAPP 7-4） */

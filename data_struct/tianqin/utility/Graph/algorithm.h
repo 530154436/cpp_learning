@@ -1,5 +1,5 @@
 //
-// Created by 郑楚彬 on 2018/5/3.
+// Created by Edward on 2018/5/3.
 //
 #include "MGraph.h"
 #include <iostream>
