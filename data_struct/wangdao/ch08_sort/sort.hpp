@@ -17,7 +17,8 @@ typedef int ElemType;
 void InsertSort(ElemType A[], int n);               // 1. 直接插入排序
 void BinaryInsertSort(ElemType A[] , int n);        // 2. 折半插入排序
 void ShellSort(ElemType A[] , int n);               // 3. 希尔排序
-void BubbleSort(ElemType A[] , int n);              // 4. 冒泡排序
+void BubbleSort1(ElemType A[] , int n);             // 4. 冒泡排序
+void BubbleSort2(ElemType A[] , int n);
 void QuickSort(ElemType A[] , int low, int high);   // 5. 快速排序 (每趟排序后会将枢轴(基准)元素放到其最终的位置上)
 void SelectSort (ElemType A[], int n);              // 6. 选择排序
 void HeapSort(ElemType A[], int n);                 // 7. 堆排序

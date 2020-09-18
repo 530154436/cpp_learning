@@ -5,6 +5,7 @@
 #define TIANQINDATASTRUCT_UTIL_HPP
 
 #include "SqQueueTemplate.hpp"
+#include "LinkListTemplate.hpp"
 #include <iostream>
 using namespace std;
 
@@ -40,6 +41,22 @@ void display(Tree T){
             EnQueue(Q, p->rchild);  // 右子树不空，则右子树根结点入队
     }
     std::cout<<std::endl;
+}
+
+/**
+ * 输出操作。按前后顺序输出线性表 L 的所有元素值。
+ * @param name
+ * @param a
+ */
+template<typename ElemType>
+void display(LNode<ElemType> *L){
+    L = L->next;
+    std::cout<<"L(头结点)->";
+    while(L){
+        std::cout<<L->data<<"->";
+        L = L->next;
+    }
+    std::cout<<"NULL"<<std::endl;
 }
 
 #endif //TIANQINDATASTRUCT_UTIL_HPP
